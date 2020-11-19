@@ -1,0 +1,36 @@
+.owl {
+    &-nav {
+        display: flex;
+        .owl-prev,
+        .owl-next {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: $cl-white !important;
+            margin-left: 10px;
+            outline: none;
+            transition: all $time ease;
+            @include media-sm {
+                width: 30px;
+                height: 30px;
+            }
+            svg {
+                stroke: $cl-black;
+                transition: all $time ease;
+            }
+            &:hover {
+                svg {
+                    stroke: $cl-white;
+                }
+            }
+            &:active {
+                svg {
+                    stroke: $cl-white;
+                }
+            }
+        }
+    }
+}

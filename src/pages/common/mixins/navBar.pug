@@ -1,0 +1,6 @@
+mixin navBar(items)
+    .b-navBar
+        ul.b-navBar__list
+            each item in items
+                li.b-navBar__item
+                    a.b-navBar__link(href="#" title=item)= item

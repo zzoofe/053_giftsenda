@@ -1,0 +1,56 @@
+.s-footer {
+    background: $cl-blue-dark;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: normal;
+    font-size: 14px;
+    color: $cl-white;
+    min-width: 991px;
+
+    .container {
+        height: 71px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyr {
+
+    }
+
+    .social {
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin: 0 6px;
+                a {
+                    display: flex;
+                    svg {
+                        width: 22px;
+                        height: 22px;
+                        fill: #D8D8D8;
+                        transition: all $time ease;
+                    }
+                    &:hover {
+                        svg {
+                            fill: $cl-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .terms {
+        a {
+            color: $cl-white;
+            border-bottom: 1px solid rgba(255,255,255,.7);
+            &:hover {
+                border-bottom: 1px solid rgba(255,255,255,0);
+            }
+        }
+    }
+}

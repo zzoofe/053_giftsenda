@@ -1,0 +1,96 @@
+.s-header {
+    background: $cl-white;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        flex-grow: 1;
+        display: flex;
+        a {
+            img {
+                display: block;
+            }
+        }
+    }
+
+    .user {
+        background: rgba(0, 102, 153, 0.05);
+        height: 65px;
+        display: flex;
+        align-items: center;
+        padding: 0 22px 0 21px;
+        &__image {
+            margin-right: 12px;
+            a {
+                width: 38px;
+                height: 38px;
+                overflow: hidden;
+                border-radius: 50%;
+                display: block;
+            }
+            img {
+                width: 38px;
+                height: 38px;
+                display: block;
+            }
+        }
+        &__info {
+            &__name {
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1;
+                a {
+                    color: #006699;
+                    display: flex;
+                    align-items: center;
+
+                    &:after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-left: 3px solid transparent;
+                        border-right: 3px solid transparent;
+                        border-top: 3px solid #006699;
+                        background: none;
+                        margin-left: 6px;
+                    }
+                }
+            }
+            &__status {
+                font-size: 9px;
+                text-decoration: underline;
+                color: $cl-black;
+                margin-bottom: 5px;
+            }
+            &__reit {
+                display: flex;
+                align-items: center;
+                font-weight: normal;
+                font-size: 9px;
+                color: $cl-black;
+                svg {
+                    width: 8px;
+                    height: 8px;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+
+    .balance {
+        margin-right: 32px;
+        a {
+            font-weight: normal;
+            font-size: 14px;
+            color: #005577;
+            border-bottom: 1px solid rgba(0,85,119,.7);
+
+            &:hover {
+                border-bottom: 1px solid rgba(0,85,119,0);
+            }
+        }
+    }
+}

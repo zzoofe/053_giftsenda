@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GiftSenda</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="s-header">
+        <div class="container">
+          <div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
+          <div class="balance"><a href="#">Balance:  3030 у.е</a></div>
+          <div class="user">
+            <div class="user__image"><a href="#"><img src="img/user.jpg" alt=""></a></div>
+            <div class="user__info">
+              <div class="user__info__name"><a href="#">Eric Brain</a></div>
+              <div class="user__info__status">Manager user</div>
+              <div class="user__info__reit">
+                <svg>
+                  <use xlink:href="img/sprite.svg#reit"></use>
+                </svg><span>867</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="s-navBar">
+        <div class="container">
+          <div class="menu">
+            <ul>
+              <li class="is-active"><a href="#">Dashboard</a></li>
+              <li><a href="#">Sendas</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Contacts</a></li>
+              <li><a href="#">Reports</a></li>
+            </ul>
+          </div>
+          <div class="support"><a href="">
+              <svg>
+                <use xlink:href="img/sprite.svg#support"></use>
+              </svg><span>Support</span></a></div>
+          <div class="setup"><a href="">
+              <svg>
+                <use xlink:href="img/sprite.svg#setup"></use>
+              </svg><span>Setup</span></a></div>
+        </div>
+      </nav>
+      <main class="s-main">
+        <div class="container">
+          <div class="b-title">
+            <h1>Sendas</h1><a class="btn btn_new" href="#">
+              <svg>
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>new senda</a>
+          </div>
+          <div class="b-sep">Sendas</div>
+          <div class="b-page">
+            <div class="b-page__frame">
+              <div class="b-barTop">
+                <div class="b-search">
+                  <input class="inp" type="text" placeholder="Search by recipient, company, campaign">
+                  <button>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="b-filterBtn"><span>Expand the filter</span>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#filter"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="b-filter">
+                <div class="b-filter__status">
+                  <input class="inp" type="text" placeholder="Status">
+                </div>
+                <div class="b-filter__date">
+                  <div>
+                    <input class="inp" type="text" placeholder="02/08/20">
+                  </div>
+                  <div>
+                    <input class="inp" type="text" placeholder="10/08/20">
+                  </div>
+                </div>
+              </div>
+              <div class="b-table">
+                <div class="b-table__bar">
+                  <ul class="el-tabs">
+                    <li>Active</li>
+                    <li class="is-active">Delivered</li>
+                    <li>All</li>
+                  </ul>
+                  <ul class="el-view">
+                    <li class="is-active"><a href="#">25</a></li>
+                    <li><a href="#">50</a></li>
+                  </ul>
+                </div>
+                <div class="b-table__box">
+                  <div class="table-th">
+                    <table>
+                      <tr>
+                        <th>Senda type</th>
+                        <th>No / Date</th>
+                        <th>Recipient</th>
+                        <th>Cost</th>
+                        <th>Status</th>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="table-td" data-simplebar>
+                    <table>
+                      <tr>
+                        <td><img src="img/ico-1.svg" alt=""><span><a href="#">1758404858</a></span></td>
+                        <td><a href="#">2312321343</a><br>Oct 20</td>
+                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
+                        <td>$100,000</td>
+                        <td><span class="el-status el-status_green">Delivered</span></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/ico-2.svg" alt=""></td>
+                        <td><a href="#">2312321343</a><br>Oct 20</td>
+                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
+                        <td>$100,000</td>
+                        <td><span class="el-status el-status_blue">Delivering</span></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/ico-1.svg" alt=""><span><a href="#">1758404858</a></span></td>
+                        <td><a href="#">2312321343</a><br>Oct 20</td>
+                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
+                        <td>$100,000</td>
+                        <td><span class="el-status el-status_orange">Need Attention</span></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/ico-2.svg" alt=""></td>
+                        <td><a href="#">2312321343</a><br>Oct 20</td>
+                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
+                        <td>$100,000</td>
+                        <td><span class="el-status el-status_orange">Awaiting Action</span></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/ico-1.svg" alt=""><span><a href="#">1758404858</a></span></td>
+                        <td><a href="#">2312321343</a><br>Oct 20</td>
+                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
+                        <td>$100,000</td>
+                        <td><span class="el-status el-status_green">Delivered</span></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/ico-2.svg" alt=""></td>
+                        <td><a href="#">2312321343</a><br>Oct 20</td>
+                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
+                        <td>$100,000</td>
+                        <td><span class="el-status el-status_blue">Delivering</span></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/ico-1.svg" alt=""><span><a href="#">1758404858</a></span></td>
+                        <td><a href="#">2312321343</a><br>Oct 20</td>
+                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
+                        <td>$100,000</td>
+                        <td><span class="el-status el-status_orange">Need Attention</span></td>
+                      </tr>
+                      <tr>
+                        <td><img src="img/ico-2.svg" alt=""></td>
+                        <td><a href="#">2312321343</a><br>Oct 20</td>
+                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
+                        <td>$100,000</td>
+                        <td><span class="el-status el-status_orange">Awaiting Action</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="b-page__aside">
+              <div class="b-list" data-simplebar>
+                <div class="b-list__item">
+                  <div class="b-list__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#delivery"></use>
+                    </svg>
+                  </div>
+                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
+                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
+                </div>
+                <div class="b-list__item">
+                  <div class="b-list__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning"></use>
+                    </svg>
+                  </div>
+                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
+                  <div class="b-list__item__title"><a href="#">Senda was sucsefully delivered to John</a></div>
+                </div>
+                <div class="b-list__item">
+                  <div class="b-list__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#ok"></use>
+                    </svg>
+                  </div>
+                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
+                  <div class="b-list__item__title"><a href="#">Cannot reach the Recepient pls confirim phone NO</a></div>
+                </div>
+                <div class="b-list__item">
+                  <div class="b-list__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#delivery"></use>
+                    </svg>
+                  </div>
+                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
+                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
+                </div>
+                <div class="b-list__item">
+                  <div class="b-list__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#warning"></use>
+                    </svg>
+                  </div>
+                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
+                  <div class="b-list__item__title"><a href="#">Senda was sucsefully delivered to John</a></div>
+                </div>
+                <div class="b-list__item">
+                  <div class="b-list__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#ok"></use>
+                    </svg>
+                  </div>
+                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
+                  <div class="b-list__item__title"><a href="#">Cannot reach the Recepient pls confirim phone NO</a></div>
+                </div>
+                <div class="b-list__item">
+                  <div class="b-list__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#delivery"></use>
+                    </svg>
+                  </div>
+                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
+                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="s-footer">
+        <div class="container">
+          <div class="copyr">Copyright 2020 | Privacy</div>
+          <div class="social">
+            <ul>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-fb"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-in"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-pn"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-tm"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-ins"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-yt"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="terms"><a href="#">Terms of Service</a></div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

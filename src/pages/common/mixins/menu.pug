@@ -1,0 +1,10 @@
+mixin menu(items, active)
+    .b-menu
+        ul
+            each value, item in items
+                if (item == active)
+                    li.is-active
+                        a(href="#" title=value)= value
+                else
+                    li
+                        a(href="#" title=value)= value

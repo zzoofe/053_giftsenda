@@ -1,0 +1,100 @@
+.form {
+    &-subsc {
+        max-width: 250px;
+        display: block;
+    }
+}
+
+select {
+    width: 100%;
+}
+.select2 {
+    &-container {
+        display: block;
+        &--default {
+            .select2-selection {
+                &--single {
+                    border-radius: 0;
+                    border: 1px solid rgba(91, 109, 123, 0.2);
+                    background: #FFFFFF;
+                    height: 46px;
+                    outline: none;
+                    .select2-selection {
+                        &__rendered {
+                            line-height: 44px;
+                            font-size: 14px;
+                            padding-left: 15px;
+                            padding-right: 40px;
+                            font-weight: 500;
+                            font-size: 14px;
+                            color: $cl-black;
+                            @include media-sm {
+                                padding-right: 30px;
+                            }
+                        }
+                        &__arrow {
+                            height: 44px;
+                            width: 31px;
+                            @include media-sm {
+                                width: 24px;
+                            }
+                            b {
+                                width: 11px;
+                                height: 6px;
+                                left: 0;
+                                top: 50%;
+                                margin: -3px 0 0 0;
+                                background: url(../img/arw-sel.svg) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-dropdown {
+        border: 1px solid rgba(91, 109, 123, 0.7);
+        background: #FFFFFF;
+        border-radius: 0;
+    }
+    &-results {
+        &__options {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: $cl-black;
+        }
+    }
+}
+
+.inp {
+    height: 40px;
+    border: 0;
+    line-height: 40px;
+    padding: 0 17px;
+    font-size: 14px;
+    font-weight: 300;
+    background: $cl-white;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    color: #8F9BB3;
+
+    &::placeholder {
+        color: #8F9BB3;
+    }
+
+    &_subsc {
+        padding: 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        height: 38px;
+        line-height: 37px;
+        width: 100%;
+        display: block;
+        letter-spacing: 0.4px;
+        margin-bottom: 17px;
+    }
+}

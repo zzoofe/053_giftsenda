@@ -1,0 +1,41 @@
+@mixin media-xl {
+
+    @media (max-width: $mediaXl) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+
+    @media (max-width: $mediaLg) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+
+    @media (max-width: $mediaSm) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+
+    @media (max-width: $mediaTablet) {
+        @content;
+    }
+}
+
+@mixin media-mobile {
+
+    @media (max-width: $mediaMobile) {
+        @content;
+    }
+}
+
+@mixin media-custom($width) {
+
+    @media (max-width: $width) {
+        @content;
+    }
+}

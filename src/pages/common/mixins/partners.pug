@@ -1,0 +1,7 @@
+mixin partners(items, name, img)
+    .b-partner
+        each item in items
+            .b-partner__item
+                a.b-partner__link(href="#" title=item.name)
+                    img.b-partner__image(src=item.img alt=item.name)
+                    span.b-partner__title= item.name

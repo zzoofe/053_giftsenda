@@ -1,0 +1,245 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 Sendas
+                a.btn.btn_new(href="#")
+                    +svg("plus")
+                    | new senda
+            .b-sep Sendas
+            .b-page
+                .b-page__frame
+                    .b-barTop
+                        .b-search
+                            input.inp(type="text" placeholder="Search by recipient, company, campaign")
+                            button
+                                +svg("search")
+                        .b-filterBtn
+                            span Expand the filter
+                            +svg("filter")
+                    .b-filter
+                        .b-filter__status
+                            input.inp(type="text" placeholder="Status")
+                        .b-filter__date
+                            div
+                                input.inp(type="text" placeholder="02/08/20")
+                            div
+                                input.inp(type="text" placeholder="10/08/20")
+                    .b-table
+                        .b-table__bar
+                            ul.el-tabs
+                                li Active
+                                li.is-active Delivered
+                                li All
+                            ul.el-view
+                                li.is-active
+                                    a(href="#") 25
+                                li
+                                    a(href="#") 50
+                        .b-table__box
+                            .table-th
+                                table
+                                    tr
+                                        th Senda type
+                                        th No / Date
+                                        th Recipient
+                                        th Cost
+                                        th Status
+                            .table-td(data-simplebar)
+                                table
+                                    tr
+                                        td
+                                            img(src="img/ico-1.svg" alt="")
+                                            span
+                                                a(href="#") 1758404858
+                                        td
+                                            a(href="#") 2312321343
+                                            br
+                                            | Oct 20
+                                        td.text-l
+                                            | Ivanov Andrei Kirillovish
+                                            br
+                                            | Russia
+                                            br
+                                            a(href="#") NY 2323 Campaign
+                                        td $100,000
+                                        td
+                                            span.el-status.el-status_green Delivered
+                                    tr
+                                        td
+                                            img(src="img/ico-2.svg" alt="")
+                                        td
+                                            a(href="#") 2312321343
+                                            br
+                                            | Oct 20
+                                        td.text-l
+                                            | Ivanov Andrei Kirillovish
+                                            br
+                                            | Russia
+                                            br
+                                            a(href="#") NY 2323 Campaign
+                                        td $100,000
+                                        td
+                                            span.el-status.el-status_blue Delivering
+                                    tr
+                                        td
+                                            img(src="img/ico-1.svg" alt="")
+                                            span
+                                                a(href="#") 1758404858
+                                        td
+                                            a(href="#") 2312321343
+                                            br
+                                            | Oct 20
+                                        td.text-l
+                                            | Ivanov Andrei Kirillovish
+                                            br
+                                            | Russia
+                                            br
+                                            a(href="#") NY 2323 Campaign
+                                        td $100,000
+                                        td
+                                            span.el-status.el-status_orange Need Attention
+                                    tr
+                                        td
+                                            img(src="img/ico-2.svg" alt="")
+                                        td
+                                            a(href="#") 2312321343
+                                            br
+                                            | Oct 20
+                                        td.text-l
+                                            | Ivanov Andrei Kirillovish
+                                            br
+                                            | Russia
+                                            br
+                                            a(href="#") NY 2323 Campaign
+                                        td $100,000
+                                        td
+                                            span.el-status.el-status_orange Awaiting Action
+                                    tr
+                                        td
+                                            img(src="img/ico-1.svg" alt="")
+                                            span
+                                                a(href="#") 1758404858
+                                        td
+                                            a(href="#") 2312321343
+                                            br
+                                            | Oct 20
+                                        td.text-l
+                                            | Ivanov Andrei Kirillovish
+                                            br
+                                            | Russia
+                                            br
+                                            a(href="#") NY 2323 Campaign
+                                        td $100,000
+                                        td
+                                            span.el-status.el-status_green Delivered
+                                    tr
+                                        td
+                                            img(src="img/ico-2.svg" alt="")
+                                        td
+                                            a(href="#") 2312321343
+                                            br
+                                            | Oct 20
+                                        td.text-l
+                                            | Ivanov Andrei Kirillovish
+                                            br
+                                            | Russia
+                                            br
+                                            a(href="#") NY 2323 Campaign
+                                        td $100,000
+                                        td
+                                            span.el-status.el-status_blue Delivering
+                                    tr
+                                        td
+                                            img(src="img/ico-1.svg" alt="")
+                                            span
+                                                a(href="#") 1758404858
+                                        td
+                                            a(href="#") 2312321343
+                                            br
+                                            | Oct 20
+                                        td.text-l
+                                            | Ivanov Andrei Kirillovish
+                                            br
+                                            | Russia
+                                            br
+                                            a(href="#") NY 2323 Campaign
+                                        td $100,000
+                                        td
+                                            span.el-status.el-status_orange Need Attention
+                                    tr
+                                        td
+                                            img(src="img/ico-2.svg" alt="")
+                                        td
+                                            a(href="#") 2312321343
+                                            br
+                                            | Oct 20
+                                        td.text-l
+                                            | Ivanov Andrei Kirillovish
+                                            br
+                                            | Russia
+                                            br
+                                            a(href="#") NY 2323 Campaign
+                                        td $100,000
+                                        td
+                                            span.el-status.el-status_orange Awaiting Action
+                .b-page__aside
+                    .b-list(data-simplebar)
+                        .b-list__item
+                            .b-list__item__icon
+                                +svg("delivery")
+                            .b-list__item__date
+                                span 1758404858
+                                span Oct 20, 2020
+                            .b-list__item__title
+                                a(href="#") NY Partner Gifitng Campaign sendas were delivered succesfully
+                        .b-list__item
+                            .b-list__item__icon
+                                +svg("warning")
+                            .b-list__item__date
+                                span 1758404858
+                                span Oct 20, 2020
+                            .b-list__item__title
+                                a(href="#") Senda was sucsefully delivered to John
+                        .b-list__item
+                            .b-list__item__icon
+                                +svg("ok")
+                            .b-list__item__date
+                                span 1758404858
+                                span Oct 20, 2020
+                            .b-list__item__title
+                                a(href="#") Cannot reach the Recepient pls confirim phone NO
+                        .b-list__item
+                            .b-list__item__icon
+                                +svg("delivery")
+                            .b-list__item__date
+                                span 1758404858
+                                span Oct 20, 2020
+                            .b-list__item__title
+                                a(href="#") NY Partner Gifitng Campaign sendas were delivered succesfully
+                        .b-list__item
+                            .b-list__item__icon
+                                +svg("warning")
+                            .b-list__item__date
+                                span 1758404858
+                                span Oct 20, 2020
+                            .b-list__item__title
+                                a(href="#") Senda was sucsefully delivered to John
+                        .b-list__item
+                            .b-list__item__icon
+                                +svg("ok")
+                            .b-list__item__date
+                                span 1758404858
+                                span Oct 20, 2020
+                            .b-list__item__title
+                                a(href="#") Cannot reach the Recepient pls confirim phone NO
+                        .b-list__item
+                            .b-list__item__icon
+                                +svg("delivery")
+                            .b-list__item__date
+                                span 1758404858
+                                span Oct 20, 2020
+                            .b-list__item__title
+                                a(href="#") NY Partner Gifitng Campaign sendas were delivered succesfully

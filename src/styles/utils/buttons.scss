@@ -1,0 +1,36 @@
+.btn {
+    height: 44px;
+    padding: 0 26px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $cl-white;
+    border: 0;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: all $time ease;
+    background: $cl-blue;
+    border-radius: 5px;
+
+    &:hover {
+        background: #0E99CF;
+    }
+
+    &:active {
+
+    }
+
+    &_new {
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 7px;
+        }
+    }
+
+}
