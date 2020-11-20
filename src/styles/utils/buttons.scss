@@ -33,4 +33,35 @@
         }
     }
 
+    &_send {
+        height: 30px;
+        border-bottom: 2px solid #0B587E;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: none;
+        color: #FFFFFF;
+        background: #006699;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+    }
+
+    &_more {
+        background: #0B587E;
+        max-width: 532px;
+        display: flex;
+        margin: 0 auto;
+        height: 31px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
 }

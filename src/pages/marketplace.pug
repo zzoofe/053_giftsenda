@@ -1,0 +1,238 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 Marketplace
+                a.btn.btn_new(href="#")
+                    +svg("plus")
+                    | new senda
+            .b-sep Marketplace
+            .b-search.b-search_w4
+                input.inp(type="text" placeholder="Search price")
+                button
+                    +svg("search")
+            #app.b-catalog
+                aside.b-catalog__bar
+                    .b-box
+                        input.inp(type="text" placeholder="Сountry")
+                    .b-filter-box
+                        .b-filter-box__item
+                            .b-filter-box__title
+                                span Type
+                                +svg("arw")
+                            .b-filter-box__frame
+                                ul
+                                    li
+                                        input#rad11.form-radio(type="radio" name="rad1")
+                                        label(for="rad11") Chocolate (23)
+                                    li
+                                        input#rad12.form-radio(type="radio" name="rad1")
+                                        label(for="rad12") Coffee (11)
+                                    li
+                                        input#rad13.form-radio(type="radio" name="rad1")
+                                        label(for="rad13") Tea (34)
+                                    li
+                                        input#rad14.form-radio(type="radio" name="rad1")
+                                        label(for="rad14") Coffee (55)
+                        .b-filter-box__item
+                            .b-filter-box__title
+                                span Price
+                                +svg("arw")
+                            .b-filter-box__frame
+                                ul
+                                    li
+                                        input#rad21.form-radio(type="radio" name="rad2")
+                                        label(for="rad21") All ranges
+                                    li
+                                        input#rad22.form-radio(type="radio" name="rad2")
+                                        label(for="rad22") $30 - 50
+                                    li
+                                        input#rad23.form-radio(type="radio" name="rad2")
+                                        label(for="rad23") $50 - 75
+                                    li
+                                        input#rad24.form-radio(type="radio" name="rad2")
+                                        label(for="rad24") $75 - 100
+                                    li
+                                        input#rad25.form-radio(type="radio" name="rad2")
+                                        label(for="rad25") $200
+                                    li
+                                        input#rad26.form-radio(type="radio" name="rad2")
+                                        label(for="rad26")
+                                            .form-range
+                                                div
+                                                    input.inp(type="text" placeholder="min")
+                                                div to
+                                                div
+                                                    input.inp(type="text" placeholder="min")
+                        .b-filter-box__item
+                            .b-filter-box__title
+                                span Item types
+                                +svg("arw")
+                            .b-filter-box__frame
+                                ul
+                                    li
+                                        input#rad31.form-radio(type="radio" name="rad3")
+                                        label(for="rad31") Chocolate (23)
+                                    li
+                                        input#rad32.form-radio(type="radio" name="rad3")
+                                        label(for="rad32") Coffee (11)
+                        .b-filter-box__item
+                            .b-filter-box__title
+                                span Marks
+                                +svg("arw")
+                            .b-filter-box__frame
+                                ul
+                                    li
+                                        input#rad41.form-check(type="checkbox" name="rad4")
+                                        label(for="rad41") Vegan (23)
+                                    li
+                                        input#rad42.form-check(type="checkbox" name="rad4")
+                                        label(for="rad42") Kids (43)
+                                    li
+                                        input#rad43.form-check(type="checkbox" name="rad4")
+                                        label(for="rad43") Vegan (23)
+                                    li
+                                        input#rad44.form-check(type="checkbox" name="rad4")
+                                        label(for="rad44") Kids (43)
+                .b-catalog__content
+                    .b-catalog__topBar
+                        .b-tab
+                            .b-tab__item
+                                a(href="#") Popular
+                            .b-tab__item
+                                a.is-active(href="#") Discount
+                            .b-tab__item
+                                a(href="#") Stock
+                            .b-tab__item
+                                a(href="#") Novelties
+                        .b-sort
+                            input.inp(type="text" placeholder="Price")
+                    .b-catalog__frame
+                        .b-catalog__list
+                            .b-product
+                                .b-product__info
+                                    .b-product__discount Discount
+                                    .b-product__price $89.32
+                                    .b-product__id ID: 002320
+                                .b-product__image
+                                    a(href="#")
+                                        img(src="img/img-1.jpg" alt="")
+                                .b-product__desc
+                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    p
+                                        | Rock Falls Vineyards Sauvignon (750ml)
+                                        br
+                                        | Vino e Formaggio Smoked Spread (3.5oz)
+                                .b-product__send
+                                    a.btn_send(href="#") Send now
+                            .b-product
+                                .b-product__info
+                                    .b-product__price $89.32
+                                    .b-product__id ID: 002320
+                                .b-product__image
+                                    a(href="#")
+                                        img(src="img/img-1.jpg" alt="")
+                                .b-product__desc
+                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    p
+                                        | Rock Falls Vineyards Sauvignon (750ml)
+                                        br
+                                        | Vino e Formaggio Smoked Spread (3.5oz)
+                                .b-product__send
+                                    a.btn_send(href="#") Send now
+                            .b-product
+                                .b-product__info
+                                    .b-product__price $89.32
+                                    .b-product__id ID: 002320
+                                .b-product__image
+                                    a(href="#")
+                                        img(src="img/img-1.jpg" alt="")
+                                .b-product__desc
+                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    p
+                                        | Rock Falls Vineyards Sauvignon (750ml)
+                                        br
+                                        | Vino e Formaggio Smoked Spread (3.5oz)
+                                .b-product__send
+                                    a.btn_send(href="#") Send now
+                            .b-product
+                                .b-product__info
+                                    .b-product__price $89.32
+                                    .b-product__id ID: 002320
+                                .b-product__image
+                                    a(href="#")
+                                        img(src="img/img-1.jpg" alt="")
+                                .b-product__desc
+                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    p
+                                        | Rock Falls Vineyards Sauvignon (750ml)
+                                        br
+                                        | Vino e Formaggio Smoked Spread (3.5oz)
+                                .b-product__send
+                                    a.btn_send(href="#") Send now
+
+                            .b-product
+                                .b-product__info
+                                    .b-product__discount Discount
+                                    .b-product__price $89.32
+                                    .b-product__id ID: 002320
+                                .b-product__image
+                                    a(href="#")
+                                        img(src="img/img-1.jpg" alt="")
+                                .b-product__desc
+                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    p
+                                        | Rock Falls Vineyards Sauvignon (750ml)
+                                        br
+                                        | Vino e Formaggio Smoked Spread (3.5oz)
+                                .b-product__send
+                                    a.btn_send(href="#") Send now
+                            .b-product
+                                .b-product__info
+                                    .b-product__price $89.32
+                                    .b-product__id ID: 002320
+                                .b-product__image
+                                    a(href="#")
+                                        img(src="img/img-1.jpg" alt="")
+                                .b-product__desc
+                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    p
+                                        | Rock Falls Vineyards Sauvignon (750ml)
+                                        br
+                                        | Vino e Formaggio Smoked Spread (3.5oz)
+                                .b-product__send
+                                    a.btn_send(href="#") Send now
+                            .b-product
+                                .b-product__info
+                                    .b-product__price $89.32
+                                    .b-product__id ID: 002320
+                                .b-product__image
+                                    a(href="#")
+                                        img(src="img/img-1.jpg" alt="")
+                                .b-product__desc
+                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    p
+                                        | Rock Falls Vineyards Sauvignon (750ml)
+                                        br
+                                        | Vino e Formaggio Smoked Spread (3.5oz)
+                                .b-product__send
+                                    a.btn_send(href="#") Send now
+                            .b-product
+                                .b-product__info
+                                    .b-product__price $89.32
+                                    .b-product__id ID: 002320
+                                .b-product__image
+                                    a(href="#")
+                                        img(src="img/img-1.jpg" alt="")
+                                .b-product__desc
+                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    p
+                                        | Rock Falls Vineyards Sauvignon (750ml)
+                                        br
+                                        | Vino e Formaggio Smoked Spread (3.5oz)
+                                .b-product__send
+                                    a.btn_send(href="#") Send now
+                        .b-more
+                            a.btn_more(href="#") Upload more

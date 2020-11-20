@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GiftSenda</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="s-header">
+        <div class="container">
+          <div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
+          <div class="balance"><a href="#">Balance:  3030 у.е</a></div>
+          <div class="user">
+            <div class="user__image"><a href="#"><img src="img/user.jpg" alt=""></a></div>
+            <div class="user__info">
+              <div class="user__info__name"><a href="#">Eric Brain</a></div>
+              <div class="user__info__status">Manager user</div>
+              <div class="user__info__reit">
+                <svg>
+                  <use xlink:href="img/sprite.svg#reit"></use>
+                </svg><span>867</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="s-navBar">
+        <div class="container">
+          <div class="menu">
+            <ul>
+              <li class="is-active"><a href="#">Dashboard</a></li>
+              <li><a href="#">Sendas</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Contacts</a></li>
+              <li><a href="#">Reports</a></li>
+            </ul>
+          </div>
+          <div class="support"><a href="">
+              <svg>
+                <use xlink:href="img/sprite.svg#support"></use>
+              </svg><span>Support</span></a></div>
+          <div class="setup"><a href="">
+              <svg>
+                <use xlink:href="img/sprite.svg#setup"></use>
+              </svg><span>Setup</span></a>
+            <div class="setup__nav">
+              <ul>
+                <li><a href="#">Users & Teams</a></li>
+                <li><a href="#">Branding</a></li>
+                <li><a href="#">Message Templates</a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#exit"></use>
+                    </svg><span>Exit</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="s-main">
+        <div class="container">
+          <div class="b-title">
+            <h1>Marketplace</h1><a class="btn btn_new" href="#">
+              <svg>
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>new senda</a>
+          </div>
+          <div class="b-sep">Marketplace</div>
+          <div class="b-search b-search_w4">
+            <input class="inp" type="text" placeholder="Search price">
+            <button>
+              <svg>
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="b-catalog" id="app">
+            <aside class="b-catalog__bar">
+              <div class="b-box">
+                <input class="inp" type="text" placeholder="Сountry">
+              </div>
+              <div class="b-filter-box">
+                <div class="b-filter-box__item">
+                  <div class="b-filter-box__title"><span>Type</span>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#arw"></use>
+                    </svg>
+                  </div>
+                  <div class="b-filter-box__frame">
+                    <ul>
+                      <li>
+                        <input class="form-radio" id="rad11" type="radio" name="rad1">
+                        <label for="rad11">Chocolate (23)</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad12" type="radio" name="rad1">
+                        <label for="rad12">Coffee (11)</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad13" type="radio" name="rad1">
+                        <label for="rad13">Tea (34)</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad14" type="radio" name="rad1">
+                        <label for="rad14">Coffee (55)</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="b-filter-box__item">
+                  <div class="b-filter-box__title"><span>Price</span>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#arw"></use>
+                    </svg>
+                  </div>
+                  <div class="b-filter-box__frame">
+                    <ul>
+                      <li>
+                        <input class="form-radio" id="rad21" type="radio" name="rad2">
+                        <label for="rad21">All ranges</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad22" type="radio" name="rad2">
+                        <label for="rad22">$30 - 50</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad23" type="radio" name="rad2">
+                        <label for="rad23">$50 - 75</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad24" type="radio" name="rad2">
+                        <label for="rad24">$75 - 100</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad25" type="radio" name="rad2">
+                        <label for="rad25">$200</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad26" type="radio" name="rad2">
+                        <label for="rad26">
+                          <div class="form-range">
+                            <div>
+                              <input class="inp" type="text" placeholder="min">
+                            </div>
+                            <div>to</div>
+                            <div>
+                              <input class="inp" type="text" placeholder="min">
+                            </div>
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="b-filter-box__item">
+                  <div class="b-filter-box__title"><span>Item types</span>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#arw"></use>
+                    </svg>
+                  </div>
+                  <div class="b-filter-box__frame">
+                    <ul>
+                      <li>
+                        <input class="form-radio" id="rad31" type="radio" name="rad3">
+                        <label for="rad31">Chocolate (23)</label>
+                      </li>
+                      <li>
+                        <input class="form-radio" id="rad32" type="radio" name="rad3">
+                        <label for="rad32">Coffee (11)</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="b-filter-box__item">
+                  <div class="b-filter-box__title"><span>Marks</span>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#arw"></use>
+                    </svg>
+                  </div>
+                  <div class="b-filter-box__frame">
+                    <ul>
+                      <li>
+                        <input class="form-check" id="rad41" type="checkbox" name="rad4">
+                        <label for="rad41">Vegan (23)</label>
+                      </li>
+                      <li>
+                        <input class="form-check" id="rad42" type="checkbox" name="rad4">
+                        <label for="rad42">Kids (43)</label>
+                      </li>
+                      <li>
+                        <input class="form-check" id="rad43" type="checkbox" name="rad4">
+                        <label for="rad43">Vegan (23)</label>
+                      </li>
+                      <li>
+                        <input class="form-check" id="rad44" type="checkbox" name="rad4">
+                        <label for="rad44">Kids (43)</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <div class="b-catalog__content">
+              <div class="b-catalog__topBar">
+                <div class="b-tab">
+                  <div class="b-tab__item"><a href="#">Popular</a></div>
+                  <div class="b-tab__item"><a class="is-active" href="#">Discount</a></div>
+                  <div class="b-tab__item"><a href="#">Stock</a></div>
+                  <div class="b-tab__item"><a href="#">Novelties</a></div>
+                </div>
+                <div class="b-sort">
+                  <input class="inp" type="text" placeholder="Price">
+                </div>
+              </div>
+              <div class="b-catalog__frame">
+                <div class="b-catalog__list">
+                  <div class="b-product">
+                    <div class="b-product__info">
+                      <div class="b-product__discount">Discount</div>
+                      <div class="b-product__price">$89.32</div>
+                      <div class="b-product__id">ID: 002320</div>
+                    </div>
+                    <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
+                    <div class="b-product__desc">
+                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
+                    </div>
+                    <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
+                  </div>
+                  <div class="b-product">
+                    <div class="b-product__info">
+                      <div class="b-product__price">$89.32</div>
+                      <div class="b-product__id">ID: 002320</div>
+                    </div>
+                    <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
+                    <div class="b-product__desc">
+                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
+                    </div>
+                    <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
+                  </div>
+                  <div class="b-product">
+                    <div class="b-product__info">
+                      <div class="b-product__price">$89.32</div>
+                      <div class="b-product__id">ID: 002320</div>
+                    </div>
+                    <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
+                    <div class="b-product__desc">
+                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
+                    </div>
+                    <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
+                  </div>
+                  <div class="b-product">
+                    <div class="b-product__info">
+                      <div class="b-product__price">$89.32</div>
+                      <div class="b-product__id">ID: 002320</div>
+                    </div>
+                    <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
+                    <div class="b-product__desc">
+                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
+                    </div>
+                    <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
+                  </div>
+                  <div class="b-product">
+                    <div class="b-product__info">
+                      <div class="b-product__discount">Discount</div>
+                      <div class="b-product__price">$89.32</div>
+                      <div class="b-product__id">ID: 002320</div>
+                    </div>
+                    <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
+                    <div class="b-product__desc">
+                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
+                    </div>
+                    <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
+                  </div>
+                  <div class="b-product">
+                    <div class="b-product__info">
+                      <div class="b-product__price">$89.32</div>
+                      <div class="b-product__id">ID: 002320</div>
+                    </div>
+                    <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
+                    <div class="b-product__desc">
+                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
+                    </div>
+                    <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
+                  </div>
+                  <div class="b-product">
+                    <div class="b-product__info">
+                      <div class="b-product__price">$89.32</div>
+                      <div class="b-product__id">ID: 002320</div>
+                    </div>
+                    <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
+                    <div class="b-product__desc">
+                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
+                    </div>
+                    <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
+                  </div>
+                  <div class="b-product">
+                    <div class="b-product__info">
+                      <div class="b-product__price">$89.32</div>
+                      <div class="b-product__id">ID: 002320</div>
+                    </div>
+                    <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
+                    <div class="b-product__desc">
+                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
+                    </div>
+                    <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
+                  </div>
+                </div>
+                <div class="b-more"><a class="btn_more" href="#">Upload more</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="s-footer">
+        <div class="container">
+          <div class="copyr">Copyright 2020 | Privacy</div>
+          <div class="social">
+            <ul>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-fb"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-in"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-pn"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-tm"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-ins"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-yt"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="terms"><a href="#">Terms of Service</a></div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

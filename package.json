@@ -71,7 +71,8 @@
   "dependencies": {
     "jquery": "^3.5.0",
     "normalize.css": "^8.0.1",
-    "simplebar": "^5.3.0"
+    "simplebar": "^5.3.0",
+    "vue": "^2.6.12"
   },
   "editorconfig-cli": [
     "*.json",

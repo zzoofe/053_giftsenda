@@ -16,6 +16,11 @@ module.exports = function script() {
       output: {
         filename: '[name].min.js',
       },
+        resolve: {
+            alias: {
+                vue: 'vue/dist/vue.js'
+            },
+        },
       module: {
         rules: [
           {
