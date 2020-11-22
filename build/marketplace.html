@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>GiftSenda</title>
+    <link href="img/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="css/style.min.css">
@@ -77,10 +78,30 @@
               </svg>
             </button>
           </div>
-          <div class="b-catalog" id="app">
+          <div class="b-catalog">
             <aside class="b-catalog__bar">
-              <div class="b-box">
-                <input class="inp" type="text" placeholder="Сountry">
+              <div class="b-box custom-select">
+                <select class="js-choice">
+                  <option placeholder>Сountry</option>
+                  <option value="1">Delivered</option>
+                  <option value="2">Need Attention</option>
+                  <option value="3">Awaiting Action</option>
+                  <option value="4">Delivered</option>
+                  <option value="5">Need Attention</option>
+                  <option value="6">Awaiting Action</option>
+                  <option value="7">Delivered</option>
+                  <option value="8">Need Attention</option>
+                  <option value="9">Awaiting Action</option>
+                  <option value="10">Delivered</option>
+                  <option value="11">Need Attention</option>
+                  <option value="12">Awaiting Action</option>
+                  <option value="13">Delivered</option>
+                  <option value="14">Need Attention</option>
+                  <option value="15">Awaiting Action</option>
+                  <option value="16">Delivered</option>
+                  <option value="17">Need Attention</option>
+                  <option value="18">Awaiting Action</option>
+                </select>
               </div>
               <div class="b-filter-box">
                 <div class="b-filter-box__item">
@@ -206,13 +227,30 @@
             <div class="b-catalog__content">
               <div class="b-catalog__topBar">
                 <div class="b-tab">
-                  <div class="b-tab__item"><a href="#">Popular</a></div>
-                  <div class="b-tab__item"><a class="is-active" href="#">Discount</a></div>
-                  <div class="b-tab__item"><a href="#">Stock</a></div>
-                  <div class="b-tab__item"><a href="#">Novelties</a></div>
+                  <div class="b-tab__item">
+                    <input id="tb1" type="checkbox">
+                    <label for="tb1">Popular</label>
+                  </div>
+                  <div class="b-tab__item">
+                    <input id="tb2" type="checkbox">
+                    <label for="tb2">Discount</label>
+                  </div>
+                  <div class="b-tab__item">
+                    <input id="tb3" type="checkbox">
+                    <label for="tb3">Stock</label>
+                  </div>
+                  <div class="b-tab__item">
+                    <input id="tb4" type="checkbox">
+                    <label for="tb4">Novelties</label>
+                  </div>
                 </div>
                 <div class="b-sort">
-                  <input class="inp" type="text" placeholder="Price">
+                  <select class="js-choice">
+                    <option placeholder>Price</option>
+                    <option value="1">Delivered</option>
+                    <option value="2">Need Attention</option>
+                    <option value="3">Awaiting Action</option>
+                  </select>
                 </div>
               </div>
               <div class="b-catalog__frame">
@@ -225,7 +263,7 @@
                     </div>
                     <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
                     <div class="b-product__desc">
-                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <h5><a href="#">CALIFORNIA CABERNET GIFT BASKET</a></h5>
                       <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
                     </div>
                     <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
@@ -237,7 +275,7 @@
                     </div>
                     <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
                     <div class="b-product__desc">
-                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <h5><a href="#">CALIFORNIA CABERNET GIFT BASKET</a></h5>
                       <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
                     </div>
                     <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
@@ -249,7 +287,7 @@
                     </div>
                     <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
                     <div class="b-product__desc">
-                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <h5><a href="#">CALIFORNIA CABERNET GIFT BASKET</a></h5>
                       <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
                     </div>
                     <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
@@ -261,7 +299,7 @@
                     </div>
                     <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
                     <div class="b-product__desc">
-                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <h5><a href="#">CALIFORNIA CABERNET GIFT BASKET</a></h5>
                       <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
                     </div>
                     <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
@@ -274,7 +312,7 @@
                     </div>
                     <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
                     <div class="b-product__desc">
-                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <h5><a href="#">CALIFORNIA CABERNET GIFT BASKET</a></h5>
                       <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
                     </div>
                     <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
@@ -286,7 +324,7 @@
                     </div>
                     <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
                     <div class="b-product__desc">
-                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <h5><a href="#">CALIFORNIA CABERNET GIFT BASKET</a></h5>
                       <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
                     </div>
                     <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
@@ -298,7 +336,7 @@
                     </div>
                     <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
                     <div class="b-product__desc">
-                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <h5><a href="#">CALIFORNIA CABERNET GIFT BASKET</a></h5>
                       <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
                     </div>
                     <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>
@@ -310,7 +348,7 @@
                     </div>
                     <div class="b-product__image"><a href="#"><img src="img/img-1.jpg" alt=""></a></div>
                     <div class="b-product__desc">
-                      <h5>CALIFORNIA CABERNET GIFT BASKET</h5>
+                      <h5><a href="#">CALIFORNIA CABERNET GIFT BASKET</a></h5>
                       <p>Rock Falls Vineyards Sauvignon (750ml)<br>Vino e Formaggio Smoked Spread (3.5oz)</p>
                     </div>
                     <div class="b-product__send"><a class="btn_send" href="#">Send now</a></div>

@@ -13,10 +13,29 @@ block content
                 input.inp(type="text" placeholder="Search price")
                 button
                     +svg("search")
-            #app.b-catalog
+            .b-catalog
                 aside.b-catalog__bar
-                    .b-box
-                        input.inp(type="text" placeholder="Сountry")
+                    .b-box.custom-select
+                        select.js-choice
+                            option(placeholder) Сountry
+                            option(value="1") Delivered
+                            option(value="2") Need Attention
+                            option(value="3") Awaiting Action
+                            option(value="4") Delivered
+                            option(value="5") Need Attention
+                            option(value="6") Awaiting Action
+                            option(value="7") Delivered
+                            option(value="8") Need Attention
+                            option(value="9") Awaiting Action
+                            option(value="10") Delivered
+                            option(value="11") Need Attention
+                            option(value="12") Awaiting Action
+                            option(value="13") Delivered
+                            option(value="14") Need Attention
+                            option(value="15") Awaiting Action
+                            option(value="16") Delivered
+                            option(value="17") Need Attention
+                            option(value="18") Awaiting Action
                     .b-filter-box
                         .b-filter-box__item
                             .b-filter-box__title
@@ -100,15 +119,23 @@ block content
                     .b-catalog__topBar
                         .b-tab
                             .b-tab__item
-                                a(href="#") Popular
+                                input#tb1(type="checkbox")
+                                label(for="tb1") Popular
                             .b-tab__item
-                                a.is-active(href="#") Discount
+                                input#tb2(type="checkbox")
+                                label(for="tb2") Discount
                             .b-tab__item
-                                a(href="#") Stock
+                                input#tb3(type="checkbox")
+                                label(for="tb3") Stock
                             .b-tab__item
-                                a(href="#") Novelties
+                                input#tb4(type="checkbox")
+                                label(for="tb4") Novelties
                         .b-sort
-                            input.inp(type="text" placeholder="Price")
+                            select.js-choice
+                                option(placeholder) Price
+                                option(value="1") Delivered
+                                option(value="2") Need Attention
+                                option(value="3") Awaiting Action
                     .b-catalog__frame
                         .b-catalog__list
                             .b-product
@@ -120,7 +147,8 @@ block content
                                     a(href="#")
                                         img(src="img/img-1.jpg" alt="")
                                 .b-product__desc
-                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    h5
+                                        a(href="#") CALIFORNIA CABERNET GIFT BASKET
                                     p
                                         | Rock Falls Vineyards Sauvignon (750ml)
                                         br
@@ -135,7 +163,8 @@ block content
                                     a(href="#")
                                         img(src="img/img-1.jpg" alt="")
                                 .b-product__desc
-                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    h5
+                                        a(href="#") CALIFORNIA CABERNET GIFT BASKET
                                     p
                                         | Rock Falls Vineyards Sauvignon (750ml)
                                         br
@@ -150,7 +179,8 @@ block content
                                     a(href="#")
                                         img(src="img/img-1.jpg" alt="")
                                 .b-product__desc
-                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    h5
+                                        a(href="#") CALIFORNIA CABERNET GIFT BASKET
                                     p
                                         | Rock Falls Vineyards Sauvignon (750ml)
                                         br
@@ -165,7 +195,8 @@ block content
                                     a(href="#")
                                         img(src="img/img-1.jpg" alt="")
                                 .b-product__desc
-                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    h5
+                                        a(href="#") CALIFORNIA CABERNET GIFT BASKET
                                     p
                                         | Rock Falls Vineyards Sauvignon (750ml)
                                         br
@@ -182,7 +213,8 @@ block content
                                     a(href="#")
                                         img(src="img/img-1.jpg" alt="")
                                 .b-product__desc
-                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    h5
+                                        a(href="#") CALIFORNIA CABERNET GIFT BASKET
                                     p
                                         | Rock Falls Vineyards Sauvignon (750ml)
                                         br
@@ -197,7 +229,8 @@ block content
                                     a(href="#")
                                         img(src="img/img-1.jpg" alt="")
                                 .b-product__desc
-                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    h5
+                                        a(href="#") CALIFORNIA CABERNET GIFT BASKET
                                     p
                                         | Rock Falls Vineyards Sauvignon (750ml)
                                         br
@@ -212,7 +245,8 @@ block content
                                     a(href="#")
                                         img(src="img/img-1.jpg" alt="")
                                 .b-product__desc
-                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    h5
+                                        a(href="#") CALIFORNIA CABERNET GIFT BASKET
                                     p
                                         | Rock Falls Vineyards Sauvignon (750ml)
                                         br
@@ -227,7 +261,8 @@ block content
                                     a(href="#")
                                         img(src="img/img-1.jpg" alt="")
                                 .b-product__desc
-                                    h5 CALIFORNIA CABERNET GIFT BASKET
+                                    h5
+                                        a(href="#") CALIFORNIA CABERNET GIFT BASKET
                                     p
                                         | Rock Falls Vineyards Sauvignon (750ml)
                                         br

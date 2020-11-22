@@ -26,10 +26,15 @@
     }
 
     &_new {
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0);
         svg {
             width: 20px;
             height: 20px;
             margin-right: 7px;
+        }
+        &:active {
+            background: #0E99CF;
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
     }
 

@@ -69,7 +69,9 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "choices.js": "^9.0.1",
     "jquery": "^3.5.0",
+    "js-datepicker": "^5.16.0",
     "normalize.css": "^8.0.1",
     "simplebar": "^5.3.0",
     "vue": "^2.6.12"
