@@ -329,4 +329,8 @@ select {
     .choices__list--dropdown .choices__item--selectable.is-selected{
         background: #F2F7FA;
     }
+
+    .choices[data-type*=select-one]:after {
+        display: none;
+    }
 }
