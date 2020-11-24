@@ -7,20 +7,47 @@
     font-weight: normal;
     font-size: 14px;
     color: $cl-white;
-    min-width: 991px;
+
+    @include media-tablet {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
 
     .container {
         height: 71px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media-tablet {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 15px;
+            height: auto;
+            justify-content: center;
+            text-align: center;
+            grid-template-areas:
+                'terms'
+                'social'
+                'copyr';
+        }
     }
 
     .copyr {
-
+        @include media-tablet {
+            grid-area: copyr;
+        }
     }
 
     .social {
+        @include media-tablet {
+            grid-area: social;
+            display: flex;
+            justify-content: center;
+        }
         ul {
             display: flex;
             align-items: center;
@@ -45,6 +72,9 @@
     }
 
     .terms {
+        @include media-tablet {
+            grid-area: terms;
+        }
         a {
             color: $cl-white;
             border-bottom: 1px solid rgba(255,255,255,.7);

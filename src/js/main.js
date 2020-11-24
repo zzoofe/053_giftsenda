@@ -3,14 +3,15 @@ import 'choices.js/public/assets/scripts/choices.min'
 import datepicker from 'js-datepicker'
 
 const choices = document.querySelectorAll(`.js-choice`)
+const choicesSearch = document.querySelectorAll(`.js-choice-search`)
 const date = document.querySelectorAll(`.inp-date`)
 const filterTitle = document.querySelectorAll(`.b-filter-box__title span`)
 const filterBtn = document.querySelector(`.b-filterBtn span`)
 const filter = document.querySelector(`.b-filter`)
+const burger = document.querySelector(`.burger`)
 
 if (choices) {
     choices.forEach(function (e) {
-
         const choice = new Choices(e, {
             searchEnabled: false,
             searchChoices: false,
@@ -20,6 +21,17 @@ if (choices) {
                 const scroll = new SimpleBar(drop)
             },
         })
+    })
+    choicesSearch.forEach(function (e) {
+        const choicesSearch = new Choices(e, {
+        searchEnabled: true,
+        searchChoices: true,
+        itemSelectText: ``,
+        callbackOnInit: () => {
+          const drop = e.attributes[0].ownerElement.parentElement.nextSibling
+          const scroll = new SimpleBar(drop)
+        },
+      })
     })
 }
 
@@ -61,3 +73,7 @@ if (filterBtn) {
         }
     })
 }
+
+burger.addEventListener(`click`, function (e) {
+    this.classList.toggle(`open`)
+})

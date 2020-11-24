@@ -179,6 +179,9 @@
 
         &_w4 {
             max-width: 432px;
+            @include media-tablet {
+                max-width: none;
+            }
         }
     }
 
@@ -494,6 +497,11 @@
         grid-column-gap: 30px;
         margin-top: 15px;
 
+        @include media-sm {
+          grid-template-columns: 1fr;
+          grid-row-gap: 20px;
+        }
+
         &__bar {
 
         }
@@ -507,6 +515,11 @@
             grid-template-columns: 1fr 175px;
             grid-column-gap: 34px;
             margin-bottom: 21px;
+            @include media-tablet {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+            }
+
         }
 
         &__frame {
@@ -521,6 +534,20 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-gap: 20px;
             grid-row-gap: 30px;
+
+            @include media-tablet {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-row-gap: 20px;
+            }
+
+            @include media-custom(620px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include media-mobile {
+                grid-template-columns: 1fr;
+            }
+
         }
     }
 
@@ -573,6 +600,11 @@
                     color: #8F9BB3;
                     padding: 0 17px;
                     border: 1px solid #ffffff;
+                    @include media-tablet {
+                        padding: 0 10px;
+                        justify-content: center;
+                        font-size: 13px;
+                    }
                 }
                 &:checked {
                     &+label {
@@ -633,6 +665,9 @@
             transition: all $time ease;
             overflow: hidden;
             height: 0;
+            @include media-sm {
+                height: auto;
+            }
         }
         &__discount {
             position: absolute;
@@ -671,6 +706,9 @@
         &:hover {
             margin-bottom: -30px;
             z-index: 5;
+            @include media-sm {
+                margin-bottom: 0;
+            }
             .b-product__send {
                 height: 30px;
             }
@@ -679,5 +717,8 @@
 
     &-more {
         margin-top: 50px;
+        @include media-tablet {
+            margin-top: 30px;
+        }
     }
 }

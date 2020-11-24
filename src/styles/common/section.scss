@@ -1,16 +1,115 @@
 .s {
     &-navBar {
         background: $cl-blue-dark;
-        height: 39px;
 
         .container {
+            height: 39px;
+            position: relative;
+            @include  media-sm {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__frame {
             display: flex;
+
+            @include media-sm {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 250px;
+                background: $cl-blue-dark;
+                z-index: 10;
+                transition: .4s ease-in-out;
+                transform: translateX(-100%);
+            }
+        }
+
+        .burger {
+            width: 30px;
+            height: 18px;
+            position: relative;
+            margin: 0;
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+            display: none;
+
+            @include media-sm {
+                display: block;
+            }
+
+            span {
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background: $cl-white;
+                border-radius: 2px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+            }
+
+            span:nth-child(1) {
+                top: 0px;
+            }
+
+            span:nth-child(2),
+            span:nth-child(3) {
+                top: 8px;
+            }
+
+            span:nth-child(4) {
+                top: 16px;
+            }
+
+            &.open span:nth-child(1) {
+                top: 8px;
+                width: 0;
+                left: 50%;
+            }
+
+            &.open span:nth-child(2) {
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            &.open span:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+            &.open span:nth-child(4) {
+                top: 8px;
+                width: 0;
+                left: 50%;
+            }
+
+            &.open {
+                &+.s-navBar__frame {
+                    transform: translateX(0);
+                }
+            }
+
         }
 
         .menu {
             flex-grow: 1;
             ul {
                 display: flex;
+                @include media-sm {
+                    display: block;
+                }
                 li {
                     font-size: 14px;
                     line-height: 26px;
@@ -21,6 +120,12 @@
                         display: flex;
                         align-items: center;
                         padding: 0 25px 0 24px;
+                        @include media-sm {
+                            padding: 0 20px;
+                        }
+                        @include media-tablet {
+                            padding: 0 15px;
+                        }
                         &:hover {
                             background: $cl-blue;
                         }
@@ -69,6 +174,13 @@
                 line-height: 26px;
                 color: $cl-white;
 
+                @include media-sm {
+                    padding: 0 20px;
+                }
+                @include media-tablet {
+                    padding: 0 15px;
+                }
+
                 &:hover {
                     background: $cl-blue;
                 }
@@ -103,6 +215,18 @@
                 visibility: hidden;
                 transition: all $time ease;
                 z-index: -1;
+
+                @include media-sm {
+                    width: 100%;
+                    opacity: 1;
+                    z-index: 1;
+                    position: relative;
+                    top: auto;
+                    background: none;
+                    box-shadow: none;
+                    visibility: visible;
+                }
+
                 ul {
                     li {
                         a {
@@ -113,12 +237,19 @@
                             font-weight: normal;
                             font-size: 12px;
                             color: #393939;
+                            @include media-sm {
+                                color: $cl-white;
+                                padding-left: 45px;
+                            }
                             svg {
                                 width: 10px;
                                 height: 10px;
                                 margin-right: 6px;
                                 fill: #393939;
                                 transition: all $time ease;
+                                @include media-sm {
+                                    fill: $cl-white;
+                                }
                             }
                             &:hover,
                             &.is-active {
@@ -147,5 +278,8 @@
 
     &-main {
         padding: 26px 0 120px 0;
+        @include media-tablet {
+            padding-bottom: 30px;
+        }
     }
 }

@@ -1,34 +1,40 @@
 nav.s-navBar
     .container
-        .menu
-            ul
-                li.is-active
-                    a(href="#") Dashboard
-                li
-                    a(href="#") Sendas
-                li
-                    a(href="#") Marketplace
-                li
-                    a(href="#") Contacts
-                li
-                    a(href="#") Reports
-        .support
-            a(href="")
-                +svg("support")
-                span Support
-        .setup
-            a(href="")
-                +svg("setup")
-                span Setup
-            .setup__nav
+        .burger
+            span
+            span
+            span
+            span
+        .s-navBar__frame
+            .menu
                 ul
+                    li.is-active
+                        a(href="#") Dashboard
                     li
-                        a(href="#") Users & Teams
+                        a(href="#") Sendas
                     li
-                        a(href="#") Branding
+                        a(href="#") Marketplace
                     li
-                        a(href="#") Message Templates
+                        a(href="#") Contacts
                     li
-                        a(href="#")
-                            +svg("exit")
-                            span Exit
+                        a(href="#") Reports
+            .support
+                a(href="")
+                    +svg("support")
+                    span Support
+            .setup
+                a(href="")
+                    +svg("setup")
+                    span Setup
+                .setup__nav
+                    ul
+                        li
+                            a(href="#") Users & Teams
+                        li
+                            a(href="#") Branding
+                        li
+                            a(href="#") Message Templates
+                        li
+                            a(href="#")
+                                +svg("exit")
+                                span Exit
