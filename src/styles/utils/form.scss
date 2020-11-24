@@ -330,7 +330,7 @@ select {
         background: #F2F7FA;
     }
 
-    .choices[data-type*=select-one]:after {
+    [data-type*=select-one]:after {
         display: none;
     }
 }
