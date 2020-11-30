@@ -234,8 +234,18 @@
         overflow: hidden;
         transition: max-height 0.5s ease-out;
 
+        @include media-tablet {
+            grid-template-columns: 1fr;
+            grid-row-gap: 15px;
+        }
+
         &>div {
             padding-top: 15px;
+            @include media-tablet {
+                &:last-child {
+                    padding-top: 0;
+                }
+            }
         }
 
         &__date {
@@ -337,8 +347,13 @@
             justify-content: space-between;
             align-items: center;
             padding-right: 19px;
-
+            .el-view {
+                @include media-tablet {
+                    display: none;
+                }
+            }
         }
+
         &__box {
 
         }
@@ -361,7 +376,6 @@
                         padding-left: 0;
                         padding-right: 0;
                     }
-
                     &:nth-child(1) {
                         width: 106px;
                         padding-left: 0;
@@ -431,6 +445,33 @@
             max-height: 296px;
             overflow-y: auto;
             overflow-x: hidden;
+        }
+
+        &_tb1 {
+            table {
+                th,
+                td {
+                    @include media-tablet {
+                        padding-left: 5px !important;
+                        padding-right: 5px !important;
+                    }
+                    &:nth-child(1) {
+                        @include media-tablet {
+                            width: 90px !important;
+                        }
+                    }
+                    &:nth-child(2) {
+                        @include media-tablet {
+                            display: none;
+                        }
+                    }
+                    &:last-child {
+                        @include media-tablet {
+                            width: 100px !important;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -502,6 +543,11 @@
                         color: #F77C2D;
                     }
                 }
+            }
+        }
+        &+.b-frame {
+            @include media-tablet {
+                display: none;
             }
         }
     }
@@ -743,5 +789,11 @@
         @include media-tablet {
             margin-top: 30px;
         }
+    }
+}
+
+.table-none {
+    @include media-tablet {
+        display: none;
     }
 }
