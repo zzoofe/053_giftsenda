@@ -115,6 +115,7 @@
             text-align: center;
             .inp {
                 height: 22px;
+                line-height: 20px;
                 border: 1px solid #8F9BB3;
                 padding: 0 7px;
                 border-radius: 0;
@@ -330,7 +331,17 @@ select {
         background: #F2F7FA;
     }
 
-    [data-type*=select-one]:after {
+    &[data-type*=select-one]:after {
         display: none;
+    }
+    &[data-type*=select-one] .choices__input {
+        border: 1px solid #ddd;
+        border-left: 0;
+        border-right: 0;
+        margin: 0;
+        background-image: url(../img/search.svg);
+        background-repeat: no-repeat;
+        background-position:  10px center;
+        padding-left: 30px;
     }
 }
