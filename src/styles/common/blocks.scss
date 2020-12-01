@@ -92,6 +92,26 @@
 
         }
 
+        &_rec {
+            grid-template-columns: 1fr 255px;
+            @include media-sm {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+            }
+            .b-page__aside {
+                @include media-sm {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 20px;
+                    .b-infoRecip {
+                        display: none;
+                    }
+                }
+                @include media-tablet {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
 
     }
 
@@ -333,6 +353,25 @@
             }
         }
 
+        &_row-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 16px;
+            @include media-tablet {
+                grid-template-columns: 1fr;
+            }
+            &>div {
+                @include media-tablet {
+                    padding-top: 0;
+                    &:first-child {
+                        padding-top: 15px;
+                    }
+                    &:last-child {
+
+                    }
+                }
+            }
+        }
+
     }
 
     &-table {
@@ -468,6 +507,142 @@
                     &:last-child {
                         @include media-tablet {
                             width: 100px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_tb2 {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 17px;
+            min-height: 354px;
+
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+
+                tr {
+                    th {
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #393939;
+                        text-align: left;
+                        padding: 15px 7px 14px 7px;
+                        @include media-tablet {
+                            display: none;
+                        }
+                        &:nth-child(1) {
+                            width: 12px;
+                            @include media-tablet {
+                                display: block;
+                                width: 100%;
+                                float: left;
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+                    td {
+                        text-align: left;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #393939;
+                        padding: 8px 7px;
+                        @include media-tablet {
+                            float: left;
+                            width: 100%;
+                            padding: 4px 10px;
+                            &:before {
+                                width: 100px;
+                                display: inline-block;
+                            }
+                            &:nth-child(2) {
+                                &:before {
+                                    content: 'Name';
+                                }
+                            }
+                            &:nth-child(3) {
+                                &:before {
+                                    content: 'Company';
+                                }
+                            }
+                            &:nth-child(4) {
+                                &:before {
+                                    content: 'Email';
+                                }
+                            }
+                            &:nth-child(5) {
+                                &:before {
+                                    content: 'Country';
+                                }
+                            }
+                            &:nth-child(6) {
+                                &:before {
+                                    content: 'Tags';
+                                }
+                            }
+                            &:nth-child(7) {
+                                &:before {
+                                    content: 'Sendas';
+                                }
+                            }
+                            &:nth-child(8) {
+                                &:before {
+                                    content: 'Owner';
+                                }
+                            }
+                            &:nth-child(9) {
+                                &:before {
+                                    content: 'Edit';
+                                }
+                            }
+                        }
+                        svg {
+                            width: 10px;
+                            height: 10px;
+                            fill: #6B6B6B;
+                            transition: all $time ease;
+                            opacity: 0;
+                            @include media-tablet {
+                                opacity: 1;
+                            }
+                        }
+                        a {
+                            &.el-edit {
+                                display: flex;
+                                width: 10px;
+                                height: 10px;
+                                @include media-tablet {
+                                    display: inline-block;
+                                }
+
+                                &:hover {
+                                    svg {
+                                        fill: #006699;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        td {
+                            a {
+                                &.el-edit {
+                                    svg {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(2n) {
+                        td {
+                            background: rgba(0, 102, 153, 0.08);
                         }
                     }
                 }
@@ -788,6 +963,143 @@
         margin-top: 50px;
         @include media-tablet {
             margin-top: 30px;
+        }
+    }
+
+    &-boxed {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-bottom: 14px;
+    }
+
+    &-buttons {
+        padding-top: 26px;
+        padding-bottom: 24px;
+        &>div {
+            max-width: 165px;
+            margin: 0 auto;
+            margin-bottom: 12px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-sync {
+        padding-top: 19px;
+        padding-bottom: 37px;
+        &__info {
+            padding: 0 0 28px 23px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-column-gap: 20px;
+            p {
+                margin: 0;
+                font-weight: normal;
+                font-size: 10px;
+                line-height: 14px;
+                span {
+                    padding-left: 5px;
+                }
+            }
+        }
+        &__btn {
+            max-width: 165px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &-infoRecip {
+        font-size: 9px;
+        line-height: 1.2;
+        color: #B9B9B9;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-pages {
+        display: flex;
+        justify-content: center;
+        margin-top: 14px;
+
+        ul {
+            display: flex;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            li {
+                font-weight: normal;
+                font-size: 12px;
+                @include media-tablet {
+                    display: none;
+                }
+                span {
+                    display: flex;
+                    height: 32px;
+                    align-items: center;
+                    justify-content: center;
+                    color: #393939;
+                    padding: 0 10px;
+                }
+                a {
+                    display: flex;
+                    height: 32px;
+                    align-items: center;
+                    width: 52px;
+                    justify-content: center;
+                    color: #393939;
+                    &:hover {
+                        background: #F4F4F4;
+                        color: #006699;
+                    }
+                }
+                &.is-active {
+                    @include media-tablet {
+                        display: block;
+                    }
+                    a {
+                        background: #F4F4F4;
+                        color: #006699;
+                    }
+                }
+                svg {
+                    width: 8px;
+                    height: 12px;
+                }
+                &.prev,
+                &.next {
+                    @include media-tablet {
+                        display: block;
+                    }
+                    span,
+                    a {
+                        width: auto;
+                        padding: 0 14px;
+                    }
+                    span {
+                        svg {
+                            fill: #C8C8C8;
+                        }
+                    }
+                    a {
+                        svg {
+                            fill: #393939;
+                        }
+                    }
+                }
+
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5), {
+                    @include media-tablet {
+                        display: block;
+                    }
+                }
+            }
         }
     }
 }

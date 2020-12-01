@@ -102,6 +102,67 @@
                 opacity: 1;
             }
         }
+
+        &-1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            visibility: hidden;
+
+            &+label {
+                font-weight: normal;
+                width: 12px;
+                height: 12px;
+                color: #8F9BB3;
+                position: relative;
+                padding: 0;
+                margin: 0;
+                display: block;
+                transition: all $time ease;
+                user-select: none;
+
+                &:before {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    background: none;
+                    border: 1px solid #000000;
+                    box-sizing: border-box;
+                    border-radius: 2px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transition: all $time ease;
+                }
+
+                &:after {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    background-image: url(../img/check.svg);
+                    background-repeat: no-repeat;
+                    background-size: 70% 70%;
+                    background-position: 3px center;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    transition: all $time ease;
+                }
+            }
+            &:checked + label {
+                color: #006699;
+
+                &:before {
+                    border: 1px solid #006699;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
     }
     &-range {
         display: grid;
@@ -345,3 +406,39 @@ select {
         padding-left: 30px;
     }
 }
+
+.js-choiceTag {
+    .choices__input {
+        background: none;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #8F9BB3;
+        &::placeholder {
+            color: #8F9BB3;
+        }
+    }
+    .choices__list--multiple {
+        padding-top: 4px;
+    }
+    .choices__list--multiple .choices__item {
+        background: #006699;
+        border: 1px solid #006699;
+    }
+    .choices .choices__inner {
+        padding-right: 40px !important;
+        height: auto;
+    }
+
+}
+
+.choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.choices.is-open {
+    position: relative;
+    z-index: 10;
+}
+

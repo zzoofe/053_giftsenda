@@ -1,0 +1,144 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 Recipients
+                a.btn.btn_new(href="#")
+                    +svg("plus")
+                    | new senda
+            .b-sep Recipients
+            .b-page.b-page_rec
+                .b-page__frame
+                    .b-barTop
+                        .b-search
+                            input.inp(type="text" placeholder="Search by recipient, company, campaign")
+                            button
+                                +svg("search")
+                        .b-filterBtn
+                            span Expand the filter
+                            +svg("filter")
+                    .b-filter.b-filter_row-3
+                        div
+                            select.js-choice
+                                option(placeholder) Status
+                                option(value="1") Delivered
+                                option(value="2") Need Attention
+                                option(value="3") Awaiting Action
+                        div
+                            select.js-choice
+                                option(placeholder) Owner
+                                option(value="1") Delivered
+                                option(value="2") Need Attention
+                                option(value="3") Awaiting Action
+                        div
+                            select.js-choice
+                                option(placeholder) Tags
+                                option(value="1") Delivered
+                                option(value="2") Need Attention
+                                option(value="3") Awaiting Action
+                    .b-table_tb2
+                        table
+                            tr
+                                th
+                                    input#cht1.form-check-1(type="checkbox")
+                                    label(for="cht1")
+                                th Name
+                                th Company
+                                th Email
+                                th Coyntry
+                                th Tags
+                                th Sendas
+                                th Owner
+                                th
+                            tr
+                                td
+                                    input#cht2.form-check-1(type="checkbox")
+                                    label(for="cht2")
+                                td Ivan Ivanov
+                                td DSSS inc
+                                td test@mail.ru
+                                td Russia
+                                td #gold_partner
+                                td 223
+                                td Ivan Ivanov
+                                td
+                                    a.el-edit(href="#")
+                                        +svg("edit")
+                            tr
+                                td
+                                    input#cht3.form-check-1(type="checkbox")
+                                    label(for="cht3")
+                                td Ivan Ivanov
+                                td DSSS inc
+                                td test@mail.ru
+                                td Russia
+                                td #gold_partner
+                                td 223
+                                td Ivan Ivanov
+                                td
+                                    a.el-edit(href="#")
+                                        +svg("edit")
+                            tr
+                                td
+                                    input#cht4.form-check-1(type="checkbox")
+                                    label(for="cht4")
+                                td Ivan Ivanov
+                                td DSSS inc
+                                td test@mail.ru
+                                td Russia
+                                td #gold_partner
+                                td 223
+                                td Ivan Ivanov
+                                td
+                                    a.el-edit(href="#")
+                                        +svg("edit")
+                            tr
+                                td
+                                    input#cht5.form-check-1(type="checkbox")
+                                    label(for="cht5")
+                                td Ivan Ivanov
+                                td DSSS inc
+                                td test@mail.ru
+                                td Russia
+                                td #gold_partner
+                                td 223
+                                td Ivan Ivanov
+                                td
+                                    a.el-edit(href="#")
+                                        +svg("edit")
+                    .b-pages
+                        ul
+                            li.prev
+                                span
+                                    +svg("arw-page-prev")
+                            li: a(href="#") 1
+                            li: a(href="#") 2
+                            li.is-active: a(href="#") 3
+                            li: a(href="#") 4
+                            li: a(href="#") 5
+                            li: span ...
+                            li: a(href="#") 32
+                            li.next
+                                a(href="#")
+                                    +svg("arw-page-next")
+                .b-page__aside
+                    .b-boxed.b-buttons
+                        div
+                            a.btn.btn_blue(href="#") New Recipient
+                        div
+                            a.btn.btn_blue(href="#") Uploas form CSV
+                    .b-boxed.b-sync
+                        .b-sync__info
+                            div
+                                img(src="img/logo-salesforce.png" alt="")
+                            div
+                                p Connection status:
+                                    span.cl-green OK
+                                p Last synced: 10/10/2020 16:12
+                        .b-sync__btn
+                            a.btn.btn_blue(href="#") Sync NOW
+                    .b-infoRecip
+                        span Total Recipients: 1486
+                        span Last updated at  10/10/2020

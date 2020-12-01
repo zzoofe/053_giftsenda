@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GiftSenda</title>
+    <link href="img/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="s-header">
+        <div class="container">
+          <div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
+          <div class="balance"><a href="#">Balance:  3030 у.е</a></div>
+          <div class="user">
+            <div class="user__image"><a href="#"><img src="img/user.jpg" alt=""></a></div>
+            <div class="user__info">
+              <div class="user__info__name"><a href="#">Eric Brain</a></div>
+              <div class="user__info__status">Manager user</div>
+              <div class="user__info__reit">
+                <svg>
+                  <use xlink:href="img/sprite.svg#reit"></use>
+                </svg><span>867</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="s-navBar">
+        <div class="container">
+          <div class="burger"><span></span><span></span><span></span><span></span></div>
+          <div class="s-navBar__frame">
+            <div class="menu">
+              <ul>
+                <li class="is-active"><a href="#">Dashboard</a></li>
+                <li><a href="#">Sendas</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Reports</a></li>
+              </ul>
+            </div>
+            <div class="support"><a href="">
+                <svg>
+                  <use xlink:href="img/sprite.svg#support"></use>
+                </svg><span>Support</span></a></div>
+            <div class="setup"><a href="">
+                <svg>
+                  <use xlink:href="img/sprite.svg#setup"></use>
+                </svg><span>Setup</span></a>
+              <div class="setup__nav">
+                <ul>
+                  <li><a href="#">Users & Teams</a></li>
+                  <li><a href="#">Branding</a></li>
+                  <li><a href="#">Message Templates</a></li>
+                  <li><a href="#">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#exit"></use>
+                      </svg><span>Exit</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="s-main">
+        <div class="container">
+          <div class="b-title">
+            <h1>Recipients</h1><a class="btn btn_new" href="#">
+              <svg>
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>new senda</a>
+          </div>
+          <div class="b-sep">Recipients</div>
+          <div class="b-page b-page_rec">
+            <div class="b-page__frame">
+              <div class="b-barTop">
+                <div class="b-search">
+                  <input class="inp" type="text" placeholder="Search by recipient, company, campaign">
+                  <button>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="b-filterBtn"><span>Expand the filter</span>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#filter"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="b-filter b-filter_row-3">
+                <div>
+                  <select class="js-choice">
+                    <option placeholder>Status</option>
+                    <option value="1">Delivered</option>
+                    <option value="2">Need Attention</option>
+                    <option value="3">Awaiting Action</option>
+                  </select>
+                </div>
+                <div>
+                  <select class="js-choice">
+                    <option placeholder>Owner</option>
+                    <option value="1">Delivered</option>
+                    <option value="2">Need Attention</option>
+                    <option value="3">Awaiting Action</option>
+                  </select>
+                </div>
+                <div>
+                  <select class="js-choice">
+                    <option placeholder>Tags</option>
+                    <option value="1">Delivered</option>
+                    <option value="2">Need Attention</option>
+                    <option value="3">Awaiting Action</option>
+                  </select>
+                </div>
+              </div>
+              <div class="b-table_tb2">
+                <table>
+                  <tr>
+                    <th>
+                      <input class="form-check-1" id="cht1" type="checkbox">
+                      <label for="cht1"></label>
+                    </th>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Email</th>
+                    <th>Coyntry</th>
+                    <th>Tags</th>
+                    <th>Sendas</th>
+                    <th>Owner</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="form-check-1" id="cht2" type="checkbox">
+                      <label for="cht2"></label>
+                    </td>
+                    <td>Ivan Ivanov</td>
+                    <td>DSSS inc</td>
+                    <td>test@mail.ru</td>
+                    <td>Russia</td>
+                    <td>#gold_partner</td>
+                    <td>223</td>
+                    <td>Ivan Ivanov</td>
+                    <td><a class="el-edit" href="#">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#edit"></use>
+                        </svg></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="form-check-1" id="cht3" type="checkbox">
+                      <label for="cht3"></label>
+                    </td>
+                    <td>Ivan Ivanov</td>
+                    <td>DSSS inc</td>
+                    <td>test@mail.ru</td>
+                    <td>Russia</td>
+                    <td>#gold_partner</td>
+                    <td>223</td>
+                    <td>Ivan Ivanov</td>
+                    <td><a class="el-edit" href="#">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#edit"></use>
+                        </svg></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="form-check-1" id="cht4" type="checkbox">
+                      <label for="cht4"></label>
+                    </td>
+                    <td>Ivan Ivanov</td>
+                    <td>DSSS inc</td>
+                    <td>test@mail.ru</td>
+                    <td>Russia</td>
+                    <td>#gold_partner</td>
+                    <td>223</td>
+                    <td>Ivan Ivanov</td>
+                    <td><a class="el-edit" href="#">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#edit"></use>
+                        </svg></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="form-check-1" id="cht5" type="checkbox">
+                      <label for="cht5"></label>
+                    </td>
+                    <td>Ivan Ivanov</td>
+                    <td>DSSS inc</td>
+                    <td>test@mail.ru</td>
+                    <td>Russia</td>
+                    <td>#gold_partner</td>
+                    <td>223</td>
+                    <td>Ivan Ivanov</td>
+                    <td><a class="el-edit" href="#">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#edit"></use>
+                        </svg></a></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="b-pages">
+                <ul>
+                  <li class="prev"><span>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#arw-page-prev"></use>
+                      </svg></span></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li class="is-active"><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><span>...</span></li>
+                  <li><a href="#">32</a></li>
+                  <li class="next"><a href="#">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#arw-page-next"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="b-page__aside">
+              <div class="b-boxed b-buttons">
+                <div><a class="btn btn_blue" href="#">New Recipient</a></div>
+                <div><a class="btn btn_blue" href="#">Uploas form CSV</a></div>
+              </div>
+              <div class="b-boxed b-sync">
+                <div class="b-sync__info">
+                  <div><img src="img/logo-salesforce.png" alt=""></div>
+                  <div>
+                    <p>Connection status:<span class="cl-green">OK</span></p>
+                    <p>Last synced: 10/10/2020 16:12</p>
+                  </div>
+                </div>
+                <div class="b-sync__btn"><a class="btn btn_blue" href="#">Sync NOW</a></div>
+              </div>
+              <div class="b-infoRecip"><span>Total Recipients: 1486</span><span>Last updated at  10/10/2020</span></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="s-footer">
+        <div class="container">
+          <div class="copyr">Copyright 2020 | Privacy</div>
+          <div class="social">
+            <ul>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-fb"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-in"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-pn"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-tm"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-ins"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-yt"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="terms"><a href="#">Terms of Service</a></div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,14 +1,35 @@
 import SimpleBar from 'simplebar'
 import 'choices.js/public/assets/scripts/choices.min'
 import datepicker from 'js-datepicker'
+import './vanillaSelectBox'
 
+const vanillaSelect = document.querySelectorAll(`.js-vanillaSelectBox`)
 const choices = document.querySelectorAll(`.js-choice`)
 const choicesSearch = document.querySelectorAll(`.js-choice-search`)
+const choicesTag = document.querySelectorAll(`.js-choice-tag`)
 const date = document.querySelectorAll(`.inp-date`)
 const filterTitle = document.querySelectorAll(`.b-filter-box__title span`)
 const filterBtn = document.querySelector(`.b-filterBtn span`)
 const filter = document.querySelector(`.b-filter`)
 const burger = document.querySelector(`.burger`)
+
+
+// let selectBox = new vanillaSelectBox(`#brandsOne`, {
+//     "maxHeight": 200,
+//     "search": true,
+//     "placeHolder": "Choose a brand..."
+// })
+
+// if (vanillaSelect) {
+//     vanillaSelect.forEach(function (e) {
+//         console.log(111)
+//         const selectBox = new vanillaSelectBox(e, {
+//                 "maxHeight": 200,
+//                 "search": true,
+//                 "placeHolder": "Choose a brand..."
+//         })
+//     })
+// }
 
 if (choices) {
     choices.forEach(function (e) {
@@ -22,6 +43,7 @@ if (choices) {
             },
         })
     })
+
     choicesSearch.forEach(function (e) {
         const choicesSearch = new Choices(e, {
         searchEnabled: true,
@@ -32,6 +54,19 @@ if (choices) {
           const scroll = new SimpleBar(drop)
         },
       })
+    })
+
+    choicesTag.forEach(function (e) {
+        const choicesSearch = new Choices(e, {
+            searchEnabled: true,
+            searchChoices: true,
+            itemSelectText: ``,
+            removeItemButton: true,
+            callbackOnInit: () => {
+                const drop = e.attributes[0].ownerElement.parentElement.nextSibling
+                const scroll = new SimpleBar(drop)
+            },
+        })
     })
 }
 
