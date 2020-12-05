@@ -1,0 +1,147 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 California cabernet gift basket
+                a.btn.btn_new(href="#")
+                    +svg("plus")
+                    | new senda
+            .b-sep
+                .b-sep__item
+                    a(href="") Marketplace
+                .b-sep__item
+                    | California cabernet gift basket
+            .b-search.b-search_w4
+                input.inp(type="text" placeholder="Search price")
+                button
+                    +svg("search")
+            .b-catalog
+                aside.b-catalog__bar
+                    .b-box.custom-select
+                        select.js-choice-search
+                            option(placeholder) Сountry
+                            option(value="1") Delivered
+                            option(value="2") Need Attention
+                            option(value="3") Awaiting Action
+                            option(value="4") Delivered
+                            option(value="5") Need Attention
+                            option(value="6") Awaiting Action
+                            option(value="7") Delivered
+                            option(value="8") Need Attention
+                            option(value="9") Awaiting Action
+                            option(value="10") Delivered
+                            option(value="11") Need Attention
+                            option(value="12") Awaiting Action
+                            option(value="13") Delivered
+                            option(value="14") Need Attention
+                            option(value="15") Awaiting Action
+                            option(value="16") Delivered
+                            option(value="17") Need Attention
+                            option(value="18") Awaiting Action
+                    .b-filter-box
+                        .b-filter-box__item
+                            .b-filter-box__title
+                                span Type
+                                +svg("arw")
+                            .b-filter-box__frame
+                                ul
+                                    li
+                                        input#rad11.form-radio(type="radio" name="rad1")
+                                        label(for="rad11") Chocolate (23)
+                                    li
+                                        input#rad12.form-radio(type="radio" name="rad1")
+                                        label(for="rad12") Coffee (11)
+                                    li
+                                        input#rad13.form-radio(type="radio" name="rad1")
+                                        label(for="rad13") Tea (34)
+                                    li
+                                        input#rad14.form-radio(type="radio" name="rad1")
+                                        label(for="rad14") Coffee (55)
+                        .b-filter-box__item
+                            .b-filter-box__title
+                                span Price
+                                +svg("arw")
+                            .b-filter-box__frame
+                                ul
+                                    li
+                                        input#rad21.form-radio(type="radio" name="rad2")
+                                        label(for="rad21") All ranges
+                                    li
+                                        input#rad22.form-radio(type="radio" name="rad2")
+                                        label(for="rad22") $30 - 50
+                                    li
+                                        input#rad23.form-radio(type="radio" name="rad2")
+                                        label(for="rad23") $50 - 75
+                                    li
+                                        input#rad24.form-radio(type="radio" name="rad2")
+                                        label(for="rad24") $75 - 100
+                                    li
+                                        input#rad25.form-radio(type="radio" name="rad2")
+                                        label(for="rad25") $200
+                                    li
+                                        input#rad26.form-radio(type="radio" name="rad2")
+                                        label(for="rad26")
+                                            .form-range
+                                                div
+                                                    input.inp(type="text" placeholder="min")
+                                                div to
+                                                div
+                                                    input.inp(type="text" placeholder="min")
+                        .b-filter-box__item
+                            .b-filter-box__title
+                                span Item types
+                                +svg("arw")
+                            .b-filter-box__frame
+                                ul
+                                    li
+                                        input#rad31.form-radio(type="radio" name="rad3")
+                                        label(for="rad31") Chocolate (23)
+                                    li
+                                        input#rad32.form-radio(type="radio" name="rad3")
+                                        label(for="rad32") Coffee (11)
+                        .b-filter-box__item
+                            .b-filter-box__title
+                                span Marks
+                                +svg("arw")
+                            .b-filter-box__frame
+                                ul
+                                    li
+                                        input#rad41.form-check(type="checkbox" name="rad4")
+                                        label(for="rad41") Vegan (23)
+                                    li
+                                        input#rad42.form-check(type="checkbox" name="rad4")
+                                        label(for="rad42") Kids (43)
+                                    li
+                                        input#rad43.form-check(type="checkbox" name="rad4")
+                                        label(for="rad43") Vegan (23)
+                                    li
+                                        input#rad44.form-check(type="checkbox" name="rad4")
+                                        label(for="rad44") Kids (43)
+                .b-catalog__content
+                    .b-catalog__topBar
+                        .b-tab
+                            .b-tab__item
+                                input#tb1(type="checkbox")
+                                label(for="tb1") Popular
+                            .b-tab__item
+                                input#tb2(type="checkbox")
+                                label(for="tb2") Discount
+                            .b-tab__item
+                                input#tb3(type="checkbox")
+                                label(for="tb3") Stock
+                            .b-tab__item
+                                input#tb4(type="checkbox")
+                                label(for="tb4") Novelties
+                        .b-sort
+                            select.js-choice
+                                option(placeholder) Price
+                                option(value="1") Delivered
+                                option(value="2") Need Attention
+                                option(value="3") Awaiting Action
+                    .b-catalog__frame
+                        .b-productDetail
+                            include includes/product/image
+                            include includes/product/info
+                            include includes/product/reviews

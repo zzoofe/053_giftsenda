@@ -112,3 +112,66 @@ if (filterBtn) {
 burger.addEventListener(`click`, function (e) {
     this.classList.toggle(`open`)
 })
+
+const tabby = document.querySelector(`.tabby`)
+const tabs = tabby.querySelectorAll(`.tab`)
+const tabContents = tabby.querySelectorAll(`.tab-content`)
+
+tabs.forEach(button => {
+    button.addEventListener('click', event => {
+        const tabTheme = button.getAttribute('data-theme')
+        if (button.classList.contains('is-selected')) {
+            return
+        } else {
+            tabs.forEach(tab => {
+                if (tab.classList.contains('is-selected')) {
+                    tab.classList.remove('is-selected')
+                }
+            })
+            button.classList.add('is-selected')
+        }
+
+        tabContents.forEach(section => {
+            const contentTheme = section.getAttribute('data-theme')
+            if (contentTheme === tabTheme) {
+                section.classList.add('is-selected')
+            } else {
+                section.classList.remove('is-selected')
+            }
+        })
+    })
+})
+
+const imgBtn = document.querySelectorAll(`.b-productDetail__image__small a`)
+const imgLarge = document.querySelector(`.b-productDetail__image__large img`)
+
+if (imgBtn) {
+    imgBtn.forEach(function (e) {
+        e.addEventListener(`click`, function (e) {
+            imgBtn.forEach(function (e) {
+                console.log(111)
+                e.classList.remove(`is-active`)
+            })
+            let src = this.getAttribute(`data-src`)
+            this.classList.add(`is-active`)
+            imgLarge.setAttribute(`src`, src)
+        })
+    })
+}
+
+const quaPlus = document.querySelector(`.el-qua__btn--plus`)
+const quaMinus = document.querySelector(`.el-qua__btn--minus`)
+const countEl = document.querySelector(`.el-qua input`)
+let count = 1
+
+quaPlus.addEventListener(`click`, function (e) {
+    count++
+    countEl.value = count
+})
+
+quaMinus.addEventListener(`click`, function (e) {
+    if (count > 1) {
+        count--
+        countEl.value = count
+    }
+})

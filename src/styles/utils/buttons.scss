@@ -27,6 +27,7 @@
 
     &_new {
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0);
+        min-width: 125px;
         @include media-tablet {
             font-size: 12px;
             padding: 0 15px;
