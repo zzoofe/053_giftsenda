@@ -177,4 +177,13 @@
             color: #006699;
         }
     }
+
+    &-edit {
+        cursor: pointer;
+        svg {
+            width: 7px;
+            height: 7px;
+            display: block;
+        }
+    }
 }

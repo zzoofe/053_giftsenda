@@ -186,6 +186,161 @@
             }
         }
     }
+    &-multSelect {
+        position: relative;
+        &__title {
+            background: $cl-white;
+            border-radius: 5px;
+            height: 40px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            padding: 0 0 0 17px;
+            color: #8F9BB3;
+            position: relative;
+            cursor: pointer;
+            &:after {
+                content: '';
+                width: 10px;
+                height: 7px;
+                position: absolute;
+                right: 19px;
+                top: 17px;
+                background: url(../img/sel.svg) no-repeat;
+                background-size: contain;
+            }
+        }
+        &__frame {
+            background: $cl-white;
+            width: 336px;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 0 5px 5px 5px;
+            z-index: 10;
+        }
+        &__search {
+            padding: 10px;
+            position: relative;
+            input {
+                height: 35px;
+                line-height: 35px;
+                background: #F2F1EF;
+                border-radius: 5px;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 20px;
+                color: #8F9BB3;
+                padding: 0 30px 0 11px;
+                border: 0;
+                width: 100%;
+                display: block;
+            }
+            svg {
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                margin-top: -9px;
+            }
+        }
+        &__list {
+            padding-bottom: 10px;
+            ul {
+                li {
+                    position: relative;
+                    input {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        & + label {
+                            padding: 8px 10px 8px 54px;
+                            line-height: 20px;
+                            display: block;
+                            font-weight: normal;
+                            font-size: 16px;
+                            color: #8F9BB3;
+                            position: relative;
+                            transition: all $time ease;
+                            user-select: none;
+
+                            &:before {
+                                width: 16px;
+                                height: 16px;
+                                content: '';
+                                border: 1px solid #8F9BB3;
+                                position: absolute;
+                                left: 12px;
+                                top: 9px;
+                                background: none;
+                                transition: all $time ease;
+                            }
+
+                            &:after {
+                                opacity: 0;
+                                content: '';
+                                background: url(../img/ch.svg) no-repeat center;
+                                background-size: contain;
+                                width: 11px;
+                                height: 9px;
+                                position: absolute;
+                                left: 15px;
+                                top: 12px;
+                                transition: all $time ease;
+                            }
+                        }
+                        &:checked {
+                            &+label {
+                                background: rgba(0, 102, 153, 0.06);
+                                &:before {
+                                    border: 1px solid #006699;
+                                }
+                                &:after {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__sel {
+            display: flex;
+            flex-wrap: wrap;
+            border-top: 1px solid #F2F1EF;
+            padding: 5px 12px;
+            margin-left: -30px;
+            &__item {
+                display: flex;
+                align-items: center;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 20px;
+                color: #8F9BB3;
+                padding: 5px 0;
+                margin-left: 30px;
+                .del {
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                    background: #C4C4C4;
+                    margin-left: 6px;
+                    font-weight: normal;
+                    font-size: 10px;
+                    line-height: 13px;
+                    text-align: center;
+                    color: #8F9BB3;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
 select {

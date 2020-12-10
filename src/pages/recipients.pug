@@ -33,11 +33,27 @@ block content
                                 option(value="2") Need Attention
                                 option(value="3") Awaiting Action
                         div
-                            select.js-choice
-                                option(placeholder) Tags
-                                option(value="1") Delivered
-                                option(value="2") Need Attention
-                                option(value="3") Awaiting Action
+                            .form-multSelect
+                                .form-multSelect__title Tags
+                                .form-multSelect__frame
+                                    .form-multSelect__search
+                                        input(type="text" placeholder="Search")
+                                        +svg("search1")
+                                    .form-multSelect__list
+                                        ul
+                                            li
+                                                input#tag1.item-check(type="checkbox" value="Perspiciatis")
+                                                label(for="tag1") Perspiciatis
+                                            li
+                                                input#tag2.item-check(type="checkbox" value="Omnis")
+                                                label(for="tag2") Omnis
+                                    .form-multSelect__sel
+                                        .form-multSelect__sel__item
+                                            | Perspiciatis
+                                            span.del x
+                                        .form-multSelect__sel__item
+                                            | Omnis
+                                            span.del x
                     .b-table_tb2
                         table
                             tr

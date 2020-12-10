@@ -549,17 +549,19 @@
 
                 tr {
                     th {
-                        font-weight: normal;
+                        font-weight: 700;
                         font-size: 12px;
                         line-height: 14px;
                         color: #393939;
                         text-align: left;
                         padding: 15px 7px 14px 7px;
+                        background: rgba(0, 102, 153, 0.15);
                         @include media-tablet {
                             display: none;
                         }
                         &:nth-child(1) {
                             width: 12px;
+                            padding-left: 14px;
                             @include media-tablet {
                                 display: block;
                                 width: 100%;
@@ -575,6 +577,9 @@
                         line-height: 14px;
                         color: #393939;
                         padding: 8px 7px;
+                        &:nth-child(1) {
+                            padding-left: 14px;
+                        }
                         @include media-tablet {
                             float: left;
                             width: 100%;
@@ -662,7 +667,7 @@
                             }
                         }
                     }
-                    &:nth-child(2n) {
+                    &:nth-child(2n+1) {
                         td {
                             background: rgba(0, 102, 153, 0.08);
                         }
@@ -1145,8 +1150,8 @@
     }
 
     &-sync {
-        padding-top: 19px;
-        padding-bottom: 37px;
+        padding-top: 25px;
+        padding-bottom: 25px;
         &__info {
             padding: 0 0 28px 23px;
             display: grid;
@@ -1291,7 +1296,7 @@
                 grid-template-columns: 1fr auto;
                 grid-row-gap: 10px;
                 grid-template-areas:
-                        'bx1 bx2'
+                        'bx2 bx1'
                         'bx3 bx3';
 
                 &>div {
@@ -1659,6 +1664,159 @@
                 .btn {
                     width: 165px;
                 }
+            }
+        }
+    }
+
+    &-profile {
+        display: grid;
+        grid-template-columns: 41% 1fr;
+        grid-column-gap: 23px;
+
+        @include media-sm {
+            grid-template-columns: 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+
+        .b-boxed {
+            margin-bottom: 0;
+        }
+
+        &__info {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 127px 1fr;
+            grid-column-gap: 24px;
+            padding: 45px 24px;
+
+            @include media-sm {
+                padding: 30px 24px;
+            }
+
+            @include media-mobile {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+            }
+
+            &__image {
+                img {
+                    border: 4px solid #006699;
+                    border-radius: 50%;
+                    display: block;
+                }
+            }
+            &__desc {
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 1;
+                    color: #000000;
+                    text-transform: none;
+                    letter-spacing: 0;
+                    display: flex;
+                    align-items: center;
+                    .el-edit {
+                        margin-left: 15px;
+                        margin-top: 5px;
+                    }
+                }
+
+                .email {
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #000000;
+
+                }
+
+                .adres {
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #000000;
+                    opacity: 0.3;
+                    margin-top: 20px;
+                    margin-bottom: 24px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    .el-edit {
+                        margin-left: 25px;
+                    }
+                }
+
+                .edit {
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        &__level {
+            padding: 50px 60px 40px 66px;
+            @include media-sm {
+                padding: 30px 24px;
+            }
+            h2 {
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 20px;
+                margin: 0 0 26px 0;
+                padding: 0;
+                color: #000000;
+                text-transform: none;
+                display: flex;
+                justify-content: space-between;
+                letter-spacing: 0;
+                span {
+                    color: #006699;
+                }
+            }
+            &__desc {
+                margin-top: 30px;
+                h3 {
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin: 0 0 5px 0;
+                    padding: 0;
+                    text-transform: none;
+                    color: #000000;
+                }
+                p {
+                    font-size: 10px;
+                    line-height: 16px;
+                    color: #535353;
+                    font-weight: normal;
+                    margin: 0;
+                }
+            }
+            .b-barTopSn__deliver__bar {
+                background: #ECECEC;
+            }
+        }
+
+        &-row {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 30px;
+
+            @include media-sm {
+                grid-column-gap: 20px;
+            }
+
+            @include media-tablet {
+                display: none;
+            }
+
+            .b-boxed {
+                height: 135px;
+                margin: 0;
             }
         }
     }

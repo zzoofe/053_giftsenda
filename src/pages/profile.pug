@@ -1,0 +1,42 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 My Profile
+            .b-sep My Profile
+            .b-profile
+                .b-profile__info.b-boxed
+                    .b-profile__info__image
+                        img(src="img/user.png" alt="")
+                    .b-profile__info__desc
+                        h2
+                            span.text-edit(contenteditable="false") Eric Brain
+                            a.el-edit(href="javascript:void(0)")
+                                +svg("edit-1")
+                        .email betteam85@mail.ru
+                        .adres
+                            span.text-edit(contenteditable="false")
+                                | ESF Company
+                                br
+                                | 5th Street, 290 Atlanta
+                                br
+                                | LA, 123234 USA
+                            a.el-edit(href="javascript:void(0)")
+                                +svg("edit-1")
+                        .edit
+                            a.link-blue(href="#") Сменить пароль
+                .b-profile__level.b-boxed
+                    h2
+                        | Your gifting level
+                        span 4
+                    .b-barTopSn__deliver__bar
+                        span(style="width: 50%")
+                    .b-profile__level__desc
+                        h3 Description
+                        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .b-profile-row
+                .b-boxed
+                .b-boxed
+                .b-boxed

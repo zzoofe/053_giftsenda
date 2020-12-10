@@ -108,12 +108,33 @@
                   </select>
                 </div>
                 <div>
-                  <select class="js-choice">
-                    <option placeholder>Tags</option>
-                    <option value="1">Delivered</option>
-                    <option value="2">Need Attention</option>
-                    <option value="3">Awaiting Action</option>
-                  </select>
+                  <div class="form-multSelect">
+                    <div class="form-multSelect__title">Tags</div>
+                    <div class="form-multSelect__frame">
+                      <div class="form-multSelect__search">
+                        <input type="text" placeholder="Search">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#search1"></use>
+                        </svg>
+                      </div>
+                      <div class="form-multSelect__list">
+                        <ul>
+                          <li>
+                            <input class="item-check" id="tag1" type="checkbox" value="Perspiciatis">
+                            <label for="tag1">Perspiciatis</label>
+                          </li>
+                          <li>
+                            <input class="item-check" id="tag2" type="checkbox" value="Omnis">
+                            <label for="tag2">Omnis</label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="form-multSelect__sel">
+                        <div class="form-multSelect__sel__item">Perspiciatis<span class="del">x</span></div>
+                        <div class="form-multSelect__sel__item">Omnis<span class="del">x</span></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="b-table_tb2">
