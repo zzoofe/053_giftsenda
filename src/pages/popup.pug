@@ -1,0 +1,19 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 Popup
+            .b-sep Popup
+            .b-page
+                ul.b-list_1
+                    li
+                        a(href="javascript:;" data-micromodal-trigger="modal-1") Change password
+                    li
+                        a(href="javascript:;" data-micromodal-trigger="modal-2") CSV Upload
+                    li
+                        a(href="javascript:;" data-micromodal-trigger="modal-3") New Contact
+    include includes/modal/modal-1
+    include includes/modal/modal-2
+    include includes/modal/modal-3

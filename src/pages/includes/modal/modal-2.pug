@@ -1,0 +1,58 @@
+#modal-2.modal.micromodal-slide(aria-hidden="true")
+    .modal__overlay(tabindex="-1" data-micromodal-close)
+        .modal__container.modal__container--lg(role="dialog" aria-modal="true")
+            header.modal__title
+                h3 CSV Upload
+            main.modal__content
+                form(action="#")
+                    .form-row--selUpload
+                        label Select delimeter type
+                        .form-select.form-select--bord
+                            select.js-choice
+                                option(value="1") Текст 1
+                                option(value="2") Текст 2
+                        .form-upload
+                            a.link-blue(href="#") Upload file
+                    .form-row--csvUpload
+                        .col
+                            h5 File Columns:
+                            .form-select.form-select--bord
+                                select.js-choice
+                                    option(value="1") Текст 1
+                                    option(value="2") Текст 2
+                            .form-select.form-select--bord
+                                select.js-choice
+                                    option(value="1") Текст 1
+                                    option(value="2") Текст 2
+                            .form-select.form-select--bord
+                                select.js-choice
+                                    option(value="1") Текст 1
+                                    option(value="2") Текст 2
+                            .form-select.form-select--bord
+                                select.js-choice
+                                    option(value="1") Текст 1
+                                    option(value="2") Текст 2
+                            .form-select.form-select--bord
+                                select.js-choice
+                                    option(value="1") Текст 1
+                                    option(value="2") Текст 2
+                            .form-select.form-select--bord
+                                select.js-choice
+                                    option(value="1") Текст 1
+                                    option(value="2") Текст 2
+                        .col
+                            h5 Recipients list fields:
+                            .form-text
+                                label TEXT
+                            .form-text
+                                label TEXT
+                            .form-text
+                                label TEXT
+                            .form-text
+                                label TEXT
+                            .form-text
+                                label TEXT
+                            .form-text
+                                label TEXT
+                    .form-btn
+                        button.btn.btn_blue Add Recipients

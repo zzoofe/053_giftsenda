@@ -1,0 +1,15 @@
+#modal-1.modal.micromodal-slide(aria-hidden="true")
+    .modal__overlay(tabindex="-1" data-micromodal-close)
+        .modal__container.modal__container--sm(role="dialog" aria-modal="true")
+            header.modal__title
+                h3 Change password
+            main.modal__content
+                form(action="#")
+                    .form-line
+                        label Enter new password:
+                        input.inp.inp_bord(type="text" placeholder="Сompany")
+                    .form-line
+                        label Confirm password:
+                        input.inp.inp_bord(type="text" placeholder="Сompany")
+                    .form-btn
+                        button.btn.btn_blue Change
