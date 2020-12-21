@@ -52,7 +52,7 @@ a {
 }
 
 .container {
-    max-width: 1150px;
+    max-width: 1150px !important;
     margin: 0 auto;
     padding: 0 20px;
     @include media-tablet {
