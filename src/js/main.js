@@ -83,7 +83,9 @@ if (date) {
 
 if (filterTitle) {
     const boxOpen = document.querySelector(`.b-filter-box__frame.is-open`)
-    boxOpen.style.maxHeight = boxOpen.scrollHeight + `px`
+    if (boxOpen) {
+        boxOpen.style.maxHeight = boxOpen.scrollHeight + `px`
+    }
 
     filterTitle.forEach(function (e) {
         e.addEventListener(`click`, function (e) {
