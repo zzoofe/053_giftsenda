@@ -370,7 +370,7 @@
                     }
                 }
                 &.is-open {
-                    display: block;
+                    max-height: initial;
                 }
             }
         }

@@ -82,14 +82,23 @@ if (date) {
 }
 
 if (filterTitle) {
+    const boxOpen = document.querySelector(`.b-filter-box__frame.is-open`)
+    boxOpen.style.maxHeight = boxOpen.scrollHeight + `px`
+
     filterTitle.forEach(function (e) {
         e.addEventListener(`click`, function (e) {
             e.preventDefault()
             const el = e.target
             const panel = el.parentElement.nextElementSibling
             el.classList.toggle(`is-active`)
+
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null
+
+                if (panel.classList.contains(`is-open`)) {
+                    panel.classList.remove(`is-open`)
+                }
+
             } else {
                 panel.style.maxHeight = panel.scrollHeight + `px`
             }
