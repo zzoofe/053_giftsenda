@@ -31,18 +31,11 @@ const imgLarge = document.querySelector(`.b-productDetail__image__large img`)
 const pageBarBtn = document.querySelector(`.b-pageBar__btn`)
 const pageBar = document.querySelector(`.b-pageBar`)
 
+import {general} from "./general";
+
 if (choices) {
-    choices.forEach(function (e) {
-        const choice = new Choices(e, {
-            searchEnabled: false,
-            searchChoices: false,
-            itemSelectText: ``,
-            callbackOnInit: () => {
-                const drop = e.attributes[0].ownerElement.parentElement.nextSibling
-                const scroll = new SimpleBar(drop)
-            },
-        })
-    })
+
+    general.choiceInit();
 
     choicesSearch.forEach(function (e) {
         const choicesSearch = new Choices(e, {
