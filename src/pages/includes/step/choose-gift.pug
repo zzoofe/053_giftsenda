@@ -1,2 +1,25 @@
 .b-chooseGift
-    .b-chooseGift__sel (0) Selected
+    .b-chooseGift__select (0) Selected
+    .b-chooseGift__header
+        .b-chooseGift__header__col
+            input#cht1.form-check-1(type="checkbox")
+            label(for="cht1")
+        .b-chooseGift__header__col Name
+        .b-chooseGift__header__col Gift name
+        .b-chooseGift__header__col Photo
+        .b-chooseGift__header__col Cost
+        .b-chooseGift__header__col Quantity
+        .b-chooseGift__header__col Sum
+        .b-chooseGift__header__col Delivery date
+    .b-chooseGift__frame(style="display:none")
+        .b-chooseGift__row
+            .b-chooseGift__title
+                .b-chooseGift__title__col
+                    input#cht2.form-check-1(type="checkbox")
+                    label(for="cht2")
+                .b-chooseGift__title__col USA (23)
+                .b-chooseGift__title__col Choose
+                .b-chooseGift__title__col
+                    .el-arw
+                        +svg("arw-1")
+            .b-chooseGift__list

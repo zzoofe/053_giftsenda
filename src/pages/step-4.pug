@@ -26,5 +26,13 @@ block content
                         strong 4
                         span Step
                     .b-step__item__label Review
-            .b-step-title
-                h2 Choose gift (0/12)
+            .b-title_bl
+                h2 Review your order
+            include includes/step/review-order
+            .b-btnBar.b-btnBar_right
+                a.btn.btn_bl.btn_lg(href="#") SUBMIT PAYMENT
+            include includes/step/choose-gift
+            .b-btnBar
+                a.btn.btn_bl.btn_lg.btn_prev(href="#")
+                    +svg("arw-btn-prev")
+                    | MESSAGE

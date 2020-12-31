@@ -58,8 +58,24 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 0;
+
         h1 {
             margin-left: -3px;
+        }
+
+        &_bl {
+            margin: 40px 0 20px 0;
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                text-transform: none;
+                font-family: $fontRoboto;
+                font-size: 30px;
+                line-height: 1;
+                color: #393939;
+                letter-spacing: 0;
+            }
         }
     }
 
@@ -865,6 +881,53 @@
                     }
                 }
 
+            }
+        }
+
+        &_tb4 {
+            table {
+                tr {
+                    th {
+                        font-weight: 700;
+                    }
+                    td {
+                        text-align: left;
+                    }
+                    &:nth-child(2n) {
+                        td {
+                            background: #ffffff;
+                        }
+                    }
+                    &:nth-child(2n+1) {
+                        td {
+                          background: rgba(0, 102, 153, 0.08);
+                        }
+                    }
+                }
+            }
+
+            &__total {
+                padding: 10px 22px;
+                color: #006699;
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                &__list {
+                    font-size: 18px;
+                    line-height: 36px;
+                    font-weight: normal;
+                    padding-bottom: 7px;
+                }
+
+                &__itog {
+                    font-weight: bold;
+                    font-size: 22px;
+                    line-height: 36px;
+                    padding-top: 7px;
+                    border-top: 1px solid #006699;
+                }
             }
         }
     }
@@ -2088,7 +2151,9 @@
                 }
 
                 &:nth-child(4) {
-
+                    &:after {
+                        background: #006699;
+                    }
                 }
             }
         }
@@ -2234,7 +2299,10 @@
     }
 
     &-chooseGift {
-        &__sel {
+        margin-top: 20px;
+        background: #ffffff;
+
+        &__select {
             background: rgba(0, 102, 153, 0.15);
             height: 46px;
             padding: 0 22px;
@@ -2245,6 +2313,58 @@
             color: #000000;
             display: flex;
             align-items: center;
+        }
+
+        &__header {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr auto;
+            align-items: center;
+            padding: 0 7px;
+            &>div {
+                padding: 10px 7px;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 14px;
+                color: #393939;
+            }
+        }
+
+        &__title {
+            .el-arw {
+                svg {
+                    width: 6px;
+                    height: 9px;
+                }
+            }
+        }
+    }
+
+    &-btnBar {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        padding-bottom: 20px;
+
+        &_right {
+            justify-content: flex-end;
+        }
+    }
+
+    &-design {
+        min-height: 506px;
+        background: #ffffff;
+    }
+
+    &-sendEmail {
+        display: flex;
+        align-items: center;
+        margin-top: 56px;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 26px;
+        span {
+            color: #393939;
+            margin: 0 17px;
         }
     }
 }

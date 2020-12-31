@@ -26,5 +26,20 @@ block content
                         strong 4
                         span Step
                     .b-step__item__label Review
-            .b-step-title
-                h2 Choose gift (0/12)
+            .b-sendEmail
+                .form-check-2
+                    input#ch22(type="checkbox")
+                    label(for="ch22")
+                span Send E-mail Gift Invtitations first
+                a.link-blue(href="#") Design
+            .b-title_bl
+                h2 Design your Greeting Card
+            .b-design
+            .b-btnBar
+                a.btn.btn_bl.btn_lg.btn_prev(href="#")
+                    +svg("arw-btn-prev")
+                    | GIFTS
+                a.btn.btn_bl.btn_lg.btn_next(href="#")
+                    | REVIEW
+                    +svg("arw-btn-next")
+
