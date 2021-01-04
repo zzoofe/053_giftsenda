@@ -1,0 +1,52 @@
+.swiper {
+	position: relative;
+
+	&-container {
+
+	}
+
+	&-wrapper {
+
+	}
+
+	&-slide {
+		&__item {
+			height: 54px;
+			border: 1px solid #C9C9C9;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+		}
+	}
+
+	&-button {
+		width: 30px;
+		height: 30px;
+		background: #C4C4C4;
+		border-radius: 50%;
+		font-size: 0;
+		line-height: 0;
+		top: 50%;
+		margin-top: -15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+		svg {
+			width: 6px;
+			height: 8px;
+			display: block;
+			fill: #000000;
+		}
+
+		&-prev {
+			left: auto;
+			right: 35px;
+		}
+
+		&-next {
+			right: 0;
+		}
+	}
+}

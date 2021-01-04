@@ -3,6 +3,8 @@ import 'choices.js/public/assets/scripts/choices.min'
 import datepicker from 'js-datepicker'
 import '../js/multSelect'
 import MicroModal from 'micromodal'
+import Quill from 'quill'
+import Swiper from 'swiper/swiper-bundle'
 
 MicroModal.init({
     onShow: () => document.body.classList.add('howdy'),
@@ -10,6 +12,7 @@ MicroModal.init({
     awaitCloseAnimation: true,
     openClass: 'open'
 })
+
 
 const choices = document.querySelectorAll(`.js-choice`)
 const edit = document.querySelectorAll(`.el-edit`)
@@ -30,6 +33,46 @@ const imgBtn = document.querySelectorAll(`.b-productDetail__image__small a`)
 const imgLarge = document.querySelector(`.b-productDetail__image__large img`)
 const pageBarBtn = document.querySelector(`.b-pageBar__btn`)
 const pageBar = document.querySelector(`.b-pageBar`)
+const swiperSelector = document.querySelectorAll(`.swiper-container`)
+const areaEditor = document.querySelector(`.editor`)
+
+if (areaEditor) {
+    const editor = new Quill(`.editor`, {
+        theme: `snow`
+    })
+}
+
+swiperSelector.forEach(function (e) {
+    const swiper = new Swiper(e, {
+        slidesPerView: 5,
+        spaceBetween: 3,
+        pagination: {
+            el: `.swiper-pagination`,
+        },
+        navigation: {
+            nextEl: `.swiper-button-next`,
+            prevEl: `.swiper-button-prev`,
+        },
+        breakpoints: {
+            200: {
+                slidesPerView: 3,
+                spaceBetween: 3,
+            },
+            550: {
+                slidesPerView: 4,
+                spaceBetween: 3,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 3,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 3,
+            },
+        }
+    })
+})
 
 if (choices) {
     choices.forEach(function (e) {

@@ -27,14 +27,21 @@ block content
                         span Step
                     .b-step__item__label Review
             .b-sendEmail
-                .form-check-2
-                    input#ch22(type="checkbox")
-                    label(for="ch22")
-                span Send E-mail Gift Invtitations first
-                a.link-blue(href="#") Design
+                div
+                    .form-check-2
+                        input#ch22(type="checkbox")
+                        label(for="ch22")
+                    span Send E-mail Gift Invtitations first
+                div
+                    a.link-blue(href="#") Design
             .b-title_bl
                 h2 Design your Greeting Card
             .b-design
+                include includes/step-3/select
+                .b-design__canvas
+                    canvas
+                .b-design__btn
+                    a.btn.btn_bl.btn_w170(href="#") Save
             .b-btnBar
                 a.btn.btn_bl.btn_lg.btn_prev(href="#")
                     +svg("arw-btn-prev")
@@ -42,4 +49,3 @@ block content
                 a.btn.btn_bl.btn_lg.btn_next(href="#")
                     | REVIEW
                     +svg("arw-btn-next")
-

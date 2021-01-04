@@ -241,6 +241,8 @@
             color: #8F9BB3;
             position: relative;
             cursor: pointer;
+            user-select: none;
+            z-index: 5;
             &:after {
                 content: '';
                 width: 10px;
@@ -254,13 +256,18 @@
         }
         &__frame {
             background: $cl-white;
-            width: 336px;
+            min-width: 336px;
+            width: 100%;
             position: absolute;
             left: 0;
             top: 100%;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
             border-radius: 0 5px 5px 5px;
             z-index: 10;
+            display: none;
+            @include media-tablet {
+                min-width: initial;
+            }
         }
         &__search {
             padding: 10px;
@@ -378,6 +385,36 @@
                     color: #8F9BB3;
                     cursor: pointer;
                 }
+            }
+        }
+        &__over {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            display: none;
+        }
+
+        &_bord {
+            .form-multSelect__title {
+                border: 1px solid #C9C9C9;
+            }
+        }
+
+        &.is-open {
+            .form-multSelect__title {
+                &:after {
+                    transform: rotate(-180deg);
+                }
+            }
+            .form-multSelect__frame {
+                display: block;
+            }
+            .form-multSelect__over {
+                display: block;
+                z-index: 1;
             }
         }
     }
@@ -850,3 +887,6 @@ label {
     z-index: 10;
 }
 
+.ql-editor {
+    height: 80px;
+}

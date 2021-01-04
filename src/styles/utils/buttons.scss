@@ -17,6 +17,10 @@
     background: $cl-blue;
     border-radius: 5px;
 
+    @include media-tablet {
+        height: 40px;
+    }
+
     &:hover {
         background: #0E99CF;
         color: $cl-white;
@@ -154,12 +158,23 @@
         }
     }
 
+    &_w170 {
+        min-width: 170px;
+        justify-content: center;
+    }
+
     &_lg {
         height: 56px;
         font-weight: bold;
         font-size: 15px;
         min-width: 173px;
         justify-content: center;
+
+        @include media-tablet {
+            min-width: initial;
+            height: 40px;
+            font-size: 14px;
+        }
     }
 
     &_prev {

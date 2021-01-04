@@ -1,37 +1,42 @@
-// const multSelect = document.querySelector(`.form-multSelect`)
-// const multSelectTitle = multSelect.querySelector(`.form-multSelect__title`)
-// const multSelectList = multSelect.querySelectorAll(`.item-check`)
+class DropDown {
+    constructor(selector) {
+        this.$el = document.querySelector(selector)
+        this.init()
+    }
 
-//if (multSelect) {
-    //console.log(multSelectList)
+    init() {
+        this.clickHandler = this.clickHandler.bind(this)
+        this.$el.addEventListener(`click`, this.clickHandler)
+        this.$el.insertAdjacentHTML(
+            `beforeend`,
+            `<div class="form-multSelect__over" data-type="over"></div>`
+        )
+    }
 
-    // multSelectTitle.addEventListener(`click`, e => {
-    //     console.log(e)
-    //     this.classList.toggle()
-    // })
+    clickHandler(event) {
+        const { type } = event.target.dataset
+        if (type === `title`) {
+            this.toggle()
+        } else if (type === `over`) {
+            this.close()
+        }
+    }
 
-    // multSelectList.forEach(function (e) {
-    //     e.addEventListener(`click`,
-    //         e => {
-    //             let tgt = e.target
-    //             console.log(tgt)
-    //
-    //             let checked = [...e.currentTarget.querySelectorAll(`[name=${tgt.name}]:checked`)]
-    //             document.querySelector(`.form-multSelect__sel`).innerHTML = checked.map(inp => inp.value).join(", ")
-    //             checked()
-    //
-    //         })
-    // })
-//}
+    get isOpen() {
+        return this.$el.classList.contains(`is-open`)
+    }
 
-// function checked() {
-//     for (let i = 0; i < multSelectList.length; i++) {
-//         let isChecked = multSelectList[i].checked
-//         if (isChecked) {
-//             let value = multSelectList[i].value
-//             document.querySelector(`.form-multSelect__sel`).innerHTML = value.join(", ")
-//             console.log(value)
-//         }
-//         // console.log(isChecked)
-//     }
-// }
+    toggle() {
+        this.isOpen ? this.close() : this.open()
+    }
+
+    open() {
+        this.$el.classList.add(`is-open`)
+    }
+
+    close() {
+        this.$el.classList.remove(`is-open`)
+    }
+}
+
+window.drop = new DropDown(`.form-multSelect`)

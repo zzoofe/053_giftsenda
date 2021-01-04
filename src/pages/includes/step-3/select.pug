@@ -1,0 +1,72 @@
+.b-design__select
+    .b-design__select__ind
+        .form-check-2
+            input#ch23(type="checkbox")
+            label(for="ch23")
+        span Individual Messages
+    .b-design__select__drop
+        .form-multSelect.form-multSelect_bord
+            .form-multSelect__title(data-type="title") Dropdown select
+            .form-multSelect__frame
+                .form-multSelect__search
+                    input(type="text" placeholder="Search")
+                    +svg("search1")
+                .form-multSelect__list
+                    ul
+                        li
+                            input#tag1.item-check(type="checkbox" value="Perspiciatis")
+                            label(for="tag1") Perspiciatis
+                        li
+                            input#tag2.item-check(type="checkbox" value="Omnis")
+                            label(for="tag2") Omnis
+    .b-design__select__message
+        .b-design__select__message__title Select form message templates
+        .b-design__select__message__frame
+            .editor
+                p Hello World!
+        .b-design__select__swiper
+            .b-design__select__swiper__title Background
+            .swiper
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .swiper-slide__item Slide 1
+                        .swiper-slide
+                            .swiper-slide__item Slide 2
+                        .swiper-slide
+                            .swiper-slide__item Slide 3
+                        .swiper-slide
+                            .swiper-slide__item Slide 4
+                        .swiper-slide
+                            .swiper-slide__item Slide 5
+                        .swiper-slide
+                            .swiper-slide__item Slide 6
+                        .swiper-slide
+                            .swiper-slide__item Slide 7
+                    .swiper-button.swiper-button-prev
+                        +svg("swiper-button-prev")
+                    .swiper-button.swiper-button-next
+                        +svg("swiper-button-next")
+            .b-design__select__swiper
+                .b-design__select__swiper__title Logo
+                .swiper
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                .swiper-slide__item Slide 1
+                            .swiper-slide
+                                .swiper-slide__item Slide 2
+                            .swiper-slide
+                                .swiper-slide__item Slide 3
+                            .swiper-slide
+                                .swiper-slide__item Slide 4
+                            .swiper-slide
+                                .swiper-slide__item Slide 5
+                            .swiper-slide
+                                .swiper-slide__item Slide 6
+                            .swiper-slide
+                                .swiper-slide__item Slide 7
+                        .swiper-button.swiper-button-prev
+                            +svg("swiper-button-prev")
+                        .swiper-button.swiper-button-next
+                            +svg("swiper-button-next")
