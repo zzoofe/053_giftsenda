@@ -39,4 +39,7 @@ class DropDown {
     }
 }
 
-window.drop = new DropDown(`.form-multSelect`)
+const multSelect = document.querySelector(`.form-multSelect`)
+if (multSelect) {
+    window.drop = new DropDown(`.form-multSelect`)
+}
