@@ -1,24 +1,18 @@
 import SimpleBar from 'simplebar'
 import 'choices.js/public/assets/scripts/choices.min'
 import datepicker from 'js-datepicker'
-import '../js/multSelect'
 import MicroModal from 'micromodal'
 import Quill from 'quill'
 import Swiper from 'swiper/swiper-bundle'
-
-MicroModal.init({
-    onShow: () => document.body.classList.add('howdy'),
-    onClose: () => document.body.classList.remove('howdy'),
-    awaitCloseAnimation: true,
-    openClass: 'open'
-})
-
+import '../js/multSelect'
+import '../js/class'
 
 const choices = document.querySelectorAll(`.js-choice`)
 const edit = document.querySelectorAll(`.el-edit`)
 const choicesSearch = document.querySelectorAll(`.js-choice-search`)
 const choicesTag = document.querySelectorAll(`.js-choice-tag`)
 const date = document.querySelectorAll(`.inp-date`)
+const dateLink = document.querySelectorAll(`.link-date`)
 const filterTitle = document.querySelectorAll(`.b-filter-box__title span`)
 const filterBtn = document.querySelector(`.b-filterBtn span`)
 const filter = document.querySelector(`.b-filter`)
@@ -26,15 +20,19 @@ const burger = document.querySelector(`.burger`)
 const tabby = document.querySelector(`.tabby`)
 const tabs = document.querySelectorAll(`.tab`)
 const tabContents = document.querySelectorAll(`.tab-content`)
-const quaPlus = document.querySelector(`.el-qua__btn--plus`)
-const quaMinus = document.querySelector(`.el-qua__btn--minus`)
-const countEl = document.querySelector(`.el-qua input`)
 const imgBtn = document.querySelectorAll(`.b-productDetail__image__small a`)
 const imgLarge = document.querySelector(`.b-productDetail__image__large img`)
 const pageBarBtn = document.querySelector(`.b-pageBar__btn`)
 const pageBar = document.querySelector(`.b-pageBar`)
 const swiperSelector = document.querySelectorAll(`.swiper-container`)
 const areaEditor = document.querySelector(`.editor`)
+
+MicroModal.init({
+    onShow: () => document.body.classList.add('howdy'),
+    onClose: () => document.body.classList.remove('howdy'),
+    awaitCloseAnimation: true,
+    openClass: 'open'
+})
 
 if (areaEditor) {
     const editor = new Quill(`.editor`, {
@@ -120,6 +118,18 @@ if (date) {
                 const value = date.toLocaleDateString(`en-US`)
                 input.value = value
             },
+        })
+    })
+}
+
+if (dateLink) {
+    dateLink.forEach(function (e) {
+        const picker = datepicker(e, {
+            formatter: () => {
+                const value = date.toLocaleDateString(`en-US`)
+                input.value = value
+            },
+            position: `br`
         })
     })
 }
@@ -210,24 +220,6 @@ if (imgBtn) {
     })
 }
 
-let count = 1
-
-if (quaPlus) {
-    quaPlus.addEventListener(`click`, function (e) {
-        count++
-        countEl.value = count
-    })
-}
-
-if (quaMinus) {
-    quaMinus.addEventListener(`click`, function (e) {
-        if (count > 1) {
-            count--
-            countEl.value = count
-        }
-    })
-}
-
 if (edit) {
     edit.forEach(function (e) {
         e.addEventListener(`click`, function (e) {
@@ -245,3 +237,5 @@ if (pageBar) {
         pageBar.classList.toggle(`is-open`)
     })
 }
+
+

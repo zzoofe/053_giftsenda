@@ -899,9 +899,72 @@
                 tr {
                     th {
                         font-weight: 700;
+                        @include media-tablet {
+                            display: none;
+                        }
                     }
                     td {
                         text-align: left;
+                        @include media-tablet {
+                            float: left;
+                            width: 100%;
+                            padding: 5px 14px;
+                            display: flex;
+
+                            &:before {
+                                font-weight: bold;
+                                flex-basis: 83px;
+                            }
+
+                            &:first-child {
+                                padding-top: 14px;
+                            }
+                            &:last-child {
+                                padding-bottom: 14px;
+                            }
+
+                            &:nth-child(1) {
+                                &:before {
+                                    content: 'Order';
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                &:before {
+                                    content: 'Cost';
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                &:before {
+                                    content: 'Quantity';
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                &:before {
+                                    content: 'Subtotal';
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                &:before {
+                                    content: 'Shipping';
+                                }
+                            }
+
+                            &:nth-child(6) {
+                                &:before {
+                                    content: 'Tax';
+                                }
+                            }
+
+                            &:nth-child(7) {
+                                &:before {
+                                    content: 'Total';
+                                }
+                            }
+                        }
                     }
                     &:nth-child(2n) {
                         td {
@@ -919,6 +982,11 @@
             &__total {
                 padding: 10px 22px;
                 color: #006699;
+
+                @include media-tablet {
+                    padding: 10px 14px;
+                }
+
                 p {
                     margin: 0;
                     padding: 0;
@@ -2432,9 +2500,14 @@
 
         &__header {
             display: grid;
-            grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr auto;
+            grid-template-columns: auto 19% 19% 1fr 1fr 1fr 1fr auto;
             align-items: center;
             padding: 0 7px;
+
+            @include media-tablet {
+                display: none;
+            }
+
             &>div {
                 padding: 10px 7px;
                 font-weight: bold;
@@ -2444,20 +2517,176 @@
             }
         }
 
+        &__frame {
+            max-height: 348px;
+            overflow-y: auto;
+        }
+
         &__title {
             display: flex;
             align-items: center;
             background: rgba(0, 102, 153, 0.15);
             min-height: 30px;
             padding: 0 7px;
+            margin-top: 1px;
+
             &__col {
                 padding: 0 7px;
+                strong {
+                    font-weight: bold;
+                }
+                &:nth-child(2) {
+                    flex-basis: 19%;
+                    @include media-tablet {
+                        flex-basis: auto;
+                    }
+                }
+                &:nth-child(3) {
+                    flex: 2;
+                }
             }
 
             .el-arw {
                 svg {
-                    width: 6px;
-                    height: 9px;
+                    width: 10px;
+                    height: 11px;
+                }
+            }
+        }
+
+        &__list {
+
+            &__row {
+                display: grid;
+                grid-template-columns: auto 19% 19% 1fr 1fr 1fr 1fr auto;
+                align-items: center;
+                padding: 0 7px;
+                min-height: 72px;
+
+                @include media-tablet {
+                    grid-template-columns: 1fr;
+                    padding: 7px;
+                }
+
+                &:nth-child(2n) {
+                    background: rgba(0, 102, 153, 0.08);
+                }
+
+                &:hover {
+                    .el-linkBar {
+                        opacity: 1 !important;
+                    }
+                }
+            }
+
+            &__col {
+                padding: 10px 7px;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 16px;
+                color: #393939;
+                position: relative;
+
+                @include media-tablet {
+                    padding: 5px 7px;
+                    padding-left: 90px;
+
+                    &:before {
+                        position: absolute;
+                        left: 7px;
+                        top: 4px;
+                        font-weight: bold;
+                    }
+
+                    &:nth-child(1) {
+                        padding-left: 7px;
+                    }
+
+                    &:nth-child(2) {
+                        &:before {
+                            content: 'Name';
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        &:before {
+                            content: 'Gift name';
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        &:before {
+                            content: 'Photo';
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        &:before {
+                            content: 'Cost';
+                        }
+                    }
+
+                    &:nth-child(6) {
+                        &:before {
+                            content: 'Quantity';
+                        }
+                    }
+
+                    &:nth-child(7) {
+                        &:before {
+                            content: 'Sum';
+                        }
+                    }
+
+                    &:nth-child(8) {
+                        &:before {
+                            content: 'Delivery date';
+                        }
+                    }
+
+                }
+
+                .el-linkBar {
+                    transition: all $time ease;
+                    opacity: 0;
+                    @include media-tablet {
+                        opacity: 1;
+                    }
+                }
+            }
+
+
+
+        }
+
+        .el-date {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            svg {
+                width: 14px;
+                height: 14px;
+                margin-left: 8px;
+            }
+        }
+
+        &_review {
+            .b-chooseGift__header {
+                grid-template-columns: auto 17% 17% 1fr 1fr 1fr 1fr 1fr 16%;
+            }
+            .b-chooseGift__list__row {
+                grid-template-columns: auto 17% 17% 1fr 1fr 1fr 1fr 1fr 16%;
+
+                @include media-tablet {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .b-chooseGift__title {
+                .b-chooseGift__title__col {
+                    &:nth-child(2) {
+                        flex-basis: 17%;
+                    }
                 }
             }
         }
@@ -2613,6 +2842,7 @@
 .link-blue {
     color: rgba(0,102,153,1);
     border-bottom: 1px solid rgba(0,102,153,.7);
+
     &:hover {
         border-bottom: 1px solid rgba(0,102,153,0);
     }
