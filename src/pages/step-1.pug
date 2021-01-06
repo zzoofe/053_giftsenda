@@ -32,9 +32,10 @@ block content
                 .b-page__frame
                     .b-barTop
                         .b-search
-                            input.inp(type="text" placeholder="Search by recipient, company, campaign")
-                            button
-                                +svg("search")
+                            input.inp.b-search__inp(type="text" placeholder="Search by recipient, company, campaign")
+                            .b-search__icon
+                                +svg("search").b-search__icon__search
+                                +svg("close").b-search__icon__close
                         .b-filterBtn
                             span Expand the filter
                             +svg("filter")
@@ -167,6 +168,11 @@ block content
                     .b-recipients
                         .b-recipients__title
                             h4 Recipients (32)
+                            .b-recipients__icon
+                                +svg("search").b-recipients__icon__search
+                                +svg("close").b-recipients__icon__close
+                            .b-recipients__search
+                                input.b-recipients__search__inp(type="text" placeholder="Search")
                         .b-recipients__list(data-simplebar)
                             ul
                                 li Ivan Ivanov

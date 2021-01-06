@@ -14,8 +14,9 @@ block content
                     .b-barTopSn__left
                         .b-search
                             input.inp(type="text" placeholder="Search by recipient, company, campaign")
-                            button
-                                +svg("search")
+                            .b-search__icon
+                                +svg("search").b-search__icon__search
+                                +svg("close").b-search__icon__close
                     .b-barTopSn__right
                         .b-barTopSn__download
                             a(href="#") Download Invoice

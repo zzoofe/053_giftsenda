@@ -161,6 +161,16 @@
             text-align: center;
             cursor: pointer;
             user-select: none;
+            transition: all $time ease;
+
+            &:hover {
+                background: rgba(0, 102, 153, 0.08);
+            }
+
+            &:active {
+                background: #006699;
+                color: #ffffff;
+            }
         }
 
         &__inp {
@@ -196,6 +206,20 @@
         &:hover {
             &>span {
                 border-bottom: 1px solid rgba(0,102,153,0);
+            }
+        }
+
+        &-pos {
+            position: relative;
+            padding-left: 30px;
+            &__icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }
@@ -237,6 +261,71 @@
                 svg {
                     fill: #006699;
                 }
+            }
+        }
+    }
+
+    &-setAll {
+        position: relative;
+
+        &__frame {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: #FFFFFF;
+            border-radius: 5px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            width: 197px;
+            z-index: 50;
+            padding: 4px 0;
+            margin-top: 18px;
+            margin-left: -75px;
+            display: none;
+        }
+
+        &__row {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__inp {
+            background: #FFFFFF;
+            border: 1px solid #C6C6C6;
+            box-sizing: border-box;
+            border-radius: 5px;
+            width: 48px;
+            height: 28px;
+            display: block;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        &__btn {
+            width: 121px;
+            height: 28px;
+            margin-left: 5px;
+            margin-right: 0;
+        }
+
+        &__bg {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 5;
+            display: none;
+        }
+
+        &.is-open {
+            .el-setAll__link {
+                z-index: 50;
+                position: relative;
+            }
+            .el-setAll__frame,
+            .el-setAll__bg {
+                display: block;
             }
         }
     }

@@ -84,6 +84,11 @@
 <path d="M4.33398 2H7.66732V2.66667H4.33398V2Z" fill="#393939"/>
 </symbol><symbol id="ch" viewBox="0 0 12 9">
 <path d="M11.1252 1.37578L3.62518 8.87578L0.187683 5.43828L1.06893 4.55703L3.62518 7.10703L10.2439 0.494529L11.1252 1.37578Z" fill="#006699"/>
+</symbol><symbol id="ch_green" viewBox="0 0 12 9">
+<path d="M11.125 1.37539L3.625 8.87539L0.1875 5.43789L1.06875 4.55664L3.625 7.10664L10.2438 0.494141L11.125 1.37539Z" fill="#44C38D"/>
+</symbol><symbol id="close" viewBox="0 0 24 24">
+<path d="M18.75 5.25L5.25 18.75" stroke="#8F9BB3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.75 18.75L5.25 5.25" stroke="#8F9BB3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol id="dash-1" viewBox="0 0 64 64">
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
 <rect width="64" height="64" fill="url(#pattern0)"/>

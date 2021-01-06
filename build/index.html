@@ -77,12 +77,15 @@
             <div class="b-page__frame">
               <div class="b-barTop">
                 <div class="b-search">
-                  <input class="inp" type="text" placeholder="Search by recipient, company, campaign">
-                  <button>
-                    <svg>
+                  <input class="inp b-search__inp" type="text" placeholder="Search by recipient, company, campaign">
+                  <div class="b-search__icon">
+                    <svg class="b-search__icon__search">
                       <use xlink:href="img/sprite.svg#search"></use>
                     </svg>
-                  </button>
+                    <svg class="b-search__icon__close">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </div>
                 </div>
                 <div class="b-filterBtn"><span>Expand the filter</span>
                   <svg>

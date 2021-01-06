@@ -15,8 +15,9 @@ block content
                     | California cabernet gift basket
             .b-search.b-search_w4
                 input.inp(type="text" placeholder="Search price")
-                button
-                    +svg("search")
+                .b-search__icon
+                    +svg("search").b-search__icon__search
+                    +svg("close").b-search__icon__close
             .b-catalog
                 aside.b-catalog__bar
                     .b-box.custom-select
@@ -45,7 +46,7 @@ block content
                             .b-filter-box__title
                                 span.is-active Type
                                 +svg("arw")
-                            .b-filter-box__frame.is-open 
+                            .b-filter-box__frame.is-open
                                 ul
                                     li
                                         input#rad11.form-radio(type="radio" name="rad1")
@@ -61,9 +62,9 @@ block content
                                         label(for="rad14") Coffee (55)
                         .b-filter-box__item
                             .b-filter-box__title
-                                span Price
+                                span.is-active Price
                                 +svg("arw")
-                            .b-filter-box__frame
+                            .b-filter-box__frame.is-open
                                 ul
                                     li
                                         input#rad21.form-radio(type="radio" name="rad2")
@@ -91,9 +92,9 @@ block content
                                                     input.inp(type="text" placeholder="min")
                         .b-filter-box__item
                             .b-filter-box__title
-                                span Item types
+                                span.is-active Item types
                                 +svg("arw")
-                            .b-filter-box__frame
+                            .b-filter-box__frame.is-open
                                 ul
                                     li
                                         input#rad31.form-radio(type="radio" name="rad3")
@@ -103,9 +104,9 @@ block content
                                         label(for="rad32") Coffee (11)
                         .b-filter-box__item
                             .b-filter-box__title
-                                span Marks
+                                span.is-active Marks
                                 +svg("arw")
-                            .b-filter-box__frame
+                            .b-filter-box__frame.is-open
                                 ul
                                     li
                                         input#rad41.form-check(type="checkbox" name="rad4")

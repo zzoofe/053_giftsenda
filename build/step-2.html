@@ -91,7 +91,29 @@
             <h2>Choose gift (0/12)</h2>
           </div>
           <div class="b-chooseGift">
-            <div class="b-chooseGift__select">(0) Selected</div>
+            <div class="b-chooseGift__select">
+              <div>(0) Selected</div>
+              <div class="b-chooseGift__select__hide">
+                <div>
+                  <div class="el-setAll"><a class="link-blue el-setAll__link" href="javascript:void(0)">Quantity</a>
+                    <div class="el-setAll__frame">
+                      <div class="el-setAll__row">
+                        <input class="el-setAll__inp" type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57">
+                        <button class="btn btn_blue el-setAll__btn">Set For All</button>
+                      </div>
+                    </div>
+                    <div class="el-setAll__bg" data-type="bg"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="el-date el-date-p"><span class="link-date-bt">Delivery date</span>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#calendar"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="b-chooseGift__header">
               <div class="b-chooseGift__header__col">
                 <input class="form-check-1" id="cht1" type="checkbox">
@@ -101,10 +123,20 @@
               <div class="b-chooseGift__header__col">Gift name</div>
               <div class="b-chooseGift__header__col">Photo</div>
               <div class="b-chooseGift__header__col">Cost</div>
-              <div class="b-chooseGift__header__col">Quantity</div>
+              <div class="b-chooseGift__header__col">
+                <div class="el-setAll"><a class="link-blue el-setAll__link" href="javascript:void(0)">Quantity</a>
+                  <div class="el-setAll__frame">
+                    <div class="el-setAll__row">
+                      <input class="el-setAll__inp" type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57">
+                      <button class="btn btn_blue el-setAll__btn">Set For All</button>
+                    </div>
+                  </div>
+                  <div class="el-setAll__bg" data-type="bg"></div>
+                </div>
+              </div>
               <div class="b-chooseGift__header__col">Sum</div>
               <div class="b-chooseGift__header__col">
-                <div class="el-date"><span class="link-date">Delivery date</span>
+                <div class="el-date el-date-p"><span class="link-date-bt">Delivery date</span>
                   <svg>
                     <use xlink:href="img/sprite.svg#calendar"></use>
                   </svg>
@@ -113,14 +145,14 @@
             </div>
             <div class="b-chooseGift__frame" data-simplebar>
               <div class="b-chooseGift__row">
-                <div class="b-chooseGift__title">
-                  <div class="b-chooseGift__title__col">
+                <div class="b-chooseGift__title is-open">
+                  <div class="b-chooseGift__title__col" data-type="col">
                     <input class="form-check-1" id="cht2" type="checkbox">
                     <label for="cht2"></label>
                   </div>
-                  <div class="b-chooseGift__title__col"><strong>USA (23)</strong></div>
-                  <div class="b-chooseGift__title__col"><a class="link-blue" href="#">Choose</a></div>
-                  <div class="b-chooseGift__title__col">
+                  <div class="b-chooseGift__title__col" data-type="col"><strong>USA (23)</strong></div>
+                  <div class="b-chooseGift__title__col" data-type="col"><a class="link-blue" href="#">Choose</a></div>
+                  <div class="b-chooseGift__title__col" data-type="col">
                     <div class="el-arw">
                       <svg>
                         <use xlink:href="img/sprite.svg#arw-1"></use>
@@ -148,9 +180,11 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <svg>
-                          <use xlink:href="img/sprite.svg#calendar"></use>
-                        </svg>
+                        <div class="el-date-p">
+                          <svg class="link-date">
+                            <use xlink:href="img/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -173,9 +207,11 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <svg>
-                          <use xlink:href="img/sprite.svg#calendar"></use>
-                        </svg>
+                        <div class="el-date-p">
+                          <svg class="link-date">
+                            <use xlink:href="img/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -206,9 +242,11 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <svg>
-                          <use xlink:href="img/sprite.svg#calendar"></use>
-                        </svg>
+                        <div class="el-date-p">
+                          <svg class="link-date">
+                            <use xlink:href="img/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -216,13 +254,13 @@
               </div>
               <div class="b-chooseGift__row">
                 <div class="b-chooseGift__title">
-                  <div class="b-chooseGift__title__col">
+                  <div class="b-chooseGift__title__col" data-type="col">
                     <input class="form-check-1" id="cht3" type="checkbox">
                     <label for="cht3"></label>
                   </div>
-                  <div class="b-chooseGift__title__col"><strong>France (23)</strong></div>
-                  <div class="b-chooseGift__title__col"><a class="link-blue" href="#">Choose</a></div>
-                  <div class="b-chooseGift__title__col">
+                  <div class="b-chooseGift__title__col" data-type="col"><strong>France (23)</strong></div>
+                  <div class="b-chooseGift__title__col" data-type="col"><a class="link-blue" href="#">Choose</a></div>
+                  <div class="b-chooseGift__title__col" data-type="col">
                     <div class="el-arw">
                       <svg>
                         <use xlink:href="img/sprite.svg#arw-1"></use>
@@ -250,9 +288,11 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <svg>
-                          <use xlink:href="img/sprite.svg#calendar"></use>
-                        </svg>
+                        <div class="el-date-p">
+                          <svg class="link-date">
+                            <use xlink:href="img/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -275,9 +315,11 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <svg>
-                          <use xlink:href="img/sprite.svg#calendar"></use>
-                        </svg>
+                        <div class="el-date-p">
+                          <svg class="link-date">
+                            <use xlink:href="img/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -308,9 +350,11 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <svg>
-                          <use xlink:href="img/sprite.svg#calendar"></use>
-                        </svg>
+                        <div class="el-date-p">
+                          <svg class="link-date">
+                            <use xlink:href="img/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>

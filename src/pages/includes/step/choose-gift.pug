@@ -1,5 +1,19 @@
 .b-chooseGift
-    .b-chooseGift__select (0) Selected
+    .b-chooseGift__select
+        div (0) Selected
+        div.b-chooseGift__select__hide
+            div
+                .el-setAll
+                    a.link-blue.el-setAll__link(href="javascript:void(0)") Quantity
+                    .el-setAll__frame
+                        .el-setAll__row
+                            input.el-setAll__inp(type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57")
+                            button.btn.btn_blue.el-setAll__btn Set For All
+                    .el-setAll__bg(data-type="bg")
+            div
+                .el-date.el-date-p
+                    span.link-date-bt Delivery date
+                    +svg("calendar")
     .b-chooseGift__header
         .b-chooseGift__header__col
             input#cht1.form-check-1(type="checkbox")
@@ -8,27 +22,33 @@
         .b-chooseGift__header__col Gift name
         .b-chooseGift__header__col Photo
         .b-chooseGift__header__col Cost
-        .b-chooseGift__header__col Quantity
+        .b-chooseGift__header__col
+            .el-setAll
+                a.link-blue.el-setAll__link(href="javascript:void(0)") Quantity
+                .el-setAll__frame
+                    .el-setAll__row
+                        input.el-setAll__inp(type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57")
+                        button.btn.btn_blue.el-setAll__btn Set For All
+                .el-setAll__bg(data-type="bg")
         .b-chooseGift__header__col Sum
         .b-chooseGift__header__col
-            .el-date
-                span.link-date Delivery date
+            .el-date.el-date-p
+                span.link-date-bt Delivery date
                 +svg("calendar")
 
     .b-chooseGift__frame(data-simplebar)
         .b-chooseGift__row
-            .b-chooseGift__title
-                .b-chooseGift__title__col
+            .b-chooseGift__title.is-open
+                .b-chooseGift__title__col(data-type="col")
                     input#cht2.form-check-1(type="checkbox")
                     label(for="cht2")
-                .b-chooseGift__title__col
+                .b-chooseGift__title__col(data-type="col")
                     strong USA (23)
-                .b-chooseGift__title__col
+                .b-chooseGift__title__col(data-type="col")
                     a.link-blue(href="#") Choose
-                .b-chooseGift__title__col
+                .b-chooseGift__title__col(data-type="col")
                     .el-arw
                         +svg("arw-1")
-
             .b-chooseGift__list
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
@@ -54,7 +74,8 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            +svg("calendar")
+                            .el-date-p
+                                +svg("calendar").link-date
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht22.form-check-1(type="checkbox")
@@ -79,7 +100,8 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            +svg("calendar")
+                            .el-date-p
+                                +svg("calendar").link-date
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht23.form-check-1(type="checkbox")
@@ -114,17 +136,18 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            +svg("calendar")
+                            .el-date-p
+                                +svg("calendar").link-date
         .b-chooseGift__row
             .b-chooseGift__title
-                .b-chooseGift__title__col
+                .b-chooseGift__title__col(data-type="col")
                     input#cht3.form-check-1(type="checkbox")
                     label(for="cht3")
-                .b-chooseGift__title__col
+                .b-chooseGift__title__col(data-type="col")
                     strong France (23)
-                .b-chooseGift__title__col
+                .b-chooseGift__title__col(data-type="col")
                     a.link-blue(href="#") Choose
-                .b-chooseGift__title__col
+                .b-chooseGift__title__col(data-type="col")
                     .el-arw
                         +svg("arw-1")
 
@@ -153,7 +176,8 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            +svg("calendar")
+                            .el-date-p
+                                +svg("calendar").link-date
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht32.form-check-1(type="checkbox")
@@ -178,7 +202,8 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            +svg("calendar")
+                            .el-date-p
+                                +svg("calendar").link-date
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht33.form-check-1(type="checkbox")
@@ -213,4 +238,5 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            +svg("calendar")
+                            .el-date-p
+                                +svg("calendar").link-date

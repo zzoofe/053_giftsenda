@@ -88,24 +88,57 @@
             </div>
           </div>
           <div class="b-sendEmail">
-            <div>
+            <div><span>Send E-mail Gift Invtitations first</span>
               <div class="form-check-2">
-                <input id="ch22" type="checkbox">
+                <input class="sendEmail" id="ch22" type="checkbox">
                 <label for="ch22"></label>
-              </div><span>Send E-mail Gift Invtitations first</span>
+              </div>
             </div>
-            <div><a class="link-blue" href="#">Design</a></div>
+          </div>
+          <div class="b-sendEmailFrame">
+            <div class="b-sendEmailFrame__padd">
+              <div class="b-sendEmailFrame__info">
+                <div><a class="link-blue" href="javascript:;" data-micromodal-trigger="modal-4">Design</a></div>
+                <div>Gift Invitation Delivery Date:<span>22/03/2020</span>
+                  <div class="el-date-p">
+                    <svg class="link-date">
+                      <use xlink:href="img/sprite.svg#calendar"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="b-sendEmailFrame__row">
+                <div><span>Enable swap to charity</span>
+                  <div class="form-check-2">
+                    <input id="ch51" type="checkbox">
+                    <label for="ch51"></label>
+                  </div>
+                </div>
+                <div><span>Gift can be declined</span>
+                  <div class="form-check-2">
+                    <input id="ch52" type="checkbox">
+                    <label for="ch52"></label>
+                  </div>
+                </div>
+                <div><span>Ask Recipient to verify address</span>
+                  <div class="form-check-2">
+                    <input id="ch53" type="checkbox">
+                    <label for="ch53"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="b-title_bl">
             <h2>Design your Greeting Card</h2>
           </div>
           <div class="b-design">
             <div class="b-design__select">
-              <div class="b-design__select__ind">
+              <div class="b-design__select__ind"><span>Individual Messages</span>
                 <div class="form-check-2">
                   <input id="ch23" type="checkbox">
                   <label for="ch23"></label>
-                </div><span>Individual Messages</span>
+                </div>
               </div>
               <div class="b-design__select__drop">
                 <div class="form-multSelect form-multSelect_bord">
@@ -117,7 +150,7 @@
                         <use xlink:href="img/sprite.svg#search1"></use>
                       </svg>
                     </div>
-                    <div class="form-multSelect__list">
+                    <div class="form-multSelect__list form-multSelect__list_v1">
                       <ul>
                         <li>
                           <input class="item-check" id="tag1" type="checkbox" value="Perspiciatis">
@@ -235,6 +268,42 @@
               </svg></a></div>
         </div>
       </main>
+      <div class="modal modal-giftDesing micromodal-slide" id="modal-4" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container modal__container--xl" role="dialog" aria-modal="true">
+            <header class="modal__title">
+              <h3>Gift invitation E-mail Design</h3>
+            </header>
+            <main class="modal__content">
+              <form class="form-giftDesign" action="#">
+                <div class="form-giftDesign__row">
+                  <div class="form-giftDesign__col">
+                    <div class="from-line">
+                      <label class="label">Subject</label>
+                      <input class="inp inp_bord" type="text">
+                    </div>
+                    <div class="from-line">
+                      <label class="label"><a class="link-blue" href="#">Select from message templates</a></label>
+                      <textarea class="area area_block area_h294 inp_bord"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-giftDesign__col">
+                    <div class="from-line">
+                      <div class="from-line-title">
+                        <label class="label">Preview:</label><a class="link-blue" href="#">Upload logo</a>
+                      </div>
+                      <textarea class="area area_block area_h370 inp_bord"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-giftDesign__btn">
+                  <button class="btn btn_bl btn_w170">Save</button>
+                </div>
+              </form>
+            </main>
+          </div>
+        </div>
+      </div>
       <footer class="s-footer">
         <div class="container">
           <div class="copyr">Copyright 2020 | Privacy</div>

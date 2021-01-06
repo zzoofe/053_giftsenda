@@ -28,12 +28,36 @@ block content
                     .b-step__item__label Review
             .b-sendEmail
                 div
-                    .form-check-2
-                        input#ch22(type="checkbox")
-                        label(for="ch22")
                     span Send E-mail Gift Invtitations first
-                div
-                    a.link-blue(href="#") Design
+                    .form-check-2
+                        input#ch22.sendEmail(type="checkbox")
+                        label(for="ch22")
+            .b-sendEmailFrame
+                .b-sendEmailFrame__padd
+                    .b-sendEmailFrame__info
+                        div
+                            a.link-blue(href="javascript:;" data-micromodal-trigger="modal-4") Design
+                        div
+                            | Gift Invitation Delivery Date:
+                            span 22/03/2020
+                            .el-date-p
+                                +svg("calendar").link-date
+                    .b-sendEmailFrame__row
+                        div
+                            span Enable swap to charity
+                            .form-check-2
+                                input#ch51(type="checkbox")
+                                label(for="ch51")
+                        div
+                            span Gift can be declined
+                            .form-check-2
+                                input#ch52(type="checkbox")
+                                label(for="ch52")
+                        div
+                            span Ask Recipient to verify address
+                            .form-check-2
+                                input#ch53(type="checkbox")
+                                label(for="ch53")
             .b-title_bl
                 h2 Design your Greeting Card
             .b-design
@@ -49,3 +73,4 @@ block content
                 a.btn.btn_bl.btn_lg.btn_next(href="#")
                     | REVIEW
                     +svg("arw-btn-next")
+    include includes/modal/modal-4

@@ -13,6 +13,7 @@ const choicesSearch = document.querySelectorAll(`.js-choice-search`)
 const choicesTag = document.querySelectorAll(`.js-choice-tag`)
 const date = document.querySelectorAll(`.inp-date`)
 const dateLink = document.querySelectorAll(`.link-date`)
+const dateLinkBt = document.querySelectorAll(`.link-date-bt`)
 const filterTitle = document.querySelectorAll(`.b-filter-box__title span`)
 const filterBtn = document.querySelector(`.b-filterBtn span`)
 const filter = document.querySelector(`.b-filter`)
@@ -26,6 +27,11 @@ const pageBarBtn = document.querySelector(`.b-pageBar__btn`)
 const pageBar = document.querySelector(`.b-pageBar`)
 const swiperSelector = document.querySelectorAll(`.swiper-container`)
 const areaEditor = document.querySelector(`.editor`)
+const search = document.querySelector(`.b-search`)
+const setAll = document.querySelectorAll(`.el-setAll`)
+const chooseTitle = document.querySelectorAll(`.b-chooseGift__title`)
+const searchOpen = document.querySelector(`.b-recipients__icon`)
+const sendEmail = document.querySelector(`.sendEmail`)
 
 MicroModal.init({
     onShow: () => document.body.classList.add('howdy'),
@@ -43,7 +49,7 @@ if (areaEditor) {
 swiperSelector.forEach(function (e) {
     const swiper = new Swiper(e, {
         slidesPerView: 5,
-        spaceBetween: 3,
+        spaceBetween: 0,
         pagination: {
             el: `.swiper-pagination`,
         },
@@ -54,19 +60,19 @@ swiperSelector.forEach(function (e) {
         breakpoints: {
             200: {
                 slidesPerView: 3,
-                spaceBetween: 3,
+                spaceBetween: 0,
             },
             550: {
                 slidesPerView: 4,
-                spaceBetween: 3,
+                spaceBetween: 0,
             },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 3,
+                spaceBetween: 0,
             },
             1024: {
                 slidesPerView: 5,
-                spaceBetween: 3,
+                spaceBetween: 0,
             },
         }
     })
@@ -89,12 +95,15 @@ if (choices) {
         const choicesSearch = new Choices(e, {
             searchEnabled: true,
             searchChoices: true,
+            searchResultLimit: 1,
             itemSelectText: ``,
             callbackOnInit: () => {
                 const drop = e.attributes[0].ownerElement.parentElement.nextSibling
                 const scroll = new SimpleBar(drop)
             },
         })
+
+        console.log(choicesSearch)
     })
 
     choicesTag.forEach(function (e) {
@@ -125,6 +134,26 @@ if (date) {
 if (dateLink) {
     dateLink.forEach(function (e) {
         const picker = datepicker(e, {
+            onShow: instance => {
+                console.log(e)
+                let coords = e.getBoundingClientRect()
+                // console.log(coords.left)
+                console.log(picker)
+                picker.calendarContainer.style.left = coords.left + `px`
+                picker.calendarContainer.style.top = coords.top + `px`
+            },
+            formatter: () => {
+                const value = date.toLocaleDateString(`en-US`)
+                input.value = value
+            },
+            position: `c`,
+        })
+    })
+}
+
+if (dateLinkBt) {
+    dateLinkBt.forEach(function (e) {
+        const picker1 = datepicker(e, {
             formatter: () => {
                 const value = date.toLocaleDateString(`en-US`)
                 input.value = value
@@ -135,25 +164,29 @@ if (dateLink) {
 }
 
 if (filterTitle) {
-    const boxOpen = document.querySelector(`.b-filter-box__frame.is-open`)
+    const boxOpen = document.querySelectorAll(`.b-filter-box__frame.is-open`)
+
     if (boxOpen) {
-        boxOpen.style.maxHeight = boxOpen.scrollHeight + `px`
+        boxOpen.forEach(function (e) {
+            console.log(e)
+            e.style.maxHeight = e.scrollHeight + `px`
+        })
+
     }
 
     filterTitle.forEach(function (e) {
         e.addEventListener(`click`, function (e) {
-            e.preventDefault()
+
             const el = e.target
             const panel = el.parentElement.nextElementSibling
             el.classList.toggle(`is-active`)
 
+            if (panel.classList.contains(`is-open`)) {
+                panel.classList.remove(`is-open`)
+            }
+
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null
-
-                if (panel.classList.contains(`is-open`)) {
-                    panel.classList.remove(`is-open`)
-                }
-
             } else {
                 panel.style.maxHeight = panel.scrollHeight + `px`
             }
@@ -238,4 +271,94 @@ if (pageBar) {
     })
 }
 
+if (search) {
+    const searchInput = search.querySelector(`.inp`)
+    const searchIcon = search.querySelector(`.b-search__icon`)
+    const searchClear = search.querySelector(`.b-search__icon__close`)
+
+    searchInput.addEventListener(`input`, function (e) {
+        if (e.target.value.length > 0) {
+            searchIcon.classList.add(`is-clear`)
+        } else {
+            searchIcon.classList.remove(`is-clear`)
+        }
+    })
+
+    searchClear.addEventListener(`click`, function (e) {
+        searchInput.value = ''
+        searchIcon.classList.remove(`is-clear`)
+    })
+}
+
+if (setAll) {
+    setAll.forEach( (e) => {
+        const setAllLink = e.querySelector(`.el-setAll__link`)
+        const setAllBg = e.querySelector(`.el-setAll__bg`)
+
+        setAllLink.addEventListener('click', () => {
+            e.classList.toggle(`is-open`)
+        })
+
+        setAllBg.addEventListener(`click`, () => {
+            e.classList.remove(`is-open`)
+        })
+    })
+}
+
+if (chooseTitle) {
+    chooseTitle.forEach(function (e) {
+        const parent = e
+        const list = e.nextElementSibling
+
+        if (e.classList.contains(`is-open`)) {
+            list.style.maxHeight = list.scrollHeight + `px`
+        }
+
+        e.addEventListener(`click`, function (e) {
+            const { type } = e.target.dataset
+            if (type === `col`) {
+                if (list.style.maxHeight) {
+                    list.style.maxHeight = null
+                    parent.classList.remove(`is-open`)
+                } else {
+                    list.style.maxHeight = list.scrollHeight + `px`
+                    parent.classList.add(`is-open`)
+                }
+            }
+        })
+    })
+
+}
+
+if (searchOpen) {
+    searchOpen.addEventListener(`click`, function (e) {
+        const rSearch = searchOpen.nextElementSibling
+        const rFrame = document.querySelector(`.b-recipients__title`)
+        //rSearch.classList.toggle(`is-open`)
+
+        if (rSearch.style.minWidth) {
+            rSearch.style.minWidth = null
+            rSearch.classList.remove(`is-open`)
+            searchOpen.classList.remove(`is-open`)
+        } else {
+            rSearch.style.minWidth = (rFrame.scrollWidth-10) + `px`
+            rSearch.classList.add(`is-open`)
+            searchOpen.classList.add(`is-open`)
+        }
+
+        console.log(rSearch)
+    })
+}
+
+if (sendEmail) {
+    sendEmail.addEventListener(`click`, function (e) {
+        const sendEmailFrame = document.querySelector(`.b-sendEmailFrame`)
+
+        if (sendEmailFrame.style.maxHeight) {
+            sendEmailFrame.style.maxHeight = null
+        } else {
+            sendEmailFrame.style.maxHeight = sendEmailFrame.scrollHeight + `px`
+        }
+    })
+}
 

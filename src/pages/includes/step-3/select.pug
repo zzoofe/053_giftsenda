@@ -1,9 +1,9 @@
 .b-design__select
     .b-design__select__ind
+        span Individual Messages
         .form-check-2
             input#ch23(type="checkbox")
             label(for="ch23")
-        span Individual Messages
     .b-design__select__drop
         .form-multSelect.form-multSelect_bord
             .form-multSelect__title(data-type="title") Dropdown select
@@ -11,7 +11,7 @@
                 .form-multSelect__search
                     input(type="text" placeholder="Search")
                     +svg("search1")
-                .form-multSelect__list
+                .form-multSelect__list.form-multSelect__list_v1
                     ul
                         li
                             input#tag1.item-check(type="checkbox" value="Perspiciatis")
@@ -19,6 +19,7 @@
                         li
                             input#tag2.item-check(type="checkbox" value="Omnis")
                             label(for="tag2") Omnis
+
     .b-design__select__message
         .b-design__select__message__title Select form message templates
         .b-design__select__message__frame

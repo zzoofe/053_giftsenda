@@ -356,6 +356,28 @@
                     }
                 }
             }
+
+            &_v1 {
+                ul {
+                    li {
+                        input {
+                            &+label {
+                                &:before {
+                                    display: none;
+                                }
+                                &:after {
+                                    background: url(../img/ch_green.svg) no-repeat center;
+                                }
+                            }
+                            &:checked {
+                                &+label {
+                                    background: rgba(68, 195, 141, 0.06);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         &__sel {
             display: flex;
@@ -601,11 +623,43 @@
         line-height: 26px;
         color: #C6C6C6;
     }
+    &-giftDesign {
+        &__row {
+            display: grid;
+            grid-template-columns: 46% 1fr;
+            grid-column-gap: 15px;
+
+            @include media-tablet {
+                grid-template-columns: 1fr;
+                grid-row-gap: 15px;
+            }
+        }
+        &__col {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 10px;
+        }
+        &__btn {
+            padding-top: 24px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .from-line-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            a {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+        }
+    }
 }
 
 select {
     width: 100%;
 }
+
 .select2 {
     &-container {
         display: block;
@@ -678,6 +732,17 @@ label {
     }
 }
 
+.label {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #393939;
+
+    @include media-tablet {
+        font-size: 14px;
+    }
+}
+
 .inp {
     font-family: $fontRoboto;
     height: 40px;
@@ -724,7 +789,7 @@ label {
         padding: 0 11px;
         height: 40px;
         line-height: 38px;
-        color: #C6C6C6;
+        color: #393939;
         font-weight: normal;
         font-size: 14px;
 
@@ -734,6 +799,37 @@ label {
 
     }
 }
+
+.area {
+    font-family: $fontRoboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #393939;
+    padding: 10px 17px;
+
+    &_block {
+        width: 100%;
+        display: block;
+        resize: none;
+    }
+    &_h370 {
+        height: 370px;
+
+        @include media-tablet {
+            height: 100px;
+        }
+    }
+    &_h294 {
+        height: 294px;
+
+        @include media-tablet {
+            height: 100px;
+        }
+    }
+}
+
+
 
 .qs-datepicker-container {
     background: #fff;
@@ -841,14 +937,16 @@ label {
         display: none;
     }
     &[data-type*=select-one] .choices__input {
-        border: 1px solid #ddd;
-        border-left: 0;
-        border-right: 0;
+        border: 10px solid #ffffff;
+        background-color: #F2F1EF;
+        border-radius: 15px;
         margin: 0;
         background-image: url(../img/search.svg);
         background-repeat: no-repeat;
-        background-position:  10px center;
-        padding-left: 30px;
+        background-size: 18px;
+        background-position:  95% center;
+        padding: 0 30px 0 10px;
+        height: 55px;
     }
 }
 
