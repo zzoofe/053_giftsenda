@@ -6,7 +6,19 @@ block content
             .b-title
                 h1 UI Kit
             .b-sep UI Kit
-
+            .columns
+                .column.is-2
+                    .b-dashboard__item.is-blue
+                        a(href="javascript:void(0)")
+                            span Delivering
+                            img(src="img/dash-5.svg" alt="")
+                            strong 236
+                .column.is-2
+                    .b-dashboard__item.is-blue
+                        a(href="javascript:void(0)")
+                            span Delivering
+                            img(src="img/dash-5.svg" alt="")
+                            strong 236
             .columns
                 .column.is-one-fifth
                     a.btn.btn_sm(href="#")
@@ -64,22 +76,50 @@ block content
                 .column
                     .form-multSelect.form-multSelect_bord
                         .form-multSelect__title(data-type="title") Dropdown select
-                        .form-multSelect__frame
+                        .form-multSelect__frame.js-search-filter
                             .form-multSelect__search
-                                input(type="text" placeholder="Search")
+                                input.js-search-filter-input(type="text" placeholder="Search")
                                 +svg("search1")
                             .form-multSelect__list.form-multSelect__list_v1
-                                ul
+                                ul.js-search-filter-list
                                     li
                                         input#tag1.item-check(type="checkbox" value="Perspiciatis")
                                         label(for="tag1") Perspiciatis
                                     li
                                         input#tag2.item-check(type="checkbox" value="Omnis")
                                         label(for="tag2") Omnis
+                                    li
+                                        input#tag3.item-check(type="checkbox" value="Perspiciatis")
+                                        label(for="tag3") Delivered
+                                    li
+                                        input#tag4.item-check(type="checkbox" value="Omnis")
+                                        label(for="tag4") Need
                 .column
                     .select-bord
                         select.js-choice.js-choice_bord
                             option(placeholder) Country
+                            option(value="1") Delivered
+                            option(value="2") Need Attention
+                            option(value="3") Awaiting Action
+            .columns
+                .column.is-2
+                    .select-radius-no
+                        select.js-choice
+                            option(placeholder) Popular
+                            option(value="1") Delivered
+                            option(value="2") Need Attention
+                            option(value="3") Awaiting Action
+                .column.is-2
+                    .select-border.select-radius-no
+                        select.js-choice
+                            option(placeholder) Popular
+                            option(value="1") Delivered
+                            option(value="2") Need Attention
+                            option(value="3") Awaiting Action
+                .column.is-2
+                    .select-border
+                        select.js-choice
+                            option(placeholder) Popular
                             option(value="1") Delivered
                             option(value="2") Need Attention
                             option(value="3") Awaiting Action
@@ -137,6 +177,47 @@ block content
                         .form-check-4
                             input#ch51(type="checkbox")
                             label(for="ch51")
+            .columns
+                .column.is-full
+                    input#ch1.form-check-3(type="checkbox")
+                    label(for="ch1") Сheckbox
+            .columns
+                .column.is-full
+                    input#ch2.form-check-5(type="checkbox")
+                    label(for="ch2") Сheckbox
+            .columns
+                .column.is-full
+                    .form-color
+                        .form-color__label
+                            span.form-color__label__title Color
+                            span.form-color__label__select
+                        .form-color__list
+                            ul
+                                li
+                                    input#color1.js-color(type="radio" name="color")
+                                    label(for="color1"): span(style="background: #006699")
+                                li
+                                    input#color2.js-color(type="radio" name="color")
+                                    label(for="color2"): span(style="background: #E34646")
+                                li
+                                    input#color3.js-color(type="radio" name="color")
+                                    label(for="color3"): span(style="background: #44C38D")
+                                li
+                                    input#color4.js-color(type="radio" name="color")
+                                    label(for="color4"): span(style="background: #FFE601")
+                                li
+                                    input#color5.js-color(type="radio" name="color")
+                                    label(for="color5"): span(style="background: #CD9191")
+                                li
+                                    input#color6.js-color(type="radio" name="color")
+                                    label(for="color6"): span(style="background: #FFBA69")
+                                li
+                                    input#color7.js-color(type="radio" name="color")
+                                    label(for="color7"): span(style="background: #6C7085")
+                                li
+                                    input#color8.js-color(type="radio" name="color")
+                                    label(for="color8"): span(style="background: #FF6969")
+                        .form-color__bg
             .columns
                 .column.is-full
                     .b-nav

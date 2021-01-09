@@ -339,7 +339,6 @@ if (searchOpen) {
     searchOpen.addEventListener(`click`, function (e) {
         const rSearch = searchOpen.nextElementSibling
         const rFrame = document.querySelector(`.b-recipients__title`)
-        //rSearch.classList.toggle(`is-open`)
 
         if (rSearch.style.minWidth) {
             rSearch.style.minWidth = null

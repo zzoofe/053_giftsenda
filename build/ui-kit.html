@@ -71,6 +71,14 @@
           </div>
           <div class="b-sep">UI Kit</div>
           <div class="columns">
+            <div class="column is-2">
+              <div class="b-dashboard__item is-blue"><a href="javascript:void(0)"><span>Delivering</span><img src="img/dash-5.svg" alt=""><strong>236</strong></a></div>
+            </div>
+            <div class="column is-2">
+              <div class="b-dashboard__item is-blue"><a href="javascript:void(0)"><span>Delivering</span><img src="img/dash-5.svg" alt=""><strong>236</strong></a></div>
+            </div>
+          </div>
+          <div class="columns">
             <div class="column is-one-fifth"><a class="btn btn_sm" href="#">
                 <svg>
                   <use xlink:href="img/sprite.svg#plus"></use>
@@ -131,15 +139,15 @@
             <div class="column">
               <div class="form-multSelect form-multSelect_bord">
                 <div class="form-multSelect__title" data-type="title">Dropdown select</div>
-                <div class="form-multSelect__frame">
+                <div class="form-multSelect__frame js-search-filter">
                   <div class="form-multSelect__search">
-                    <input type="text" placeholder="Search">
+                    <input class="js-search-filter-input" type="text" placeholder="Search">
                     <svg>
                       <use xlink:href="img/sprite.svg#search1"></use>
                     </svg>
                   </div>
                   <div class="form-multSelect__list form-multSelect__list_v1">
-                    <ul>
+                    <ul class="js-search-filter-list">
                       <li>
                         <input class="item-check" id="tag1" type="checkbox" value="Perspiciatis">
                         <label for="tag1">Perspiciatis</label>
@@ -147,6 +155,14 @@
                       <li>
                         <input class="item-check" id="tag2" type="checkbox" value="Omnis">
                         <label for="tag2">Omnis</label>
+                      </li>
+                      <li>
+                        <input class="item-check" id="tag3" type="checkbox" value="Perspiciatis">
+                        <label for="tag3">Delivered</label>
+                      </li>
+                      <li>
+                        <input class="item-check" id="tag4" type="checkbox" value="Omnis">
+                        <label for="tag4">Need</label>
                       </li>
                     </ul>
                   </div>
@@ -157,6 +173,38 @@
               <div class="select-bord">
                 <select class="js-choice js-choice_bord">
                   <option placeholder>Country</option>
+                  <option value="1">Delivered</option>
+                  <option value="2">Need Attention</option>
+                  <option value="3">Awaiting Action</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-2">
+              <div class="select-radius-no">
+                <select class="js-choice">
+                  <option placeholder>Popular</option>
+                  <option value="1">Delivered</option>
+                  <option value="2">Need Attention</option>
+                  <option value="3">Awaiting Action</option>
+                </select>
+              </div>
+            </div>
+            <div class="column is-2">
+              <div class="select-border select-radius-no">
+                <select class="js-choice">
+                  <option placeholder>Popular</option>
+                  <option value="1">Delivered</option>
+                  <option value="2">Need Attention</option>
+                  <option value="3">Awaiting Action</option>
+                </select>
+              </div>
+            </div>
+            <div class="column is-2">
+              <div class="select-border">
+                <select class="js-choice">
+                  <option placeholder>Popular</option>
                   <option value="1">Delivered</option>
                   <option value="2">Need Attention</option>
                   <option value="3">Awaiting Action</option>
@@ -245,6 +293,62 @@
                   <input id="ch51" type="checkbox">
                   <label for="ch51"></label>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-full">
+              <input class="form-check-3" id="ch1" type="checkbox">
+              <label for="ch1">Сheckbox</label>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-full">
+              <input class="form-check-5" id="ch2" type="checkbox">
+              <label for="ch2">Сheckbox</label>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-full">
+              <div class="form-color">
+                <div class="form-color__label"><span class="form-color__label__title">Color</span><span class="form-color__label__select"></span></div>
+                <div class="form-color__list">
+                  <ul>
+                    <li>
+                      <input class="js-color" id="color1" type="radio" name="color">
+                      <label for="color1"><span style="background: #006699"></span></label>
+                    </li>
+                    <li>
+                      <input class="js-color" id="color2" type="radio" name="color">
+                      <label for="color2"><span style="background: #E34646"></span></label>
+                    </li>
+                    <li>
+                      <input class="js-color" id="color3" type="radio" name="color">
+                      <label for="color3"><span style="background: #44C38D"></span></label>
+                    </li>
+                    <li>
+                      <input class="js-color" id="color4" type="radio" name="color">
+                      <label for="color4"><span style="background: #FFE601"></span></label>
+                    </li>
+                    <li>
+                      <input class="js-color" id="color5" type="radio" name="color">
+                      <label for="color5"><span style="background: #CD9191"></span></label>
+                    </li>
+                    <li>
+                      <input class="js-color" id="color6" type="radio" name="color">
+                      <label for="color6"><span style="background: #FFBA69"></span></label>
+                    </li>
+                    <li>
+                      <input class="js-color" id="color7" type="radio" name="color">
+                      <label for="color7"><span style="background: #6C7085"></span></label>
+                    </li>
+                    <li>
+                      <input class="js-color" id="color8" type="radio" name="color">
+                      <label for="color8"><span style="background: #FF6969"></span></label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-color__bg"></div>
               </div>
             </div>
           </div>

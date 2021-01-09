@@ -55,18 +55,24 @@ block content
                         div
                             .form-multSelect
                                 .form-multSelect__title(data-type="title") Tags
-                                .form-multSelect__frame
+                                .form-multSelect__frame.js-search-filter
                                     .form-multSelect__search
-                                        input(type="text" placeholder="Search")
+                                        input.js-search-filter-input(type="text" placeholder="Search")
                                         +svg("search1")
                                     .form-multSelect__list
-                                        ul
+                                        ul.js-search-filter-list
                                             li
                                                 input#tag1.item-check(type="checkbox" value="Perspiciatis")
                                                 label(for="tag1") Perspiciatis
                                             li
                                                 input#tag2.item-check(type="checkbox" value="Omnis")
                                                 label(for="tag2") Omnis
+                                            li
+                                                input#tag3.item-check(type="checkbox" value="Perspiciatis")
+                                                label(for="tag3") Delivered
+                                            li
+                                                input#tag4.item-check(type="checkbox" value="Omnis")
+                                                label(for="tag4") Need
                     .b-table_tb2
                         table
                             tr

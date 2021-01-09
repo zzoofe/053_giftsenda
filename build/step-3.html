@@ -143,15 +143,15 @@
               <div class="b-design__select__drop">
                 <div class="form-multSelect form-multSelect_bord">
                   <div class="form-multSelect__title" data-type="title">Dropdown select</div>
-                  <div class="form-multSelect__frame">
+                  <div class="form-multSelect__frame js-search-filter">
                     <div class="form-multSelect__search">
-                      <input type="text" placeholder="Search">
+                      <input class="js-search-filter-input" type="text" placeholder="Search">
                       <svg>
                         <use xlink:href="img/sprite.svg#search1"></use>
                       </svg>
                     </div>
                     <div class="form-multSelect__list form-multSelect__list_v1">
-                      <ul>
+                      <ul class="js-search-filter-list">
                         <li>
                           <input class="item-check" id="tag1" type="checkbox" value="Perspiciatis">
                           <label for="tag1">Perspiciatis</label>
@@ -159,6 +159,14 @@
                         <li>
                           <input class="item-check" id="tag2" type="checkbox" value="Omnis">
                           <label for="tag2">Omnis</label>
+                        </li>
+                        <li>
+                          <input class="item-check" id="tag3" type="checkbox" value="Perspiciatis">
+                          <label for="tag3">Delivered</label>
+                        </li>
+                        <li>
+                          <input class="item-check" id="tag4" type="checkbox" value="Omnis">
+                          <label for="tag4">Need</label>
                         </li>
                       </ul>
                     </div>
