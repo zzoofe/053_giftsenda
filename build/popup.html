@@ -75,6 +75,7 @@
               <li><a href="javascript:;" data-micromodal-trigger="modal-1">Change password</a></li>
               <li><a href="javascript:;" data-micromodal-trigger="modal-2">CSV Upload</a></li>
               <li><a href="javascript:;" data-micromodal-trigger="modal-3">New Contact</a></li>
+              <li><a href="javascript:;" data-micromodal-trigger="modal-5">Submit payment</a></li>
             </ul>
           </div>
         </div>
@@ -284,6 +285,62 @@
           </div>
         </div>
       </div>
+      <div class="modal micromodal-slide" id="modal-5" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container modal__container--payment" role="dialog" aria-modal="true">
+            <header class="modal__title">
+              <h3>Submit payment</h3>
+              <div class="sum">Sum: 1 100 $ Order №XXXX XXXXX X</div>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content">
+              <div class="b-payment">
+                <div class="b-payment__row">
+                  <div class="b-payment__balance">
+                    <div class="b-payment__balance__title">CURRENT BALANCE</div>
+                    <div class="b-payment__balance__price">$ 50,000</div>
+                    <div class="b-payment__balance__btn"><a class="btn btn_sm" href="#">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#balance"></use>
+                        </svg>PAY FROM BALANCE</a></div>
+                  </div>
+                  <div class="b-payment__pay">
+                    <div class="b-payment__pay__paypal"><a class="btn_paypal" href="#"><img src="img/PayPal.png" alt="PayPal"></a></div>
+                    <div class="b-payment__pay__or">OR</div>
+                    <div class="b-payment__pay__card">
+                      <form action="#">
+                        <div class="b-payment__pay__card__line">
+                          <input class="inp inp_bord inp_block" type="text" placeholder="Car Number">
+                        </div>
+                        <div class="b-payment__pay__card__row">
+                          <div class="b-payment__pay__card__col">
+                            <input class="inp inp_bord inp_block" type="text" placeholder="Expire date">
+                          </div>
+                          <div class="b-payment__pay__card__col">
+                            <input class="inp inp_bord inp_block" type="text" placeholder="CVV">
+                          </div>
+                        </div>
+                        <div class="b-payment__pay__card__line">
+                          <input class="form-check-3" id="save" type="checkbox">
+                          <label for="save">Save card</label>
+                        </div>
+                        <div class="b-payment__pay__card__btn">
+                          <button class="btn btn_sm">
+                            <svg>
+                              <use xlink:href="img/sprite.svg#pay"></use>
+                            </svg>PAY FROM BALANCE
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="b-payment__info"><a class="link-blue" href="#">Request invoice</a><span>or use other</span><a class="link-blue" href="#">offline payment methods</a></div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
       <footer class="s-footer">
         <div class="container">
           <div class="copyr">Copyright 2020 | Privacy</div>
@@ -333,6 +390,8 @@
           <li><a href="step-2.html">Step 2 (Choose Gifts)</a></li>
           <li><a href="step-3.html">Step 3 (Messages)</a></li>
           <li><a href="step-4.html">Step 4 (Review)</a></li>
+          <li><a href="billing.html">Billing & Plans</a></li>
+          <li><a href="ui-kit.html">UI Kit</a></li>
         </ul>
       </div>
     </div>

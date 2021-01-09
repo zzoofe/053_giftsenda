@@ -1,0 +1,155 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 UI Kit
+            .b-sep UI Kit
+
+            .columns
+                .column.is-one-fifth
+                    a.btn.btn_sm(href="#")
+                        +svg("plus")
+                        | new senda
+                .column.is-one-fifth
+                    a.btn.btn_sm.btn_dis(href="#")
+                        +svg("plus")
+                        | new senda
+            .columns
+                .column.is-one-fifth
+                    a.btn.btn_bl.btn_lg.btn_next(href="#")
+                        | Next
+                        +svg("arw-btn-next")
+                .column.is-one-fifth
+                    a.btn.btn_bl.btn_lg.btn_next.btn_dis(href="#")
+                        | Next
+                        +svg("arw-btn-next")
+            .columns
+                .column.is-one-fifth
+                    a.btn.btn_blue(href="#")
+                        | New Recipient
+                .column.is-one-fifth
+                    a.btn.btn_blue.btn_dis(href="#")
+                        | New Recipient
+            .columns
+                .column
+                    select.js-choice
+                        option(placeholder) Popular
+                        option(value="1") Delivered
+                        option(value="2") Need Attention
+                        option(value="3") Awaiting Action
+                .column
+                    .custom-select
+                        select.js-choice-search
+                            option(placeholder) Сountry
+                            option(value="1") Delivered
+                            option(value="2") Need Attention
+                            option(value="3") Awaiting Action
+                            option(value="4") Delivered
+                            option(value="5") Need Attention
+                            option(value="6") Awaiting Action
+                            option(value="7") Delivered
+                            option(value="8") Need Attention
+                            option(value="9") Awaiting Action
+                            option(value="10") Delivered
+                            option(value="11") Need Attention
+                            option(value="12") Awaiting Action
+                            option(value="13") Delivered
+                            option(value="14") Need Attention
+                            option(value="15") Awaiting Action
+                            option(value="16") Delivered
+                            option(value="17") Need Attention
+                            option(value="18") Awaiting Action
+                .column
+                    .form-multSelect.form-multSelect_bord
+                        .form-multSelect__title(data-type="title") Dropdown select
+                        .form-multSelect__frame
+                            .form-multSelect__search
+                                input(type="text" placeholder="Search")
+                                +svg("search1")
+                            .form-multSelect__list.form-multSelect__list_v1
+                                ul
+                                    li
+                                        input#tag1.item-check(type="checkbox" value="Perspiciatis")
+                                        label(for="tag1") Perspiciatis
+                                    li
+                                        input#tag2.item-check(type="checkbox" value="Omnis")
+                                        label(for="tag2") Omnis
+                .column
+                    .select-bord
+                        select.js-choice.js-choice_bord
+                            option(placeholder) Country
+                            option(value="1") Delivered
+                            option(value="2") Need Attention
+                            option(value="3") Awaiting Action
+            .columns
+                .column.is-half
+                    input.inp(type="text" placeholder="Simple textbox")
+            .columns
+                .column.is-half
+                    .b-search
+                        input.inp.b-search__inp(type="text" placeholder="Search by recipient, company, campaign")
+                        .b-search__icon
+                            +svg("search").b-search__icon__search
+                            +svg("close").b-search__icon__close
+            .columns
+                .column.is-half
+                    input.inp.inp_bord(type="text" placeholder="Textbox with Required mark")
+            .columns
+                .column.is-half
+                    input.inp.inp_bord(type="text" placeholder="Textbox with Required mark" required="required")
+            .columns
+                .column.is-half
+                    input.inp.inp_bord.is-error(type="text" placeholder="Textbox with Required mark")
+            .columns
+                .column.is-half
+                    input.inp.inp_bord.is-success(type="text" placeholder="Textbox with Required mark")
+            .columns
+                .column.is-half
+                    a.btn_paypal(href="#")
+                        img(src="img/PayPal.png" alt="PayPal")
+            .columns
+                .column.is-half
+                    .b-tab
+                        .b-tab__item
+                            input#tb1(type="checkbox")
+                            label(for="tb1") Popular
+                        .b-tab__item
+                            input#tb2(type="checkbox")
+                            label(for="tb2") Discount
+                        .b-tab__item
+                            input#tb3(type="checkbox")
+                            label(for="tb3") Stock
+                        .b-tab__item
+                            input#tb4(type="checkbox")
+                            label(for="tb4") Novelties
+            .columns
+                .column.is-half
+                    .el-qua
+                        .el-qua__btn(data-type="minus") -
+                        input.el-qua__inp(type="text" value="1")
+                        .el-qua__btn(data-type="plus") +
+            .columns
+                .column.is-half
+                    .form-checked
+                        span Enable swap to charity
+                        .form-check-4
+                            input#ch51(type="checkbox")
+                            label(for="ch51")
+            .columns
+                .column.is-full
+                    .b-nav
+                        ul
+                            li
+                                a(href="#")
+                                    +svg("nav-1")
+                                    span SAME GIFT
+                            li
+                                a(href="#")
+                                    +svg("nav-2")
+                                    span MULTIPLE GIFTS
+                            li
+                                a(href="#")
+                                    +svg("nav-3")
+                                    span FREE CHOICE

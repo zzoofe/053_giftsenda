@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GiftSenda</title>
+    <link href="img/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="s-header">
+        <div class="container">
+          <div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
+          <div class="balance"><a href="#">Balance:  3030 у.е</a></div>
+          <div class="user">
+            <div class="user__image"><a href="#"><img src="img/user.jpg" alt=""></a></div>
+            <div class="user__info">
+              <div class="user__info__name"><a href="#">Eric Brain</a></div>
+              <div class="user__info__status">Manager user</div>
+              <div class="user__info__reit">
+                <svg>
+                  <use xlink:href="img/sprite.svg#reit"></use>
+                </svg><span>867</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="s-navBar">
+        <div class="container">
+          <div class="burger"><span></span><span></span><span></span><span></span></div>
+          <div class="s-navBar__frame">
+            <div class="menu">
+              <ul>
+                <li class="is-active"><a href="#">Dashboard</a></li>
+                <li><a href="#">Sendas</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Reports</a></li>
+              </ul>
+            </div>
+            <div class="support"><a href="">
+                <svg>
+                  <use xlink:href="img/sprite.svg#support"></use>
+                </svg><span>Support</span></a></div>
+            <div class="setup"><a href="">
+                <svg>
+                  <use xlink:href="img/sprite.svg#setup"></use>
+                </svg><span>Setup</span></a>
+              <div class="setup__nav">
+                <ul>
+                  <li><a href="#">Users & Teams</a></li>
+                  <li><a href="#">Branding</a></li>
+                  <li><a href="#">Message Templates</a></li>
+                  <li><a href="#">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#exit"></use>
+                      </svg><span>Exit</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="s-main">
+        <div class="container">
+          <div class="b-title">
+            <h1>Dashboard</h1><a class="btn btn_new" href="#">
+              <svg>
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>new senda</a>
+          </div>
+          <div class="b-hr"></div>
+          <div class="b-billing">
+            <div class="b-billing__row">
+              <div class="b-box">
+                <h2>Subscritpion</h2>
+                <div class="b-billing__subs">
+                  <div class="b-billing__subs__title">Giftbasketoverseas.com</div>
+                  <div class="b-billing__subs__row is-first">
+                    <div class="b-billing__subs__col">
+                      Current Plan:
+ <strong class="text-free">Free</strong>
+                    </div>
+                    <div class="b-billing__subs__col"><a class="btn btn_sm" href="#">Upgrade</a></div>
+                  </div>
+                  <div class="b-billing__subs__row">
+                    <div class="b-billing__subs__col">Autorenew Subscription</div>
+                    <div class="b-billing__subs__col">
+                      <div class="form-check-4">
+                        <input id="ch51" type="checkbox">
+                        <label for="ch51"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-billing__subs__row">
+                    <div class="b-billing__subs__col">
+                      Seats used:
+ <strong class="text-count">5</strong>
+                    </div>
+                    <div class="b-billing__subs__col"></div>
+                  </div>
+                  <div class="b-billing__subs__row">
+                    <div class="b-billing__subs__col">Subscription fee: 0$ / mo.</div>
+                    <div class="b-billing__subs__col"><span class="text-date">Expires 31.12.2021</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="b-box">
+                <h2>Billing Info</h2>
+                <div class="b-billing__info">
+                  <form action="#">
+                    <div class="b-billing__info__row">
+                      <input class="inp inp_bord-bm" type="text" placeholder="Real Text">
+                    </div>
+                    <div class="b-billing__info__row">
+                      <input class="inp inp_bord-bm" type="text" placeholder="Street">
+                    </div>
+                    <div class="b-billing__info__row rw-1">
+                      <div class="b-billing__info__col">
+                        <input class="inp inp_bord-bm" type="text" placeholder="City">
+                      </div>
+                      <div class="b-billing__info__col">
+                        <div class="select-bord">
+                          <select class="js-choice js-choice_bord">
+                            <option placeholder>State</option>
+                            <option value="1">Delivered</option>
+                            <option value="2">Need Attention</option>
+                            <option value="3">Awaiting Action</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-billing__info__row rw-2">
+                      <div class="b-billing__info__col">
+                        <input class="inp inp_bord-bm" type="text" placeholder="ZIP">
+                      </div>
+                      <div class="b-billing__info__col">
+                        <div class="select-bord">
+                          <select class="js-choice js-choice_bord">
+                            <option placeholder>Country</option>
+                            <option value="1">Delivered</option>
+                            <option value="2">Need Attention</option>
+                            <option value="3">Awaiting Action</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="b-billing__info__col">
+                        <input class="inp inp_bord-bm" type="text" placeholder="Phone">
+                      </div>
+                    </div>
+                    <div class="b-billing__info__card">
+                      <div class="b-billing__info__card__title">Credit Card</div>
+                      <div class="b-billing__info__card__data">
+                        <div class="b-billing__info__card__row">
+                          <div class="b-billing__info__card__col">
+                            <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="XXXX XXX XXXX XXXX 7254" readonly="readonly">
+                          </div>
+                          <div class="b-billing__info__card__col">
+                            <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="XX / XX" readonly="readonly">
+                          </div>
+                          <div class="b-billing__info__card__col">
+                            <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="****" readonly="readonly">
+                          </div>
+                          <div class="b-billing__info__card__col">
+                            <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="IVAN IVANOV" readonly="readonly">
+                          </div>
+                          <div class="b-billing__info__card__col"><a class="link-blue js-card-btn" href="javascript:void(0)">Edit</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="b-box">
+              <h2>Billing History</h2>
+              <div class="b-table b-table_tb5">
+                <div class="b-table__box">
+                  <div class="table-th">
+                    <table>
+                      <tr>
+                        <th>Invoice</th>
+                        <th>Date</th>
+                        <th>Owner</th>
+                        <th>Sum</th>
+                        <th>Payment type</th>
+                        <th>Payment Status</th>
+                        <th>Receipt</th>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="table-td" data-simplebar>
+                    <table>
+                      <tr>
+                        <td><a class="link-blue" href="#">123123144</a></td>
+                        <td>31.12.2021</td>
+                        <td>IVAn Ivanov</td>
+                        <td>$ 1346 000</td>
+                        <td>CC</td>
+                        <td>Success</td>
+                        <td><a class="link-blue" href="#">PDF</a></td>
+                      </tr>
+                      <tr>
+                        <td><a class="link-blue" href="#">123123144</a></td>
+                        <td>31.12.2021</td>
+                        <td>IVAn Ivanov</td>
+                        <td>$ 1346 000</td>
+                        <td>CC</td>
+                        <td>Success</td>
+                        <td><a class="link-blue" href="#">PDF</a></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="s-footer">
+        <div class="container">
+          <div class="copyr">Copyright 2020 | Privacy</div>
+          <div class="social">
+            <ul>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-fb"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-in"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-pn"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-tm"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-ins"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-yt"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="terms"><a href="#">Terms of Service</a></div>
+        </div>
+      </footer>
+      <div class="b-pageBar">
+        <div class="b-pageBar__btn"></div>
+        <ul>
+          <li><a href="index.html">Sendas</a></li>
+          <li><a href="bulk.html">Bulk</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="recipients.html">Recipients</a></li>
+          <li><a href="popup.html">Popup</a></li>
+          <li><a href="step-1.html">Step 1 (Recipients)</a></li>
+          <li><a href="step-2.html">Step 2 (Choose Gifts)</a></li>
+          <li><a href="step-3.html">Step 3 (Messages)</a></li>
+          <li><a href="step-4.html">Step 4 (Review)</a></li>
+          <li><a href="billing.html">Billing & Plans</a></li>
+          <li><a href="ui-kit.html">UI Kit</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

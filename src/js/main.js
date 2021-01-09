@@ -32,12 +32,14 @@ const setAll = document.querySelectorAll(`.el-setAll`)
 const chooseTitle = document.querySelectorAll(`.b-chooseGift__title`)
 const searchOpen = document.querySelector(`.b-recipients__icon`)
 const sendEmail = document.querySelector(`.sendEmail`)
+const cardbtn = document.querySelector(`.js-card-btn`)
 
 MicroModal.init({
     onShow: () => document.body.classList.add('howdy'),
     onClose: () => document.body.classList.remove('howdy'),
     awaitCloseAnimation: true,
-    openClass: 'open'
+    openClass: 'open',
+    closeTrigger: `data-micromodal-close`
 })
 
 if (areaEditor) {
@@ -95,15 +97,14 @@ if (choices) {
         const choicesSearch = new Choices(e, {
             searchEnabled: true,
             searchChoices: true,
-            searchResultLimit: 1,
+            searchResultLimit: 3,
+            searchFloor: -1,
             itemSelectText: ``,
             callbackOnInit: () => {
                 const drop = e.attributes[0].ownerElement.parentElement.nextSibling
                 const scroll = new SimpleBar(drop)
             },
         })
-
-        console.log(choicesSearch)
     })
 
     choicesTag.forEach(function (e) {
@@ -276,18 +277,22 @@ if (search) {
     const searchIcon = search.querySelector(`.b-search__icon`)
     const searchClear = search.querySelector(`.b-search__icon__close`)
 
-    searchInput.addEventListener(`input`, function (e) {
-        if (e.target.value.length > 0) {
-            searchIcon.classList.add(`is-clear`)
-        } else {
-            searchIcon.classList.remove(`is-clear`)
-        }
-    })
+    if(searchIcon) {
+        searchInput.addEventListener(`input`, function (e) {
+            if (e.target.value.length > 0) {
+                searchIcon.classList.add(`is-clear`)
+            } else {
+                searchIcon.classList.remove(`is-clear`)
+            }
+        })
 
-    searchClear.addEventListener(`click`, function (e) {
-        searchInput.value = ''
-        searchIcon.classList.remove(`is-clear`)
-    })
+        if(searchClear) {
+            searchClear.addEventListener(`click`, function (e) {
+                searchInput.value = ''
+                searchIcon.classList.remove(`is-clear`)
+            })
+        }
+    }
 }
 
 if (setAll) {
@@ -358,6 +363,25 @@ if (sendEmail) {
             sendEmailFrame.style.maxHeight = null
         } else {
             sendEmailFrame.style.maxHeight = sendEmailFrame.scrollHeight + `px`
+        }
+    })
+}
+
+if (cardbtn) {
+    const cardInput = document.querySelectorAll(`.js-card-data`)
+    cardbtn.addEventListener(`click`, function () {
+        if (cardbtn.text === `Edit`) {
+            cardbtn.text = `Save`
+            cardInput.forEach(function (e) {
+                e.classList.remove(`inp_readonly`)
+                e.removeAttribute(`readonly`)
+            })
+        } else if (cardbtn.text === `Save`) {
+            cardbtn.text = `Edit`
+            cardInput.forEach(function (e) {
+                e.classList.add(`inp_readonly`)
+                e.setAttribute(`readonly`, `readonly`)
+            })
         }
     })
 }

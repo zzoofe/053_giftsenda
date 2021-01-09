@@ -1,0 +1,42 @@
+#modal-5.modal.micromodal-slide(aria-hidden="true")
+    .modal__overlay(tabindex="-1" data-micromodal-close)
+        .modal__container.modal__container--payment(role="dialog" aria-modal="true")
+            header.modal__title
+                h3 Submit payment
+                .sum Sum: 1 100 $ Order №XXXX XXXXX X
+                button.modal__close(aria-label="Close modal" data-micromodal-close)
+            main.modal__content
+                .b-payment
+                    .b-payment__row
+                        .b-payment__balance
+                            .b-payment__balance__title CURRENT BALANCE
+                            .b-payment__balance__price $ 50,000
+                            .b-payment__balance__btn
+                                a.btn.btn_sm(href="#")
+                                    +svg("balance")
+                                    | PAY FROM BALANCE
+                        .b-payment__pay
+                            .b-payment__pay__paypal
+                                a.btn_paypal(href="#")
+                                    img(src="img/PayPal.png" alt="PayPal")
+                            .b-payment__pay__or OR
+                            .b-payment__pay__card
+                                form(action="#")
+                                    .b-payment__pay__card__line
+                                        input.inp.inp_bord.inp_block(type="text" placeholder="Car Number")
+                                    .b-payment__pay__card__row
+                                        .b-payment__pay__card__col
+                                            input.inp.inp_bord.inp_block(type="text" placeholder="Expire date")
+                                        .b-payment__pay__card__col
+                                            input.inp.inp_bord.inp_block(type="text" placeholder="CVV")
+                                    .b-payment__pay__card__line
+                                            input#save.form-check-3(type="checkbox")
+                                            label(for="save") Save card
+                                    .b-payment__pay__card__btn
+                                        button.btn.btn_sm
+                                            +svg("pay")
+                                            | PAY FROM BALANCE
+                    .b-payment__info
+                        a.link-blue(href="#") Request invoice
+                        span or use other
+                        a.link-blue(href="#") offline payment methods
