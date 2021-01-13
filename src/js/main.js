@@ -80,18 +80,11 @@ swiperSelector.forEach(function (e) {
     })
 })
 
+import {general} from "./general";
+
 if (choices) {
-    choices.forEach(function (e) {
-        const choice = new Choices(e, {
-            searchEnabled: false,
-            searchChoices: false,
-            itemSelectText: ``,
-            callbackOnInit: () => {
-                const drop = e.attributes[0].ownerElement.parentElement.nextSibling
-                const scroll = new SimpleBar(drop)
-            },
-        })
-    })
+
+    general.choiceInit();
 
     choicesSearch.forEach(function (e) {
         const choicesSearch = new Choices(e, {
