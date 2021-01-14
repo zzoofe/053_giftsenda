@@ -1,0 +1,25 @@
+extends common/layout-frame
+
+block content
+    main.s-frame
+        .s-frame__body
+            .b-mdFrame
+                .b-mdFrame__logo
+                    a(href="#")
+                        span powered by
+                        img(src="img/logo.svg" alt="")
+                .b-mdFrame__head
+                    .b-mdFrame__head__image
+                        img(src="img/img-1.png" alt="")
+                    .b-mdFrame__head__desc
+                        h4 For Ivan Ivanov,  Lukoil
+                        p The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack.
+                        p.author Petr Petrov, Rosneft
+                include includes/frame/box-1
+                include includes/frame/box-2
+                include includes/frame/box-3
+        .s-frame__info
+            p
+                | The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultima   e swag pack of our favorite items
+                br
+                a.link-blue(href="#") support@giftsenda.com

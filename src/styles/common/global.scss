@@ -52,6 +52,12 @@ a {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
+    &_frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #E5E5E5;
+    }
 }
 
 .container {

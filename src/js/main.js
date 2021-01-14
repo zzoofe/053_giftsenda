@@ -33,6 +33,8 @@ const chooseTitle = document.querySelectorAll(`.b-chooseGift__title`)
 const searchOpen = document.querySelector(`.b-recipients__icon`)
 const sendEmail = document.querySelector(`.sendEmail`)
 const cardbtn = document.querySelector(`.js-card-btn`)
+const frameNext = document.querySelectorAll(`.js-next`)
+const framePrev = document.querySelectorAll(`.js-prev`)
 
 MicroModal.init({
     onShow: () => document.body.classList.add('howdy'),
@@ -378,3 +380,20 @@ if (cardbtn) {
     })
 }
 
+if (frameNext) {
+    frameNext.forEach((e) => {
+        e.addEventListener(`click`, () => {
+            const frame = e.closest(`.b-mdFrame__box`)
+            frame.classList.remove(`is-visible`)
+            frame.nextElementSibling.classList.add(`is-visible`)
+        })
+    })
+
+    framePrev.forEach((e) => {
+        e.addEventListener(`click`, () => {
+            const frame = e.closest(`.b-mdFrame__box`)
+            frame.classList.remove(`is-visible`)
+            frame.previousElementSibling.classList.add(`is-visible`)
+        })
+    })
+}

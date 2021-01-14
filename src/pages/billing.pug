@@ -43,33 +43,36 @@ block content
                     .b-box
                         h2 Billing Info
                         .b-billing__info
-                            form(action="#")
-                                .b-billing__info__row
-                                    input.inp.inp_bord-bm(type="text" placeholder="Real Text")
-                                .b-billing__info__row
-                                    input.inp.inp_bord-bm(type="text" placeholder="Street")
-                                .b-billing__info__row.rw-1
-                                    .b-billing__info__col
-                                        input.inp.inp_bord-bm(type="text" placeholder="City")
-                                    .b-billing__info__col
-                                        .select-bord
-                                            select.js-choice.js-choice_bord
-                                                option(placeholder) State
-                                                option(value="1") Delivered
-                                                option(value="2") Need Attention
-                                                option(value="3") Awaiting Action
-                                .b-billing__info__row.rw-2
-                                    .b-billing__info__col
-                                        input.inp.inp_bord-bm(type="text" placeholder="ZIP")
-                                    .b-billing__info__col
-                                        .select-bord
-                                            select.js-choice.js-choice_bord
-                                                option(placeholder) Country
-                                                option(value="1") Delivered
-                                                option(value="2") Need Attention
-                                                option(value="3") Awaiting Action
-                                    .b-billing__info__col
-                                        input.inp.inp_bord-bm(type="text" placeholder="Phone")
+                                .b-billing__info__frame
+                                    form(action="#")
+                                        .b-billing__info__row
+                                            input.inp.inp_bord-bm(type="text" placeholder="Real Text" readonly="readonly")
+                                        .b-billing__info__row
+                                            input.inp.inp_bord-bm(type="text" placeholder="Street" readonly="readonly")
+                                        .b-billing__info__row.rw-1
+                                            .b-billing__info__col
+                                                input.inp.inp_bord-bm(type="text" placeholder="City" readonly="readonly")
+                                            .b-billing__info__col
+                                                .select-bord
+                                                    select.js-choice.js-choice_bord(data-choice-disabled)
+                                                        option(placeholder) State
+                                                        option(value="1") Delivered
+                                                        option(value="2") Need Attention
+                                                        option(value="3") Awaiting Action
+                                        .b-billing__info__row.rw-2
+                                            .b-billing__info__col
+                                                input.inp.inp_bord-bm(type="text" placeholder="ZIP" readonly="readonly")
+                                            .b-billing__info__col
+                                                .select-bord
+                                                    select.js-choice.js-choice_bord(data-choice-disabled)
+                                                        option(placeholder) Country
+                                                        option(value="1") Delivered
+                                                        option(value="2") Need Attention
+                                                        option(value="3") Awaiting Action
+                                            .b-billing__info__col
+                                                input.inp.inp_bord-bm(type="text" placeholder="Phone" readonly="readonly")
+                                    .b-billing__info__frame__edit
+                                        a.link-blue(href="javascript:void(0)") Edit
                                 .b-billing__info__card
                                     .b-billing__info__card__title Credit Card
                                     .b-billing__info__card__data

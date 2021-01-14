@@ -111,67 +111,70 @@
               <div class="b-box">
                 <h2>Billing Info</h2>
                 <div class="b-billing__info">
-                  <form action="#">
-                    <div class="b-billing__info__row">
-                      <input class="inp inp_bord-bm" type="text" placeholder="Real Text">
-                    </div>
-                    <div class="b-billing__info__row">
-                      <input class="inp inp_bord-bm" type="text" placeholder="Street">
-                    </div>
-                    <div class="b-billing__info__row rw-1">
-                      <div class="b-billing__info__col">
-                        <input class="inp inp_bord-bm" type="text" placeholder="City">
+                  <div class="b-billing__info__frame">
+                    <form action="#">
+                      <div class="b-billing__info__row">
+                        <input class="inp inp_bord-bm" type="text" placeholder="Real Text" readonly="readonly">
                       </div>
-                      <div class="b-billing__info__col">
-                        <div class="select-bord">
-                          <select class="js-choice js-choice_bord">
-                            <option placeholder>State</option>
-                            <option value="1">Delivered</option>
-                            <option value="2">Need Attention</option>
-                            <option value="3">Awaiting Action</option>
-                          </select>
+                      <div class="b-billing__info__row">
+                        <input class="inp inp_bord-bm" type="text" placeholder="Street" readonly="readonly">
+                      </div>
+                      <div class="b-billing__info__row rw-1">
+                        <div class="b-billing__info__col">
+                          <input class="inp inp_bord-bm" type="text" placeholder="City" readonly="readonly">
+                        </div>
+                        <div class="b-billing__info__col">
+                          <div class="select-bord">
+                            <select class="js-choice js-choice_bord" data-choice-disabled>
+                              <option placeholder>State</option>
+                              <option value="1">Delivered</option>
+                              <option value="2">Need Attention</option>
+                              <option value="3">Awaiting Action</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="b-billing__info__row rw-2">
-                      <div class="b-billing__info__col">
-                        <input class="inp inp_bord-bm" type="text" placeholder="ZIP">
-                      </div>
-                      <div class="b-billing__info__col">
-                        <div class="select-bord">
-                          <select class="js-choice js-choice_bord">
-                            <option placeholder>Country</option>
-                            <option value="1">Delivered</option>
-                            <option value="2">Need Attention</option>
-                            <option value="3">Awaiting Action</option>
-                          </select>
+                      <div class="b-billing__info__row rw-2">
+                        <div class="b-billing__info__col">
+                          <input class="inp inp_bord-bm" type="text" placeholder="ZIP" readonly="readonly">
+                        </div>
+                        <div class="b-billing__info__col">
+                          <div class="select-bord">
+                            <select class="js-choice js-choice_bord" data-choice-disabled>
+                              <option placeholder>Country</option>
+                              <option value="1">Delivered</option>
+                              <option value="2">Need Attention</option>
+                              <option value="3">Awaiting Action</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="b-billing__info__col">
+                          <input class="inp inp_bord-bm" type="text" placeholder="Phone" readonly="readonly">
                         </div>
                       </div>
-                      <div class="b-billing__info__col">
-                        <input class="inp inp_bord-bm" type="text" placeholder="Phone">
-                      </div>
-                    </div>
-                    <div class="b-billing__info__card">
-                      <div class="b-billing__info__card__title">Credit Card</div>
-                      <div class="b-billing__info__card__data">
-                        <div class="b-billing__info__card__row">
-                          <div class="b-billing__info__card__col">
-                            <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="XXXX XXX XXXX XXXX 7254" readonly="readonly">
-                          </div>
-                          <div class="b-billing__info__card__col">
-                            <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="XX / XX" readonly="readonly">
-                          </div>
-                          <div class="b-billing__info__card__col">
-                            <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="****" readonly="readonly">
-                          </div>
-                          <div class="b-billing__info__card__col">
-                            <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="IVAN IVANOV" readonly="readonly">
-                          </div>
-                          <div class="b-billing__info__card__col"><a class="link-blue js-card-btn" href="javascript:void(0)">Edit</a></div>
+                    </form>
+                    <div class="b-billing__info__frame__edit"><a class="link-blue" href="javascript:void(0)">Edit</a></div>
+                  </div>
+                  <div class="b-billing__info__card">
+                    <div class="b-billing__info__card__title">Credit Card</div>
+                    <div class="b-billing__info__card__data">
+                      <div class="b-billing__info__card__row">
+                        <div class="b-billing__info__card__col">
+                          <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="XXXX XXX XXXX XXXX 7254" readonly="readonly">
                         </div>
+                        <div class="b-billing__info__card__col">
+                          <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="XX / XX" readonly="readonly">
+                        </div>
+                        <div class="b-billing__info__card__col">
+                          <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="****" readonly="readonly">
+                        </div>
+                        <div class="b-billing__info__card__col">
+                          <input class="inp inp_bord inp_readonly js-card-data" type="text" placeholder="IVAN IVANOV" readonly="readonly">
+                        </div>
+                        <div class="b-billing__info__card__col"><a class="link-blue js-card-btn" href="javascript:void(0)">Edit</a></div>
                       </div>
                     </div>
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -271,6 +274,7 @@
           <li><a href="step-4.html">Step 4 (Review)</a></li>
           <li><a href="billing.html">Billing & Plans</a></li>
           <li><a href="ui-kit.html">UI Kit</a></li>
+          <li><a href="frame.html">Frame</a></li>
         </ul>
       </div>
     </div>

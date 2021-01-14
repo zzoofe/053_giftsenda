@@ -56,11 +56,15 @@
             font-size: 12px;
             padding: 0 15px;
         }
+
         svg {
             width: 20px;
             height: 20px;
+            margin-left: 7px;
             margin-right: 7px;
+            fill: #ffffff;
         }
+
         &:active {
             background: #0E99CF;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
