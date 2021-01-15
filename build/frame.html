@@ -31,20 +31,32 @@
                 </div>
               </div>
               <div class="b-mdFrame__nav">
-                <div class="b-nav">
+                <div class="b-navRadio">
                   <ul>
-                    <li><a href="#">
+                    <li>
+                      <input id="rd1" type="radio" name="rd">
+                      <label for="rd1">
                         <svg>
                           <use xlink:href="img/sprite.svg#nav-4"></use>
-                        </svg><span>CHANGE GIFT</span></a></li>
-                    <li><a href="#">
+                        </svg><span>CHANGE GIFT</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input id="rd2" type="radio" name="rd">
+                      <label for="rd2">
                         <svg>
                           <use xlink:href="img/sprite.svg#nav-5"></use>
-                        </svg><span>REDEEM GIFT</span></a></li>
-                    <li><a class="is-disabled" href="#">
+                        </svg><span>REDEEM GIFT</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input id="rd3" type="radio" name="rd" disabled="disabled">
+                      <label for="rd3">
                         <svg>
                           <use xlink:href="img/sprite.svg#nav-6"></use>
-                        </svg><span>DONATE<em>coming soon</em></span></a></li>
+                        </svg><span>DONATE<em>coming soon</em></span>
+                      </label>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -172,14 +184,16 @@
                           <input class="inp inp_bord-bm" type="text" placeholder="ZIP">
                         </div>
                         <div class="b-billing__info__col">
-                          <div class="select-bord">
-                            <select class="js-choice js-choice_bord">
-                              <option placeholder>Country</option>
-                              <option value="1">Delivered</option>
-                              <option value="2">Need Attention</option>
-                              <option value="3">Awaiting Action</option>
-                            </select>
+                          <div class="vue-form">
+                            <v-select class="style-bord-sm" placeholder="Сountry" :options="options"></v-select>
                           </div>
+                          <!--.select-bord
+                          //select.js-choice.js-choice_bord
+                          //    option(placeholder) Country
+                          //    option(value="1") Delivered
+                          //    option(value="2") Need Attention
+                          //    option(value="3") Awaiting Action
+                          -->
                         </div>
                         <div class="b-billing__info__col">
                           <input class="inp inp_bord-bm" type="text" placeholder="Phone">

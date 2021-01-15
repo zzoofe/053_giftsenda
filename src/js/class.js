@@ -96,10 +96,10 @@ export class Color {
         this.$el.classList.remove(`is-open`)
     }
     selectColor(radio) {
-        const parent = radio.path[1]
+        const parent = radio.target.nextElementSibling
         const colorStyle = parent.querySelector(`span`).style.backgroundColor
         this.color.style.backgroundColor = colorStyle
-        console.log(colorStyle)
+        this.close()
     }
 }
 

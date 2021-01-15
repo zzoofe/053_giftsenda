@@ -16,27 +16,56 @@ block content
                     +svg("close").b-search__icon__close
             .b-catalog
                 aside.b-catalog__bar
-                    .b-box.custom-select
-                        select.js-choice-search
-                            option(placeholder) Сountry
-                            option(value="1") Delivered
-                            option(value="2") Beed Attention
-                            option(value="3") Wwaiting Action
-                            option(value="4") Delivered
-                            option(value="5") Ueed Attention
-                            option(value="6") Pwaiting Action
-                            option(value="7") Relivered
-                            option(value="8") Eeed Attention
-                            option(value="9") Wwaiting Action
-                            option(value="10") Nelivered
-                            option(value="11") Meed Attention
-                            option(value="12") Lwaiting Action
-                            option(value="13") Kelivered
-                            option(value="14") Geed Attention
-                            option(value="15") Swaiting Action
-                            option(value="16") Celivered
-                            option(value="17") Xeed Attention
-                            option(value="18") Zwaiting Action
+                    .b-box.vue-form
+                        v-select(placeholder="Сountry" :options="options")
+                        //.select-search
+                        //    .select-search__input
+                        //        input(type="text" value="" placeholder="Сountry")
+                        //    .select-search__frame
+                        //        .select-search__search
+                        //            input(type="text" value="" placeholder="Search")
+                        //        .select-search__list
+                        //            ul
+                        //                li Delivered
+                        //                li Beed Attention
+                        //                li Wwaiting Action
+                        //                li Delivered
+                        //                li Ueed Attention
+                        //                li Pwaiting Action
+                        //                li Relivered
+                        //                li Ed Attention
+                        //                li Wwaiting Action
+                        //                li Nelivered
+                        //                li Meed Attention
+                        //                li Lwaiting Action
+                        //                li Kelivered
+                        //                li Attention
+                        //                li Swaiting Action
+                        //                li Celivered
+                        //                li Xed Attention
+                        //                li Zwaiting Action
+
+                    //.b-box.custom-select
+                    //    select.js-choice-search
+                    //        option(placeholder) Сountry
+                    //        option(value="1") Delivered
+                    //        option(value="2") Beed Attention
+                    //        option(value="3") Wwaiting Action
+                    //        option(value="4") Delivered
+                    //        option(value="5") Ueed Attention
+                    //        option(value="6") Pwaiting Action
+                    //        option(value="7") Relivered
+                    //        option(value="8") Ed Attention
+                    //        option(value="9") Wwaiting Action
+                    //        option(value="10") Nelivered
+                    //        option(value="11") Meed Attention
+                    //        option(value="12") Lwaiting Action
+                    //        option(value="13") Kelivered
+                    //        option(value="14") Attention
+                    //        option(value="15") Swaiting Action
+                    //        option(value="16") Celivered
+                    //        option(value="17") Xed Attention
+                    //        option(value="18") Zwaiting Action
                     .b-filter-box
                         .b-filter-box__item
                             .b-filter-box__title

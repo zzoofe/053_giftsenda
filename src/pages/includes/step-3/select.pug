@@ -2,29 +2,31 @@
     .b-design__select__ind
         span Individual Messages
         .form-check-2
-            input#ch23(type="checkbox")
+            input#ch23.js-indMess(type="checkbox")
             label(for="ch23")
     .b-design__select__drop
-        .form-multSelect.form-multSelect_bord
-            .form-multSelect__title(data-type="title") Dropdown select
-            .form-multSelect__frame.js-search-filter
-                .form-multSelect__search
-                    input.js-search-filter-input(type="text" placeholder="Search")
-                    +svg("search1")
-                .form-multSelect__list.form-multSelect__list_v1
-                    ul.js-search-filter-list
-                        li
-                            input#tag1.item-check(type="checkbox" value="Perspiciatis")
-                            label(for="tag1") Perspiciatis
-                        li
-                            input#tag2.item-check(type="checkbox" value="Omnis")
-                            label(for="tag2") Omnis
-                        li
-                            input#tag3.item-check(type="checkbox" value="Perspiciatis")
-                            label(for="tag3") Delivered
-                        li
-                            input#tag4.item-check(type="checkbox" value="Omnis")
-                            label(for="tag4") Need
+        .vue-form
+            v-select(class="style-bord" placeholder="Сountry" :options="options")
+        //.form-multSelect.form-multSelect_bord
+        //    .form-multSelect__title(data-type="title") Dropdown select
+        //    .form-multSelect__frame.js-search-filter
+        //        .form-multSelect__search
+        //            input.js-search-filter-input(type="text" placeholder="Search")
+        //            +svg("search1")
+        //        .form-multSelect__list.form-multSelect__list_v1
+        //            ul.js-search-filter-list
+        //                li
+        //                    input#tag1.item-check(type="checkbox" value="Perspiciatis")
+        //                    label(for="tag1") Perspiciatis
+        //                li
+        //                    input#tag2.item-check(type="checkbox" value="Omnis")
+        //                    label(for="tag2") Omnis
+        //                li
+        //                    input#tag3.item-check(type="checkbox" value="Perspiciatis")
+        //                    label(for="tag3") Delivered
+        //                li
+        //                    input#tag4.item-check(type="checkbox" value="Omnis")
+        //                    label(for="tag4") Need
     .b-design__select__message
         .b-design__select__message__title Select form message templates
         .b-design__select__message__frame

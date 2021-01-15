@@ -3003,6 +3003,16 @@
                 }
             }
 
+            &__drop {
+                transition: all $time ease;
+                overflow: hidden;
+                max-height: 0;
+
+	            &.is-show {
+                    overflow: visible;
+                }
+            }
+
             &__message {
                 margin-top: 20px;
 
@@ -3047,7 +3057,7 @@
             canvas {
                 display: block;
                 width: 100%;
-                height: 421px;
+                height: 430px;
                 border: 1px solid #C9C9C9;
 
                 @include media-tablet {
@@ -3442,7 +3452,7 @@
             }
 
             &__card {
-                padding-top: 24px;
+                padding-top:15px;
 
                 &__title {
                     color: #005588;
@@ -3638,16 +3648,10 @@
                 margin: 0 20px;
             }
             .b-nav {
-                margin: 0;
+
 
                 ul {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    width: 100%;
 
-                    @include media-tablet {
-                        grid-template-columns: 1fr;
-                    }
 
                     li {
                         a {
@@ -3776,6 +3780,125 @@
 
         @include media-mobile {
             grid-template-columns: 1fr;
+        }
+    }
+
+    &-navRadio {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 43px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+
+            @include media-tablet {
+                grid-template-columns: 1fr;
+                border-radius: 20px;
+            }
+
+            li {
+                border-left: 1px solid #006699;
+                position: relative;
+
+                @include media-tablet {
+                    border-left: 0;
+                    border-top: 1px solid #006699;
+                }
+
+                input[type="radio"] {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    visibility: hidden;
+
+                    &+label {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 60px;
+                        width: 100%;
+                        font-family: $fontInter;
+                        font-size: 13px;
+                        line-height: 1;
+                        font-weight: bold;
+                        color: #006699;
+                        cursor: pointer;
+                        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0);
+                        transition: all $time ease;
+                        user-select: none;
+
+                        svg {
+                            height: 25px;
+                            max-width: 25px;
+                            margin-right: 10px;
+                            fill: #006699;
+                            transition: all $time ease;
+
+                            @include media-tablet {
+                                height: 30px;
+                                max-width: 30px;
+                            }
+
+                        }
+
+                        span {
+                            em {
+                                display: block;
+                                font-style: normal;
+                                font-size: 7px;
+                                font-weight: normal;
+                            }
+                        }
+
+                        &:hover {
+                            background: #006699;
+                            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            color: #ffffff;
+                            svg {
+                                fill: #ffffff;
+                            }
+                        }
+                    }
+
+                    &:checked + label {
+                        background: #006699;
+                        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        color: #ffffff;
+                        svg {
+                            fill: #ffffff;
+                        }
+                    }
+
+                    &:disabled + label {
+                        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0);
+                        background: #ffffff;
+                        color: #CDCDCD;
+                        cursor: default;
+                        svg {
+                            fill: #CDCDCD;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    border-left: 0;
+
+                    @include media-tablet {
+                        border-left: 0;
+                        border-top: 0;
+                    }
+                }
+                &:last-child {
+
+                }
+            }
         }
     }
 }

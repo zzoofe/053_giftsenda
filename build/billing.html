@@ -139,14 +139,15 @@
                           <input class="inp inp_bord-bm" type="text" placeholder="ZIP" readonly="readonly">
                         </div>
                         <div class="b-billing__info__col">
-                          <div class="select-bord">
-                            <select class="js-choice js-choice_bord" data-choice-disabled>
-                              <option placeholder>Country</option>
-                              <option value="1">Delivered</option>
-                              <option value="2">Need Attention</option>
-                              <option value="3">Awaiting Action</option>
-                            </select>
+                          <div class="vue-form">
+                            <v-select class="style-bord-sm" placeholder="Сountry" :options="options"></v-select>
                           </div>
+                          <!--.select-bord-->
+                          <!--    select.js-choice.js-choice_bord(data-choice-disabled)-->
+                          <!--        option(placeholder) Country-->
+                          <!--        option(value="1") Delivered-->
+                          <!--        option(value="2") Need Attention-->
+                          <!--        option(value="3") Awaiting Action-->
                         </div>
                         <div class="b-billing__info__col">
                           <input class="inp inp_bord-bm" type="text" placeholder="Phone" readonly="readonly">

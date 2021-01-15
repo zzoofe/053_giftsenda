@@ -6,6 +6,43 @@ import Quill from 'quill'
 import Swiper from 'swiper/swiper-bundle'
 import '../js/multSelect'
 import '../js/class'
+import Vue from 'vue/dist/vue'
+import vSelect from 'vue-select'
+
+Vue.component(`v-select`, vSelect)
+
+vSelect.props.components.default = () => ({
+    OpenIndicator: {
+        render: createElement => createElement(`span`),
+    },
+})
+
+//console.log(vSelect.computed)
+
+const vueForm = document.querySelector(`.vue-form`)
+
+if (vueForm) {
+    new Vue({
+        data: {
+            options: [
+                `Albania`,
+                `Angola`,
+                `Belize`,
+                `Cambodia`,
+                `Denmark`,
+                `Ecuador`,
+                `Faroe Islands`,
+                `Georgia`,
+                `Haiti`,
+                `India`,
+                `Jamaica`,
+                `Kenya`,
+                `Liberia`,
+                `Madagascar`
+            ]
+        }
+    }).$mount(vueForm)
+}
 
 const choices = document.querySelectorAll(`.js-choice`)
 const edit = document.querySelectorAll(`.el-edit`)
@@ -35,6 +72,7 @@ const sendEmail = document.querySelector(`.sendEmail`)
 const cardbtn = document.querySelector(`.js-card-btn`)
 const frameNext = document.querySelectorAll(`.js-next`)
 const framePrev = document.querySelectorAll(`.js-prev`)
+const indMess = document.querySelector(`.js-indMess`)
 
 MicroModal.init({
     onShow: () => document.body.classList.add('howdy'),
@@ -357,6 +395,20 @@ if (sendEmail) {
             sendEmailFrame.style.maxHeight = null
         } else {
             sendEmailFrame.style.maxHeight = sendEmailFrame.scrollHeight + `px`
+        }
+    })
+}
+
+if (indMess) {
+    indMess.addEventListener(`click`, function (e) {
+        const sendEmailFrame = document.querySelector(`.b-design__select__drop`)
+
+        if (sendEmailFrame.style.maxHeight) {
+            sendEmailFrame.classList.remove(`is-show`)
+            sendEmailFrame.style.maxHeight = null
+        } else {
+            sendEmailFrame.style.maxHeight = sendEmailFrame.scrollHeight + `px`
+            sendEmailFrame.classList.add(`is-show`)
         }
     })
 }

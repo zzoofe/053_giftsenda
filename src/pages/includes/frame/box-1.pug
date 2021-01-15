@@ -6,18 +6,21 @@
             h3 New Year New Beginnings to Kazakhstan
             p The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack.
     .b-mdFrame__nav
-        .b-nav
+        .b-navRadio
             ul
                 li
-                    a(href="#")
+                    input#rd1(type="radio" name="rd")
+                    label(for="rd1")
                         +svg("nav-4")
                         span CHANGE GIFT
                 li
-                    a(href="#")
+                    input#rd2(type="radio" name="rd")
+                    label(for="rd2")
                         +svg("nav-5")
                         span REDEEM GIFT
                 li
-                    a.is-disabled(href="#")
+                    input#rd3(type="radio" name="rd" disabled="disabled")
+                    label(for="rd3")
                         +svg("nav-6")
                         span DONATE
                             em coming soon

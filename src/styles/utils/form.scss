@@ -683,7 +683,7 @@
                 padding: 0 15px;
 
                 &:nth-child(1) {
-                    flex-basis: 200px;
+                    flex-basis: 130px;
                     flex-grow: initial;
                 }
 
@@ -716,7 +716,7 @@
         }
 
         &--norm {
-            grid-template-columns: 170px 1fr;
+            grid-template-columns: 100px 1fr;
 
             @include media-tablet {
                 grid-template-columns: 1fr;
@@ -1009,11 +1009,11 @@ label {
 }
 
 .inp {
-    font-family: $fontRoboto;
     height: 40px;
     border: 0;
     line-height: 40px;
     padding: 0 17px;
+    font-family: $fontRoboto;
     font-size: 14px;
     font-weight: 300;
     background: $cl-white;
@@ -1083,7 +1083,7 @@ label {
     &_bord-bm {
         background: #FFFFFF;
         border-bottom: 1px solid #C6C6C6;
-        height: 26px;
+        height: 28px;
         line-height: 25px;
         padding: 0;
         border-radius: 0;
@@ -1381,4 +1381,143 @@ label {
 
 .ql-editor {
     height: 80px;
+}
+
+.vs {
+    &__search {
+        font-family: $fontRoboto;
+        font-size: 14px;
+        font-weight: 400;
+        color: #8f9bb3;
+        &::placeholder {
+            color: #8f9bb3;
+        }
+        &:focus {
+            font-family: $fontRoboto;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+    &__selected {
+        font-family: $fontRoboto;
+        font-size: 14px;
+        font-weight: 400;
+        color: #8f9bb3;
+    }
+    &__selected-options {
+        padding-left: 9px;
+    }
+    &__dropdown-toggle {
+        height: 40px;
+        border: 0;
+        background: #ffffff;
+        border-radius: 5px;
+    }
+    &__dropdown-menu {
+        box-shadow: none;
+        border: 0;
+        max-height: 200px;
+    }
+    &__dropdown-option {
+        font-family: $fontRoboto;
+        font-weight: 400;
+        padding: 0 17px;
+        font-size: 14px;
+        line-height: 32px;
+        color: #8f9bb3;
+        &:hover {
+            background: #f2f7fa;
+        }
+    }
+    &__dropdown-option--highlight {
+        background: #f2f7fa;
+    }
+    &__actions {
+        padding-right: 16px;
+    }
+    &__open-indicator {
+        width: 10px;
+        height: 7px;
+        background: url(../img/sel.svg) no-repeat;
+        background-size: contain;
+    }
+}
+
+
+.style-bord {
+    .vs {
+        &__dropdown-toggle {
+            border: 1px solid #c9c9c9;
+            height: auto;
+            min-height: 40px;
+        }
+        &__dropdown-menu {
+            border: 1px solid #c9c9c9;
+            border-top: 0;
+        }
+
+        &__dropdown-option {
+            padding-left: 50px;
+        }
+
+        &__dropdown-option--selected {
+            background: rgba(68,195,141,.06);
+            position: relative;
+            &:after {
+                opacity: 1;
+                content: '';
+                background: url(../img/ch_green.svg) no-repeat center;
+                background-size: contain;
+                width: 11px;
+                height: 9px;
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                margin-top: -4px;
+                transition: all .3s ease;
+            }
+        }
+    }
+}
+
+.style-bord-sm {
+    .vs {
+        &__dropdown-toggle {
+            border: 1px solid #ffffff;
+            border-bottom: 1px solid #c9c9c9;
+            height: auto;
+            min-height: 26px;
+            border-radius: 0;
+        }
+        &__dropdown-menu {
+            border: 1px solid #c9c9c9;
+            border-top: 0;
+        }
+
+        &__dropdown-option {
+
+        }
+
+        &__dropdown-menu {
+            border-radius: 0;
+        }
+
+        &__dropdown-option--selected {
+            position: relative;
+        }
+
+        &--open {
+            .vs {
+                &__dropdown-toggle {
+                    border: 1px solid #c9c9c9;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &.vs--open .vs__dropdown-toggle {
+        border: 1px solid #c9c9c9 !important;
+        border-bottom: 1px solid #ffffff !important;
+    }
 }
