@@ -70,7 +70,7 @@ if (searchFilter) {
     })
 }
 
-export class Color {
+class Color {
     constructor(selector) {
         this.$el = selector
         this.label = this.$el.querySelector(`.form-color__label`)

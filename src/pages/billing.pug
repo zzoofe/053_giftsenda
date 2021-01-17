@@ -46,41 +46,44 @@ block content
                                 .b-billing__info__frame
                                     form(action="#")
                                         .b-billing__info__row
-                                            input.inp.inp_bord-bm(type="text" placeholder="Real Text" readonly="readonly")
+                                            input.inp.inp_bord-bm(type="text" placeholder="Real Text" :readonly="readonly")
                                         .b-billing__info__row
-                                            input.inp.inp_bord-bm(type="text" placeholder="Street" readonly="readonly")
+                                            input.inp.inp_bord-bm(type="text" placeholder="Street" :readonly="readonly")
                                         .b-billing__info__row.rw-1
                                             .b-billing__info__col
-                                                input.inp.inp_bord-bm(type="text" placeholder="City" readonly="readonly")
+                                                input.inp.inp_bord-bm(type="text" placeholder="City" :readonly="readonly")
                                             .b-billing__info__col
-                                                .select-bord
-                                                    select.js-choice.js-choice_bord(data-choice-disabled)
-                                                        option(placeholder) State
-                                                        option(value="1") Delivered
-                                                        option(value="2") Need Attention
-                                                        option(value="3") Awaiting Action
+                                                v-select(
+                                                    class="style-bord-sm"
+                                                    placeholder="Сountry"
+                                                    :options="options"
+                                                    :searchable="false"
+                                                    :disabled="readonly"
+                                                )
                                         .b-billing__info__row.rw-2
                                             .b-billing__info__col
-                                                input.inp.inp_bord-bm(type="text" placeholder="ZIP" readonly="readonly")
+                                                input.inp.inp_bord-bm(type="text" placeholder="ZIP" :readonly="readonly")
                                             .b-billing__info__col
-                                                .vue-form
-                                                    v-select(class="style-bord-sm" placeholder="Сountry" :options="options")
-                                                //.select-bord
-                                                //    select.js-choice.js-choice_bord(data-choice-disabled)
-                                                //        option(placeholder) Country
-                                                //        option(value="1") Delivered
-                                                //        option(value="2") Need Attention
-                                                //        option(value="3") Awaiting Action
+                                                v-select(
+                                                    class="style-bord-sm"
+                                                    placeholder="Сountry"
+                                                    :options="options"
+                                                    :disabled="readonly"
+                                                )
                                             .b-billing__info__col
-                                                input.inp.inp_bord-bm(type="text" placeholder="Phone" readonly="readonly")
+                                                input.inp.inp_bord-bm(type="text" placeholder="Phone" :readonly="readonly")
                                     .b-billing__info__frame__edit
-                                        a.link-blue(href="javascript:void(0)") Edit
+                                        a.link-blue(href="javascript:void(0)" @click="edit()") {{titleEdit}}
                                 .b-billing__info__card
                                     .b-billing__info__card__title Credit Card
                                     .b-billing__info__card__data
                                         .b-billing__info__card__row
                                             .b-billing__info__card__col
-                                                input.inp.inp_bord.inp_readonly.js-card-data(type="text" placeholder="XXXX XXX XXXX XXXX 7254" readonly="readonly")
+                                                input.inp.inp_bord.inp_readonly.js-card-data(
+                                                    type="text"
+                                                    placeholder="XXXX XXX XXXX XXXX 7254"
+                                                    :readonly="readonly"
+                                                )
                                             .b-billing__info__card__col
                                                 input.inp.inp_bord.inp_readonly.js-card-data(type="text" placeholder="XX / XX" readonly="readonly")
                                             .b-billing__info__card__col

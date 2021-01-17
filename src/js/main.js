@@ -8,22 +8,39 @@ import '../js/multSelect'
 import '../js/class'
 import Vue from 'vue/dist/vue'
 import vSelect from 'vue-select'
+import Calendar from 'v-calendar/lib/components/calendar.umd'
+import DatePicker from 'v-calendar/lib/components/date-picker.umd'
 
-Vue.component(`v-select`, vSelect)
+Vue.component('v-calendar', Calendar)
+Vue.component('v-date-picker', DatePicker)
+
+Vue.component('v-select', {
+    extends: vSelect,
+    methods: {
+        toggleDropdown(event) {
+            setTimeout(() => {
+                const drop1 = this.$el.lastElementChild
+                const scroll = new SimpleBar(drop1)
+            }, 10)
+        }
+    }
+})
 
 vSelect.props.components.default = () => ({
+    Deselect: {
+        render: createElement => createElement(`span`),
+    },
     OpenIndicator: {
         render: createElement => createElement(`span`),
     },
 })
 
-//console.log(vSelect.computed)
-
-const vueForm = document.querySelector(`.vue-form`)
-
-if (vueForm) {
-    new Vue({
-        data: {
+new Vue({
+    data() {
+        return {
+            readonly: true,
+            titleEdit: `Edit`,
+            date: new Date(),
             options: [
                 `Albania`,
                 `Angola`,
@@ -41,8 +58,15 @@ if (vueForm) {
                 `Madagascar`
             ]
         }
-    }).$mount(vueForm)
-}
+    },
+    methods: {
+        edit() {
+            this.titleEdit = this.readonly ? `Save` : `Edit`
+            this.readonly = this.readonly ? false : true
+        }
+    }
+}).$mount(`.wrap`)
+
 
 const choices = document.querySelectorAll(`.js-choice`)
 const edit = document.querySelectorAll(`.el-edit`)

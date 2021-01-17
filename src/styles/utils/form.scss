@@ -1417,6 +1417,10 @@ label {
         box-shadow: none;
         border: 0;
         max-height: 200px;
+        min-width: 100px;
+        &[data-simplebar="init"] {
+            overflow-y: visible;
+        }
     }
     &__dropdown-option {
         font-family: $fontRoboto;
@@ -1440,6 +1444,18 @@ label {
         height: 7px;
         background: url(../img/sel.svg) no-repeat;
         background-size: contain;
+    }
+    &__clear {
+        width: 14px;
+        height: 14px;
+        background: url(../img/clear.svg) no-repeat center;
+        background-size: contain;
+    }
+    &--disabled {
+        .vs__dropdown-toggle,
+        .vs__search {
+            background: #ffffff;
+        }
     }
 }
 
@@ -1477,6 +1493,8 @@ label {
                 transition: all .3s ease;
             }
         }
+
+
     }
 }
 

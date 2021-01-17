@@ -222,6 +222,37 @@
                 }
             }
         }
+        &-icon {
+            cursor: pointer;
+            .flex {
+                display: flex;
+                align-items: center;
+            }
+
+            .inline-block {
+                /*
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                .vc-popover-content-wrapper {
+
+                    position: fixed !important;
+                    inset: initial !important;
+                    transform: translate(-230px, 0) !important;
+
+                }
+
+                 */
+
+                .vc-popover-caret {
+                    display: none;
+                }
+            }
+        }
+        &-p {
+
+        }
     }
 
     &-linkBar {
@@ -329,4 +360,5 @@
             }
         }
     }
+
 }

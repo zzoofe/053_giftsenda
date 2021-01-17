@@ -136,10 +136,18 @@
               </div>
               <div class="b-chooseGift__header__col">Sum</div>
               <div class="b-chooseGift__header__col">
-                <div class="el-date el-date-p"><span class="link-date-bt">Delivery date</span>
-                  <svg>
-                    <use xlink:href="img/sprite.svg#calendar"></use>
-                  </svg>
+                <div class="el-date el-date-p">
+                  <div class="el-date-icon">
+                    <v-date-picker class="inline-block h-full" v-model="date">
+                      <template v-slot="{togglePopover}">
+                        <div class="flex" @click="togglePopover({ placement: 'auto-start' })"><span class="link-blue">Delivery date</span>
+                          <svg>
+                            <use xlink:href="img/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
+                      </template>
+                    </v-date-picker>
+                  </div>
                 </div>
               </div>
             </div>
@@ -180,10 +188,14 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <div class="el-date-p">
-                          <svg class="link-date">
-                            <use xlink:href="img/sprite.svg#calendar"></use>
-                          </svg>
+                        <div class="el-date-icon">
+                          <v-date-picker class="inline-block h-full" v-model="date">
+                            <template v-slot="{togglePopover}">
+                              <svg @click="togglePopover({ placement: 'auto-start' })">
+                                <use xlink:href="img/sprite.svg#calendar"></use>
+                              </svg>
+                            </template>
+                          </v-date-picker>
                         </div>
                       </div>
                     </div>
@@ -207,10 +219,14 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <div class="el-date-p">
-                          <svg class="link-date">
-                            <use xlink:href="img/sprite.svg#calendar"></use>
-                          </svg>
+                        <div class="el-date-icon">
+                          <v-date-picker class="inline-block h-full" v-model="date">
+                            <template v-slot="{togglePopover}">
+                              <svg @click="togglePopover({ placement: 'auto-start' })">
+                                <use xlink:href="img/sprite.svg#calendar"></use>
+                              </svg>
+                            </template>
+                          </v-date-picker>
                         </div>
                       </div>
                     </div>
@@ -242,10 +258,14 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <div class="el-date-p">
-                          <svg class="link-date">
-                            <use xlink:href="img/sprite.svg#calendar"></use>
-                          </svg>
+                        <div class="el-date-icon">
+                          <v-date-picker class="inline-block h-full" v-model="date">
+                            <template v-slot="{togglePopover}">
+                              <svg @click="togglePopover({ placement: 'auto-start' })">
+                                <use xlink:href="img/sprite.svg#calendar"></use>
+                              </svg>
+                            </template>
+                          </v-date-picker>
                         </div>
                       </div>
                     </div>
@@ -288,10 +308,14 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <div class="el-date-p">
-                          <svg class="link-date">
-                            <use xlink:href="img/sprite.svg#calendar"></use>
-                          </svg>
+                        <div class="el-date-icon">
+                          <v-date-picker class="inline-block h-full" v-model="date">
+                            <template v-slot="{togglePopover}">
+                              <svg @click="togglePopover({ placement: 'auto-start' })">
+                                <use xlink:href="img/sprite.svg#calendar"></use>
+                              </svg>
+                            </template>
+                          </v-date-picker>
                         </div>
                       </div>
                     </div>
@@ -315,10 +339,14 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <div class="el-date-p">
-                          <svg class="link-date">
-                            <use xlink:href="img/sprite.svg#calendar"></use>
-                          </svg>
+                        <div class="el-date-icon">
+                          <v-date-picker class="inline-block h-full" v-model="date">
+                            <template v-slot="{togglePopover}">
+                              <svg @click="togglePopover({ placement: 'auto-start' })">
+                                <use xlink:href="img/sprite.svg#calendar"></use>
+                              </svg>
+                            </template>
+                          </v-date-picker>
                         </div>
                       </div>
                     </div>
@@ -350,10 +378,14 @@
                     <div class="b-chooseGift__list__col">$100,000</div>
                     <div class="b-chooseGift__list__col">
                       <div class="el-date">22/03/2020
-                        <div class="el-date-p">
-                          <svg class="link-date">
-                            <use xlink:href="img/sprite.svg#calendar"></use>
-                          </svg>
+                        <div class="el-date-icon">
+                          <v-date-picker class="inline-block h-full" v-model="date">
+                            <template v-slot="{togglePopover}">
+                              <svg @click="togglePopover({ placement: 'auto-start' })">
+                                <use xlink:href="img/sprite.svg#calendar"></use>
+                              </svg>
+                            </template>
+                          </v-date-picker>
                         </div>
                       </div>
                     </div>

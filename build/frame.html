@@ -169,14 +169,7 @@
                           <input class="inp inp_bord-bm" type="text" placeholder="City">
                         </div>
                         <div class="b-billing__info__col">
-                          <div class="select-bord">
-                            <select class="js-choice js-choice_bord">
-                              <option placeholder>State</option>
-                              <option value="1">Delivered</option>
-                              <option value="2">Need Attention</option>
-                              <option value="3">Awaiting Action</option>
-                            </select>
-                          </div>
+                          <v-select class="style-bord-sm" placeholder="Сountry" :options="options" :searchable="false"></v-select>
                         </div>
                       </div>
                       <div class="b-billing__info__row rw-2">
@@ -184,16 +177,7 @@
                           <input class="inp inp_bord-bm" type="text" placeholder="ZIP">
                         </div>
                         <div class="b-billing__info__col">
-                          <div class="vue-form">
-                            <v-select class="style-bord-sm" placeholder="Сountry" :options="options"></v-select>
-                          </div>
-                          <!--.select-bord
-                          //select.js-choice.js-choice_bord
-                          //    option(placeholder) Country
-                          //    option(value="1") Delivered
-                          //    option(value="2") Need Attention
-                          //    option(value="3") Awaiting Action
-                          -->
+                          <v-select class="style-bord-sm" placeholder="Сountry" :options="options"></v-select>
                         </div>
                         <div class="b-billing__info__col">
                           <input class="inp inp_bord-bm" type="text" placeholder="Phone">

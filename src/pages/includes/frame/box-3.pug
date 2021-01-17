@@ -16,24 +16,12 @@
                         .b-billing__info__col
                             input.inp.inp_bord-bm(type="text" placeholder="City")
                         .b-billing__info__col
-                            .select-bord
-                                select.js-choice.js-choice_bord
-                                    option(placeholder) State
-                                    option(value="1") Delivered
-                                    option(value="2") Need Attention
-                                    option(value="3") Awaiting Action
+                            v-select(class="style-bord-sm" placeholder="Сountry" :options="options" :searchable="false")
                     .b-billing__info__row.rw-2
                         .b-billing__info__col
                             input.inp.inp_bord-bm(type="text" placeholder="ZIP")
                         .b-billing__info__col
-                            .vue-form
-                                v-select(class="style-bord-sm" placeholder="Сountry" :options="options")
-                            //.select-bord
-                                //select.js-choice.js-choice_bord
-                                //    option(placeholder) Country
-                                //    option(value="1") Delivered
-                                //    option(value="2") Need Attention
-                                //    option(value="3") Awaiting Action
+                            v-select(class="style-bord-sm" placeholder="Сountry" :options="options")
                         .b-billing__info__col
                             input.inp.inp_bord-bm(type="text" placeholder="Phone")
     .b-mdFrame__btn

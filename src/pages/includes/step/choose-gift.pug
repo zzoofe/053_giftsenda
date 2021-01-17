@@ -33,8 +33,13 @@
         .b-chooseGift__header__col Sum
         .b-chooseGift__header__col
             .el-date.el-date-p
-                span.link-date-bt Delivery date
-                +svg("calendar")
+
+                .el-date-icon
+                    v-date-picker(class="inline-block h-full" v-model="date")
+                        template(v-slot="{togglePopover}")
+                            div.flex(@click="togglePopover({ placement: 'auto-start' })")
+                                span.link-blue Delivery date
+                                +svg("calendar")
 
     .b-chooseGift__frame(data-simplebar)
         .b-chooseGift__row
@@ -74,8 +79,10 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            .el-date-p
-                                +svg("calendar").link-date
+                            .el-date-icon
+                                v-date-picker(class="inline-block h-full" v-model="date")
+                                    template(v-slot="{togglePopover}")
+                                        +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht22.form-check-1(type="checkbox")
@@ -100,8 +107,10 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            .el-date-p
-                                +svg("calendar").link-date
+                            .el-date-icon
+                                v-date-picker(class="inline-block h-full" v-model="date")
+                                    template(v-slot="{togglePopover}")
+                                        +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht23.form-check-1(type="checkbox")
@@ -136,8 +145,10 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            .el-date-p
-                                +svg("calendar").link-date
+                            .el-date-icon
+                                v-date-picker(class="inline-block h-full" v-model="date")
+                                    template(v-slot="{togglePopover}")
+                                        +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
         .b-chooseGift__row
             .b-chooseGift__title
                 .b-chooseGift__title__col(data-type="col")
@@ -176,8 +187,10 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            .el-date-p
-                                +svg("calendar").link-date
+                            .el-date-icon
+                                v-date-picker(class="inline-block h-full" v-model="date")
+                                    template(v-slot="{togglePopover}")
+                                        +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht32.form-check-1(type="checkbox")
@@ -202,8 +215,10 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            .el-date-p
-                                +svg("calendar").link-date
+                            .el-date-icon
+                                v-date-picker(class="inline-block h-full" v-model="date")
+                                    template(v-slot="{togglePopover}")
+                                        +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht33.form-check-1(type="checkbox")
@@ -238,5 +253,7 @@
                     .b-chooseGift__list__col
                         .el-date
                             | 22/03/2020
-                            .el-date-p
-                                +svg("calendar").link-date
+                            .el-date-icon
+                                v-date-picker(class="inline-block h-full" v-model="date")
+                                    template(v-slot="{togglePopover}")
+                                        +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
