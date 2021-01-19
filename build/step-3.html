@@ -98,7 +98,7 @@
           <div class="b-sendEmailFrame">
             <div class="b-sendEmailFrame__padd">
               <div class="b-sendEmailFrame__info">
-                <div><a class="link-blue" href="javascript:;" data-micromodal-trigger="modal-4">Design</a></div>
+                <div><a class="link-blue js-module" href="javascript:;" data-micromodal-trigger="modal-4">Design</a></div>
                 <div>Gift Invitation Delivery Date:<span>22/03/2020</span>
                   <div class="el-date-p">
                     <svg class="link-date">
@@ -261,8 +261,49 @@
                       <input class="inp inp_bord" type="text">
                     </div>
                     <div class="from-line">
-                      <label class="label"><a class="link-blue" href="#">Select from message templates</a></label>
-                      <textarea class="area area_block area_h294 inp_bord"></textarea>
+                      <label class="label"><a class="link-blue" href="javascript:void(0)" @click="modalNavShow()">Select from message templates</a></label>
+                      <textarea class="area area_block area_h194 inp_bord"></textarea>
+                      <div class="el-textLenght">Characters 100 / 200</div>
+                    </div>
+                    <div class="b-design__select__swiper">
+                      <div class="b-design__select__swiper__title">Logo</div>
+                      <div class="swiper">
+                        <div class="swiper-container swiper-container-modal">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 1</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 2</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 3</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 4</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 5</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 6</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 7</div>
+                            </div>
+                          </div>
+                          <div class="swiper-button swiper-button-prev">
+                            <svg>
+                              <use xlink:href="img/sprite.svg#swiper-button-prev"></use>
+                            </svg>
+                          </div>
+                          <div class="swiper-button swiper-button-next">
+                            <svg>
+                              <use xlink:href="img/sprite.svg#swiper-button-next"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="form-giftDesign__col">
@@ -279,6 +320,39 @@
                 </div>
               </form>
             </main>
+            <nav class="b-modalMenu" :class="[modalMenu ? 'is-visible' : '']">
+              <div class="b-modalMenu__hide" @click="modalNavHide()">
+                <svg>
+                  <use xlink:href="img/sprite.svg#arw-2"></use>
+                </svg>
+              </div>
+              <ul data-simplebar>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

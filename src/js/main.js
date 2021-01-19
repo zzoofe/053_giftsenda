@@ -13,7 +13,6 @@ import DatePicker from 'v-calendar/lib/components/date-picker.umd'
 
 Vue.component('v-calendar', Calendar)
 Vue.component('v-date-picker', DatePicker)
-
 Vue.component('v-select', {
     extends: vSelect,
     methods: {
@@ -22,6 +21,9 @@ Vue.component('v-select', {
                 const drop1 = this.$el.lastElementChild
                 const scroll = new SimpleBar(drop1)
             }, 10)
+        },
+        clear() {
+            console.log(111)
         }
     }
 })
@@ -38,6 +40,7 @@ vSelect.props.components.default = () => ({
 new Vue({
     data() {
         return {
+            modalMenu: false,
             readonly: true,
             titleEdit: `Edit`,
             date: new Date(),
@@ -63,6 +66,12 @@ new Vue({
         edit() {
             this.titleEdit = this.readonly ? `Save` : `Edit`
             this.readonly = this.readonly ? false : true
+        },
+        modalNavShow() {
+            this.modalMenu = true
+        },
+        modalNavHide() {
+            this.modalMenu = false
         }
     }
 }).$mount(`.wrap`)
@@ -97,9 +106,38 @@ const cardbtn = document.querySelector(`.js-card-btn`)
 const frameNext = document.querySelectorAll(`.js-next`)
 const framePrev = document.querySelectorAll(`.js-prev`)
 const indMess = document.querySelector(`.js-indMess`)
+const clear = document.querySelector(`.clear`)
 
 MicroModal.init({
-    onShow: () => document.body.classList.add('howdy'),
+    onShow: () => {
+        document.body.classList.add('howdy')
+
+        let swiper = new Swiper(`.swiper-container-modal`, {
+            slidesPerView: 5,
+            navigation: {
+                nextEl: `.swiper-button-next`,
+                prevEl: `.swiper-button-prev`,
+            },
+            breakpoints: {
+                200: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+                550: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 0,
+                },
+            }
+        })
+    },
     onClose: () => document.body.classList.remove('howdy'),
     awaitCloseAnimation: true,
     openClass: 'open',
@@ -453,6 +491,12 @@ if (cardbtn) {
                 e.setAttribute(`readonly`, `readonly`)
             })
         }
+    })
+}
+
+if (clear) {
+    clear.addEventListener(`click`, function () {
+        console.log(choice)
     })
 }
 

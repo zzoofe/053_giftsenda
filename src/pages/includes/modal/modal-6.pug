@@ -1,0 +1,82 @@
+#modal-4.modal.modal-giftDesing.micromodal-slide(aria-hidden="true")
+    .modal__overlay(tabindex="-1" data-micromodal-close)
+        .modal__container.modal__container--xl(role="dialog" aria-modal="true")
+            header.modal__title
+                h3 Gift invitation E-mail Design
+            main.modal__content
+                form.form-giftDesign(action="#")
+                    .form-giftDesign__row
+                        .form-giftDesign__col
+                            .from-line
+                                label.label Subject
+                                input.inp.inp_bord(type="text")
+                            .from-line
+                                label.label
+                                    a.link-blue(
+                                        href="javascript:void(0)"
+                                        @click="modalNavShow()"
+                                    )
+                                        | Select from message templates
+                                textarea.area.area_block.area_h194.inp_bord
+                                .el-textLenght Characters 100 / 200
+                            .b-design__select__swiper
+                                .b-design__select__swiper__title Logo
+                                .swiper
+                                    .swiper-container.swiper-container-modal
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .swiper-slide__item Slide 1
+                                            .swiper-slide
+                                                .swiper-slide__item Slide 2
+                                            .swiper-slide
+                                                .swiper-slide__item Slide 3
+                                            .swiper-slide
+                                                .swiper-slide__item Slide 4
+                                            .swiper-slide
+                                                .swiper-slide__item Slide 5
+                                            .swiper-slide
+                                                .swiper-slide__item Slide 6
+                                            .swiper-slide
+                                                .swiper-slide__item Slide 7
+                                        .swiper-button.swiper-button-prev
+                                            +svg("swiper-button-prev")
+                                        .swiper-button.swiper-button-next
+                                            +svg("swiper-button-next")
+                        .form-giftDesign__col
+                            .from-line
+                                .from-line-title
+                                    label.label Preview:
+                                    a.link-blue(href="#") Upload logo
+                                textarea.area.area_block.area_h370.inp_bord
+                    .form-giftDesign__btn
+                        button.btn.btn_bl.btn_w170 Save
+            nav.b-modalMenu(
+                :class="[modalMenu ? 'is-visible' : '']"
+                )
+                .b-modalMenu__hide(@click="modalNavHide()")
+                    +svg("arw-2")
+                ul(data-simplebar)
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
+                    li: a(href="#") Menu Item
