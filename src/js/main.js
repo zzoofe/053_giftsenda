@@ -10,6 +10,7 @@ import Vue from 'vue/dist/vue'
 import vSelect from 'vue-select'
 import Calendar from 'v-calendar/lib/components/calendar.umd'
 import DatePicker from 'v-calendar/lib/components/date-picker.umd'
+import './component/components'
 
 Vue.component('v-calendar', Calendar)
 Vue.component('v-date-picker', DatePicker)
@@ -75,7 +76,6 @@ new Vue({
         }
     }
 }).$mount(`.wrap`)
-
 
 const choices = document.querySelectorAll(`.js-choice`)
 const edit = document.querySelectorAll(`.el-edit`)
