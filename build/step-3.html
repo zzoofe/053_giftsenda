@@ -320,7 +320,7 @@
                 </div>
               </form>
             </main>
-            <nav class="b-modalMenu" :class="[modalMenu ? 'is-visible' : '']">
+            <nav class="b-modalMenu" :class="{ 'is-visible': modalMenu }">
               <div class="b-modalMenu__hide" @click="modalNavHide()">
                 <svg>
                   <use xlink:href="img/sprite.svg#arw-2"></use>

@@ -51,7 +51,7 @@
                     .form-giftDesign__btn
                         button.btn.btn_bl.btn_w170 Save
             nav.b-modalMenu(
-                :class="[modalMenu ? 'is-visible' : '']"
+                :class="{ 'is-visible': modalMenu }"
                 )
                 .b-modalMenu__hide(@click="modalNavHide()")
                     +svg("arw-2")
