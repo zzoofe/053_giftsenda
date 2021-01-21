@@ -67,38 +67,61 @@
       <main class="s-main">
         <div class="container">
           <div class="b-title">
-            <h1>Bulk Senda №32323</h1><a class="btn btn_new" href="#">
+            <h1>Sendas</h1><a class="btn btn_new" href="#">
               <svg>
                 <use xlink:href="img/sprite.svg#plus"></use>
               </svg>new senda</a>
           </div>
-          <div class="b-sep">Bulk Senda №32323</div>
-          <div class="b-content">
-            <div class="b-barTopSn">
-              <div class="b-barTopSn__left">
-                <div class="b-search">
-                  <input class="inp" type="text" placeholder="Search by recipient, company, campaign">
-                  <div class="b-search__icon">
-                    <svg class="b-search__icon__search">
-                      <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                    <svg class="b-search__icon__close">
-                      <use xlink:href="img/sprite.svg#close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="b-barTopSn__right">
-                <div class="b-barTopSn__download"><a href="#">Download Invoice</a></div>
-                <div class="b-barTopSn__total">Total Sendas  234</div>
-                <div class="b-barTopSn__deliver">
-                  <div class="b-barTopSn__deliver__title">Delivered 154</div>
-                  <div class="b-barTopSn__deliver__bar"><span style="width: 50%"></span></div>
-                </div>
+          <div class="b-sep">Sendas</div>
+          <div class="b-barTop">
+            <div class="b-search">
+              <input class="inp b-search__inp" type="text" placeholder="Search by recipient, company, campaign">
+              <div class="b-search__icon">
+                <svg class="b-search__icon__search">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+                <svg class="b-search__icon__close">
+                  <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
               </div>
             </div>
-            <div class="b-table b-table_tb3">
-              <div class="b-table__box">
+            <div class="b-filterBtn"><span>Expand the filter</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#filter"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="b-filter">
+            <div class="b-filter__status">
+              <select class="js-choice">
+                <option placeholder>Status</option>
+                <option value="1">Delivered</option>
+                <option value="2">Need Attention</option>
+                <option value="3">Awaiting Action</option>
+              </select>
+            </div>
+            <div class="b-filter__date">
+              <div>
+                <input class="inp inp-date" type="text" placeholder="02/08/20">
+              </div>
+              <div>
+                <input class="inp inp-date" type="text" placeholder="10/08/20">
+              </div>
+            </div>
+          </div>
+          <div class="b-table">
+            <div class="b-table__bar">
+              <ul class="el-tabs">
+                <li><a @click.prevent="setActive('sendas')" :class="{active: isActive('sendas')}" href="#sendas">Sendas</a></li>
+                <li><a @click.prevent="setActive('orders')" :class="{active: isActive('orders')}" href="#orders">Orders</a></li>
+              </ul>
+              <ul class="el-view">
+                <li class="is-active"><a href="#">25</a></li>
+                <li><a href="#">50</a></li>
+              </ul>
+            </div>
+            <div class="b-table__box b-tabBox" :class="{'active': isActive('sendas')}" id="sendas">
+              <div class="b-table_tb3">
                 <div class="table-th">
                   <table>
                     <tr>
@@ -205,6 +228,58 @@
                       <td>22/03/2020</td>
                       <td><span class="el-status el-status_green">Delivered</span></td>
                       <td><a class="link-blue" href="#">View Greeting Card</a></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="b-table__box b-tabBox" :class="{'active': isActive('orders')}" id="orders">
+              <div class="b-table_tb6">
+                <div class="table-th">
+                  <table>
+                    <tr>
+                      <th>Order No</th>
+                      <th>Date</th>
+                      <th>Recipients</th>
+                      <th>Gifts</th>
+                      <th>Total Sum</th>
+                      <th>Payment Status</th>
+                      <th>Status</th>
+                      <th>Owner</th>
+                    </tr>
+                  </table>
+                </div>
+                <div class="table-td" data-simplebar>
+                  <table>
+                    <tr>
+                      <td><a href="#">1758404858</a></td>
+                      <td>20 Oct 2020</td>
+                      <td><a class="link-blue" href="#">33</a></td>
+                      <td>38</td>
+                      <td>$100,000</td>
+                      <td>Paid</td>
+                      <td>Delivering</td>
+                      <td>Ivan Ivanov</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">1758404858</a></td>
+                      <td>20 Oct 2020</td>
+                      <td><a class="link-blue" href="#">33</a></td>
+                      <td>38</td>
+                      <td>$100,000</td>
+                      <td>Paid</td>
+                      <td>Delivering</td>
+                      <td>Ivan Ivanov</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">1758404858</a></td>
+                      <td>20 Oct 2020</td>
+                      <td><a class="link-blue" href="#">33</a></td>
+                      <td>38</td>
+                      <td>$100,000</td>
+                      <td>Paid</td>
+                      <td>Delivering</td>
+                      <td>Ivan Ivanov</td>
                     </tr>
                   </table>
                 </div>

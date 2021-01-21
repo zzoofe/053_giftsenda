@@ -1,0 +1,272 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 Sendas
+                a.btn.btn_new(href="#")
+                    +svg("plus")
+                    | new senda
+            .b-sep Sendas
+            .b-barTop
+                .b-search
+                    input.inp.b-search__inp(type="text" placeholder="Search by recipient, company, campaign")
+                    .b-search__icon
+                        +svg("search").b-search__icon__search
+                        +svg("close").b-search__icon__close
+                .b-filterBtn
+                    span Expand the filter
+                    +svg("filter")
+            .b-filter
+                .b-filter__status
+                    select.js-choice
+                        option(placeholder) Status
+                        option(value="1") Delivered
+                        option(value="2") Need Attention
+                        option(value="3") Awaiting Action
+                .b-filter__date
+                    div
+                        input.inp.inp-date(type="text" placeholder="02/08/20")
+                    div
+                        input.inp.inp-date(type="text" placeholder="10/08/20")
+            .b-table
+                .b-table__bar
+                    ul.el-tabs
+                        li
+                            a(
+                                @click.prevent="setActive('sendas')"
+                                :class="{active: isActive('sendas')}"
+                                href="#sendas"
+                            ) Sendas
+                        li
+                            a(
+                                @click.prevent="setActive('orders')"
+                                :class="{active: isActive('orders')}"
+                                href="#orders"
+                            ) Orders
+                    ul.el-view
+                        li.is-active
+                            a(href="#") 25
+                        li
+                            a(href="#") 50
+                .b-table__box.b-tabBox(
+                    :class="{'active': isActive('sendas')}"
+                    id="sendas"
+                )
+                    .b-table_tb3
+                        .table-th
+                            table
+                                tr
+                                    th
+                                        .sorting
+                                            span No
+                                            span.el-sort
+                                                a.up(href="#")
+                                                a.dw(href="#")
+                                    th Recipient
+                                    th Gift
+                                    th
+                                        .sorting
+                                            span Cost
+                                            span.el-sort
+                                                a.up(href="#")
+                                                a.dw(href="#")
+                                    th
+                                        .sorting
+                                            span Delivery By
+                                            span.el-sort
+                                                a.up(href="#")
+                                                a.dw(href="#")
+                                    th
+                                        .sorting
+                                            span Status
+                                            span.el-sort
+                                                a.up(href="#")
+                                                a.dw(href="#")
+                                    th Greeting Card
+                        .table-td(data-simplebar)
+                            table
+                                tr
+                                    td
+                                        a(href="#") INV - 1001
+                                        br
+                                        | 05/10/2019
+                                    td
+                                        | Ivanov Andrei Kirillovish
+                                        br
+                                        | Russia
+                                    td
+                                        .gift-date
+                                            div
+                                                | Chocolate Basket
+                                                br
+                                                | ID: 3435454
+                                            div
+                                                img(src="img/img-1.jpg" alt="")
+                                    td $100,000
+                                    td 22/03/2020
+                                    td
+                                        span.el-status.el-status_green Delivered
+                                    td
+                                        a.link-blue(href="#") View Greeting Card
+                                tr
+                                    td
+                                        a(href="#") INV - 1001
+                                        br
+                                        | 05/10/2019
+                                    td
+                                        | Ivanov Andrei Kirillovish
+                                        br
+                                        | Russia
+                                    td
+                                        .gift-date
+                                            div
+                                                | Chocolate Basket
+                                                br
+                                                | ID: 3435454
+                                            div
+                                                img(src="img/img-1.jpg" alt="")
+                                    td $100,000
+                                    td 22/03/2020
+                                    td
+                                        span.el-status.el-status_green Delivered
+                                    td
+                                        a.link-blue(href="#") View Greeting Card
+                                tr
+                                    td
+                                        a(href="#") INV - 1001
+                                        br
+                                        | 05/10/2019
+                                    td
+                                        | Ivanov Andrei Kirillovish
+                                        br
+                                        | Russia
+                                    td
+                                        .gift-date
+                                            div
+                                                | Chocolate Basket
+                                                br
+                                                | ID: 3435454
+                                            div
+                                                img(src="img/img-1.jpg" alt="")
+                                    td $100,000
+                                    td 22/03/2020
+                                    td
+                                        span.el-status.el-status_green Delivered
+                                    td
+                                        a.link-blue(href="#") View Greeting Card
+                                tr
+                                    td
+                                        a(href="#") INV - 1001
+                                        br
+                                        | 05/10/2019
+                                    td
+                                        | Ivanov Andrei Kirillovish
+                                        br
+                                        | Russia
+                                    td
+                                        .gift-date
+                                            div
+                                                | Chocolate Basket
+                                                br
+                                                | ID: 3435454
+                                            div
+                                                img(src="img/img-1.jpg" alt="")
+                                    td $100,000
+                                    td 22/03/2020
+                                    td
+                                        span.el-status.el-status_green Delivered
+                                    td
+                                        a.link-blue(href="#") View Greeting Card
+                                tr
+                                    td
+                                        a(href="#") INV - 1001
+                                        br
+                                        | 05/10/2019
+                                    td
+                                        | Ivanov Andrei Kirillovish
+                                        br
+                                        | Russia
+                                    td
+                                        .gift-date
+                                            div
+                                                | Chocolate Basket
+                                                br
+                                                | ID: 3435454
+                                            div
+                                                img(src="img/img-1.jpg" alt="")
+                                    td $100,000
+                                    td 22/03/2020
+                                    td
+                                        span.el-status.el-status_green Delivered
+                                    td
+                                        a.link-blue(href="#") View Greeting Card
+                                tr
+                                    td
+                                        a(href="#") INV - 1001
+                                        br
+                                        | 05/10/2019
+                                    td
+                                        | Ivanov Andrei Kirillovish
+                                        br
+                                        | Russia
+                                    td
+                                        .gift-date
+                                            div
+                                                | Chocolate Basket
+                                                br
+                                                | ID: 3435454
+                                            div
+                                                img(src="img/img-1.jpg" alt="")
+                                    td $100,000
+                                    td 22/03/2020
+                                    td
+                                        span.el-status.el-status_green Delivered
+                                    td
+                                        a.link-blue(href="#") View Greeting Card
+                .b-table__box.b-tabBox(
+                    :class="{'active': isActive('orders')}"
+                    id="orders"
+                )
+                    .b-table_tb6
+                        .table-th
+                            table
+                                tr
+                                    th Order No
+                                    th Date
+                                    th Recipients
+                                    th Gifts
+                                    th Total Sum
+                                    th Payment Status
+                                    th Status
+                                    th Owner
+                        .table-td(data-simplebar)
+                            table
+                                tr
+                                    td: a(href="#") 1758404858
+                                    td 20 Oct 2020
+                                    td: a.link-blue(href="#") 33
+                                    td 38
+                                    td $100,000
+                                    td Paid
+                                    td Delivering
+                                    td Ivan Ivanov
+                                tr
+                                    td: a(href="#") 1758404858
+                                    td 20 Oct 2020
+                                    td: a.link-blue(href="#") 33
+                                    td 38
+                                    td $100,000
+                                    td Paid
+                                    td Delivering
+                                    td Ivan Ivanov
+                                tr
+                                    td: a(href="#") 1758404858
+                                    td 20 Oct 2020
+                                    td: a.link-blue(href="#") 33
+                                    td 38
+                                    td $100,000
+                                    td Paid
+                                    td Delivering
+                                    td Ivan Ivanov

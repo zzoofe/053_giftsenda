@@ -52,55 +52,13 @@ block content
                         option(value="2") Need Attention
                         option(value="3") Awaiting Action
                 .column
-                    .custom-select
-                        select.js-choice-search
-                            option(placeholder) Сountry
-                            option(value="1") Delivered
-                            option(value="2") Need Attention
-                            option(value="3") Awaiting Action
-                            option(value="4") Delivered
-                            option(value="5") Need Attention
-                            option(value="6") Awaiting Action
-                            option(value="7") Delivered
-                            option(value="8") Need Attention
-                            option(value="9") Awaiting Action
-                            option(value="10") Delivered
-                            option(value="11") Need Attention
-                            option(value="12") Awaiting Action
-                            option(value="13") Delivered
-                            option(value="14") Need Attention
-                            option(value="15") Awaiting Action
-                            option(value="16") Delivered
-                            option(value="17") Need Attention
-                            option(value="18") Awaiting Action
+                    v-select(placeholder="Сountry" :options="options")
                 .column
-                    .form-multSelect.form-multSelect_bord
-                        .form-multSelect__title(data-type="title") Dropdown select
-                        .form-multSelect__frame.js-search-filter
-                            .form-multSelect__search
-                                input.js-search-filter-input(type="text" placeholder="Search")
-                                +svg("search1")
-                            .form-multSelect__list.form-multSelect__list_v1
-                                ul.js-search-filter-list
-                                    li
-                                        input#tag1.item-check(type="checkbox" value="Perspiciatis")
-                                        label(for="tag1") Perspiciatis
-                                    li
-                                        input#tag2.item-check(type="checkbox" value="Omnis")
-                                        label(for="tag2") Omnis
-                                    li
-                                        input#tag3.item-check(type="checkbox" value="Perspiciatis")
-                                        label(for="tag3") Delivered
-                                    li
-                                        input#tag4.item-check(type="checkbox" value="Omnis")
-                                        label(for="tag4") Need
-                .column
-                    .select-bord
-                        select.js-choice.js-choice_bord
-                            option(placeholder) Country
-                            option(value="1") Delivered
-                            option(value="2") Need Attention
-                            option(value="3") Awaiting Action
+                    v-select(
+                        class="style-bord-sm"
+                        placeholder="Сountry"
+                        :options="options"
+                        )
             .columns
                 .column.is-2
                     .select-radius-no

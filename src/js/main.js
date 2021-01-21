@@ -17,15 +17,14 @@ Vue.component('v-date-picker', DatePicker)
 Vue.component('v-select', {
     extends: vSelect,
     methods: {
-        toggleDropdown(event) {
-            setTimeout(() => {
-                const drop1 = this.$el.lastElementChild
-                const scroll = new SimpleBar(drop1)
-            }, 10)
-        },
-        clear() {
-            console.log(111)
-        }
+        // toggleDropdown(event) {
+        //     setTimeout(() => {
+        //         const drop1 = this.$el.lastElementChild
+        //         const scroll = new SimpleBar(drop1)
+        //     }, 10)
+        // },
+        // clear() {
+        // }
     }
 })
 
@@ -41,6 +40,7 @@ vSelect.props.components.default = () => ({
 new Vue({
     data() {
         return {
+            activeItem: `sendas`,
             modalMenu: false,
             readonly: true,
             titleEdit: `Edit`,
@@ -73,6 +73,12 @@ new Vue({
         },
         modalNavHide() {
             this.modalMenu = false
+        },
+        isActive(menuItem) {
+            return this.activeItem === menuItem
+        },
+        setActive(menuItem) {
+            this.activeItem = menuItem
         }
     }
 }).$mount(`.wrap`)

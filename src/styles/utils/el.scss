@@ -1,40 +1,12 @@
 .el {
     &-tabs {
         display: flex;
-        li {
-            padding: 0 25px;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            color: #393939;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 16px;
-            position: relative;
-            cursor: pointer;
-            transition: all $time ease;
 
-            &:before {
-                content: '';
-                height: 2px;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                background: #006699;
-                opacity: 0;
-                transition: all $time ease;
-            }
+        li {
 
             &:nth-child(1) {
-                border-radius: 5px 0 0 0;
-            }
-
-            &:hover {
-                background: rgba(0, 102, 153, 0.15);
-                color: #000000;
-                &:before {
-                    opacity: 1;
+                a {
+                    border-radius: 5px 0 0 0;
                 }
             }
 
@@ -45,6 +17,50 @@
                 &:before {
                     opacity: 1;
                 }
+            }
+
+            a {
+                padding: 0 25px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                color: #393939;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                position: relative;
+                cursor: pointer;
+                transition: all $time ease;
+
+                &:before {
+                    content: '';
+                    height: 2px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    background: #006699;
+                    opacity: 0;
+                    transition: all $time ease;
+                }
+
+                &:hover {
+                    background: rgba(0, 102, 153, 0.15);
+                    color: #000000;
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+
+                &.active {
+                    background: rgba(0, 102, 153, 0.15);
+                    color: #000000;
+                    cursor: default;
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+
             }
         }
     }

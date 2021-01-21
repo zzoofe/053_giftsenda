@@ -44,9 +44,7 @@
                                             +svg("swiper-button-next")
                         .form-giftDesign__col
                             .from-line
-                                .from-line-title
-                                    label.label Preview:
-                                    a.link-blue(href="#") Upload logo
+                                label.label Preview:
                                 textarea.area.area_block.area_h370.inp_bord
                     .form-giftDesign__btn
                         button.btn.btn_bl.btn_w170 Save
@@ -54,7 +52,8 @@
                 :class="{ 'is-visible': modalMenu }"
                 )
                 .b-modalMenu__hide(@click="modalNavHide()")
-                    +svg("arw-2")
+                    span
+                        +svg("arw-2")
                 ul(data-simplebar)
                     li: a(href="#") Menu Item
                     li: a(href="#") Menu Item
