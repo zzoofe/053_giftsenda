@@ -1,0 +1,95 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 New Single Senda
+            .b-step
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 1
+                    .b-step__item__label
+                        span Step 1
+                        | Recipients
+                .b-step__item
+                    .b-step__item__num
+                        strong 2
+                    .b-step__item__label
+                        span Step 2
+                        | Choose Gifts
+                .b-step__item
+                    .b-step__item__num
+                        strong 3
+                    .b-step__item__label
+                        span Step 3
+                        | Messages
+                .b-step__item
+                    .b-step__item__num
+                        strong 4
+                    .b-step__item__label
+                        span Step 4
+                        | Review
+            .b-step-title
+                h2 Choose Recipients
+            .b-page.b-page_rec
+                .b-page__frame
+                    .b-barTop.b-barTop_new
+                        .b-search
+                            input.inp.b-search__inp(type="text" placeholder="Search by recipient, company, campaign")
+                            .b-search__icon
+                                +svg("search").b-search__icon__search
+                                +svg("close").b-search__icon__close
+                        .b-barTop__newCreate
+                            a.link-blue(href="#") Create New Contact
+            .b-userInfo
+                .b-userInfo__box
+                    h3 Ivan Ivanov Ivanovich
+                    .b-userInfo__list
+                        .b-userInfo__list__item
+                            div Google Inc.
+                            div Google Inc.
+                        .b-userInfo__list__item
+                            div Russia, Moskva, street Pushkina 23
+                            div ZIP
+                        .b-userInfo__list__item
+                            div Moskva, street Pushkina 23
+                            div State
+                .b-userInfo__row
+                    .b-userInfo__box
+                        .contact
+                            +svg("phone-call")
+                            | 8 (920) 343-33-44
+                    .b-userInfo__box
+                        .contact
+                            | support@mail.ru
+                .b-userInfo__box
+                    .b-userInfo__info
+                        .b-userInfo__info__col
+                            div
+                                span Created:
+                                | 10 Jan 2021
+                            div
+                                span Sourсe:
+                                | Hubsport
+                        .b-userInfo__info__col
+                            div
+                                span Address verified:
+                                +svg("yes")
+                                span.green Yes
+                            div
+                                span Gifts this year:
+                                span.red None
+            .b-nav.b-nav_rw
+                ul
+                    li
+                        a(href="#")
+                            +svg("nav-1")
+                            span SELECT A GIFT
+                    li
+                        a(href="#")
+                            +svg("nav-3")
+                            span
+                                | CHOSEN BY
+                                br
+                                | GIFTTSENDA

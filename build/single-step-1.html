@@ -67,89 +67,105 @@
       <main class="s-main">
         <div class="container">
           <div class="b-title">
-            <h1>Dashboard</h1><a class="btn btn_new" href="#">
-              <svg>
-                <use xlink:href="img/sprite.svg#plus"></use>
-              </svg>new senda</a>
+            <h1>New Single Senda</h1>
           </div>
-          <div class="b-sep">Dashboard</div>
-          <div class="b-page">
+          <div class="b-step">
+            <div class="b-step__item is-active">
+              <div class="b-step__item__num"><strong>1</strong></div>
+              <div class="b-step__item__label"><span>Step 1</span>Recipients</div>
+            </div>
+            <div class="b-step__item">
+              <div class="b-step__item__num"><strong>2</strong></div>
+              <div class="b-step__item__label"><span>Step 2</span>Choose Gifts</div>
+            </div>
+            <div class="b-step__item">
+              <div class="b-step__item__num"><strong>3</strong></div>
+              <div class="b-step__item__label"><span>Step 3</span>Messages</div>
+            </div>
+            <div class="b-step__item">
+              <div class="b-step__item__num"><strong>4</strong></div>
+              <div class="b-step__item__label"><span>Step 4</span>Review</div>
+            </div>
+          </div>
+          <div class="b-step-title">
+            <h2>Choose Recipients</h2>
+          </div>
+          <div class="b-page b-page_rec">
             <div class="b-page__frame">
-              <div class="b-dashboard">
-                <div class="b-dashboard__item is-blue"><a href="javascript:void(0)"><span>Delivering</span><img src="img/dash-1.svg" alt=""><strong>236</strong></a></div>
-                <div class="b-dashboard__item is-green"><a href="javascript:void(0)"><span>Delivered</span><img src="img/dash-2.svg" alt=""><strong>236</strong></a></div>
-                <div class="b-dashboard__item is-red"><a href="javascript:void(0)"><span>Need Attention</span><img src="img/dash-3.svg" alt=""><strong>236</strong></a></div>
-                <div class="b-dashboard__item is-orange"><a href="javascript:void(0)"><span>Аwaiting action</span><img src="img/dash-4.svg" alt=""><strong>236</strong></a></div>
+              <div class="b-barTop b-barTop_new">
+                <div class="b-search">
+                  <input class="inp b-search__inp" type="text" placeholder="Search by recipient, company, campaign">
+                  <div class="b-search__icon">
+                    <svg class="b-search__icon__search">
+                      <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                    <svg class="b-search__icon__close">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="b-barTop__newCreate"><a class="link-blue" href="#">Create New Contact</a></div>
               </div>
-              <div class="b-frame"></div>
             </div>
-            <div class="b-page__aside">
-              <div class="b-list" data-simplebar>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#delivery"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
+          </div>
+          <div class="b-userInfo">
+            <div class="b-userInfo__box">
+              <h3>Ivan Ivanov Ivanovich</h3>
+              <div class="b-userInfo__list">
+                <div class="b-userInfo__list__item">
+                  <div>Google Inc.</div>
+                  <div>Google Inc.</div>
                 </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#warning"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">Senda was sucsefully delivered to John</a></div>
+                <div class="b-userInfo__list__item">
+                  <div>Russia, Moskva, street Pushkina 23</div>
+                  <div>ZIP</div>
                 </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#ok"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">Cannot reach the Recepient pls confirim phone NO</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#delivery"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#warning"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">Senda was sucsefully delivered to John</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#ok"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">Cannot reach the Recepient pls confirim phone NO</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#delivery"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
+                <div class="b-userInfo__list__item">
+                  <div>Moskva, street Pushkina 23</div>
+                  <div>State</div>
                 </div>
               </div>
             </div>
+            <div class="b-userInfo__row">
+              <div class="b-userInfo__box">
+                <div class="contact">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#phone-call"></use>
+                  </svg>8 (920) 343-33-44
+                </div>
+              </div>
+              <div class="b-userInfo__box">
+                <div class="contact">support@mail.ru</div>
+              </div>
+            </div>
+            <div class="b-userInfo__box">
+              <div class="b-userInfo__info">
+                <div class="b-userInfo__info__col">
+                  <div><span>Created:</span>10 Jan 2021</div>
+                  <div><span>Sourсe:</span>Hubsport</div>
+                </div>
+                <div class="b-userInfo__info__col">
+                  <div><span>Address verified:</span>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#yes"></use>
+                    </svg><span class="green">Yes</span>
+                  </div>
+                  <div><span>Gifts this year:</span><span class="red">None</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="b-nav b-nav_rw">
+            <ul>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#nav-1"></use>
+                  </svg><span>SELECT A GIFT</span></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#nav-3"></use>
+                  </svg><span>CHOSEN BY<br>GIFTTSENDA</span></a></li>
+            </ul>
           </div>
         </div>
       </main>

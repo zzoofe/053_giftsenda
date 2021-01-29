@@ -1,0 +1,33 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 Senda №344433
+                a.btn.btn_new(href="#")
+                    +svg("plus")
+                    | new senda
+            .b-sep Senda №344433
+            .b-card
+                .b-card__frame
+                .b-card__status
+                    .b-status
+                        .b-status__item
+                            .b-status__item__icon
+                                +svg("status-1")
+                            .b-status__item__desc
+                                h5 Received
+                                p We have recevied uour order
+                                span.date 10 Jan 20
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item
+                            .b-status__item__icon
+                                +svg("status-1")
+                            .b-status__item__desc
+                                h5 Confirmed
+                                p We have recevied uour order
+                                span.date 10 Jan 20
+                            .b-status__item__line
+                                span.circle
