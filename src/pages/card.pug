@@ -11,9 +11,71 @@ block content
             .b-sep Senda №344433
             .b-card
                 .b-card__frame
+                    .b-card__info
+                        h5 New Year New Beginnings to Kazakhstan
+                        .b-card__info__image
+                            img(src="img/img-4.png" alt="")
+                        .b-card__info__desc
+                            p The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack.
+                    .b-card__desc
+                        ul.el-tabs
+                            li
+                                a(
+                                    @click.prevent="setActive('sendas')"
+                                    :class="{active: isActive('sendas')}"
+                                    href="#sendas"
+                                ) Recipient
+                            li
+                                a(
+                                    @click.prevent="setActive('orders')"
+                                    :class="{active: isActive('orders')}"
+                                    href="#orders"
+                                ) Greeting Card
+                        .b-tabBox(
+                            :class="{'active': isActive('sendas')}"
+                            id="sendas")
+                            .recipient-info
+                                p
+                                    | Ivan Ivanov Ivanovich
+                                    br
+                                    | Moskva, street Pushkina 23
+                                    br
+                                    | Moskva, street Pushkina 23
+                                    br
+                                    | Moskva, street Pushkina 23
+                            .recipient-contact
+                                p
+                                    +svg("phone")
+                                    | 8 (920) 343-33-44
+                                p
+                                    +svg("email")
+                                    | support@mail.ru
+                            .recipient-delivery
+                                strong Estimated Delivery:
+                                span 20.12.2020
+
+                        .b-tabBox(
+                            :class="{'active': isActive('orders')}"
+                            id="orders")
+                            .greeting-desc
+                                h4 Greeting card
+                                p The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack of our favorite items The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack of our favorite itemsThe people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack of our favorite items
+                            .greeting-image
+                                img(src="img/img-5.png" alt="")
+                        .b-card__itog
+                            ul
+                                li
+                                    span Gift Cost:
+                                    span 600 $
+                                li
+                                    span Delivery Fee:
+                                    span 80 €
+                                li.total
+                                    span Total:
+                                    span 680 £
                 .b-card__status
                     .b-status
-                        .b-status__item
+                        .b-status__item.is-blue.is-done
                             .b-status__item__icon
                                 +svg("status-1")
                             .b-status__item__desc
@@ -21,13 +83,94 @@ block content
                                 p We have recevied uour order
                                 span.date 10 Jan 20
                             .b-status__item__line
-                                span.circle
-                        .b-status__item
+                                span
+                                    +svg("check")
+                        .b-status__item.is-green.is-processing
                             .b-status__item__icon
-                                +svg("status-1")
+                                +svg("status-2")
                             .b-status__item__desc
                                 h5 Confirmed
                                 p We have recevied uour order
                                 span.date 10 Jan 20
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-green
+                            .b-status__item__icon
+                                +svg("status-3")
+                            .b-status__item__desc
+                                h5 Paid
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-blue
+                            .b-status__item__icon
+                                +svg("status-4")
+                            .b-status__item__desc
+                                h5 Processing
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-blue
+                            .b-status__item__icon
+                                +svg("status-5")
+                            .b-status__item__desc
+                                h5 Delivering
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-green
+                            .b-status__item__icon
+                                +svg("status-6")
+                            .b-status__item__desc
+                                h5 Delivered
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-red
+                            .b-status__item__icon
+                                +svg("status-7")
+                            .b-status__item__desc
+                                h5 Cancelled
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-blue
+                            .b-status__item__icon
+                                +svg("status-8")
+                            .b-status__item__desc
+                                h5 Gift invitation Sent
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-green
+                            .b-status__item__icon
+                                +svg("status-9")
+                            .b-status__item__desc
+                                h5 Gift Accepted
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-red
+                            .b-status__item__icon
+                                +svg("status-10")
+                            .b-status__item__desc
+                                h5 Gift Declined
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-blue
+                            .b-status__item__icon
+                                +svg("status-11")
+                            .b-status__item__desc
+                                h5 Chartty Chosen
+                                p We have recevied uour order
+                            .b-status__item__line
+                                span.circle
+                        .b-status__item.is-orange
+                            .b-status__item__icon
+                                +svg("status-12")
+                            .b-status__item__desc
+                                h5 Chartty Chosen
+                                p We have recevied uour order
                             .b-status__item__line
                                 span.circle

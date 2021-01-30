@@ -74,10 +74,56 @@
           </div>
           <div class="b-sep">Senda №344433</div>
           <div class="b-card">
-            <div class="b-card__frame"></div>
+            <div class="b-card__frame">
+              <div class="b-card__info">
+                <h5>New Year New Beginnings to Kazakhstan</h5>
+                <div class="b-card__info__image"><img src="img/img-4.png" alt=""></div>
+                <div class="b-card__info__desc">
+                  <p>The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack.</p>
+                </div>
+              </div>
+              <div class="b-card__desc">
+                <ul class="el-tabs">
+                  <li><a @click.prevent="setActive('sendas')" :class="{active: isActive('sendas')}" href="#sendas">Recipient</a></li>
+                  <li><a @click.prevent="setActive('orders')" :class="{active: isActive('orders')}" href="#orders">Greeting Card</a></li>
+                </ul>
+                <div class="b-tabBox" :class="{'active': isActive('sendas')}" id="sendas">
+                  <div class="recipient-info">
+                    <p>Ivan Ivanov Ivanovich<br>Moskva, street Pushkina 23<br>Moskva, street Pushkina 23<br>Moskva, street Pushkina 23</p>
+                  </div>
+                  <div class="recipient-contact">
+                    <p>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#phone"></use>
+                      </svg>8 (920) 343-33-44
+                    </p>
+                    <p>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#email"></use>
+                      </svg>support@mail.ru
+                    </p>
+                  </div>
+                  <div class="recipient-delivery"><strong>Estimated Delivery:</strong><span>20.12.2020</span></div>
+                </div>
+                <div class="b-tabBox" :class="{'active': isActive('orders')}" id="orders">
+                  <div class="greeting-desc">
+                    <h4>Greeting card</h4>
+                    <p>The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack of our favorite items The people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack of our favorite itemsThe people that matter to your company deserve the best. All of our favorite items bundled together make this the ultimate swag pack of our favorite items</p>
+                  </div>
+                  <div class="greeting-image"><img src="img/img-5.png" alt=""></div>
+                </div>
+                <div class="b-card__itog">
+                  <ul>
+                    <li><span>Gift Cost:</span><span>600 $</span></li>
+                    <li><span>Delivery Fee:</span><span>80 €</span></li>
+                    <li class="total"><span>Total:</span><span>680 £</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div class="b-card__status">
               <div class="b-status">
-                <div class="b-status__item">
+                <div class="b-status__item is-blue is-done">
                   <div class="b-status__item__icon">
                     <svg>
                       <use xlink:href="img/sprite.svg#status-1"></use>
@@ -87,17 +133,140 @@
                     <h5>Received</h5>
                     <p>We have recevied uour order</p><span class="date">10 Jan 20</span>
                   </div>
-                  <div class="b-status__item__line"><span class="circle"></span></div>
+                  <div class="b-status__item__line"><span>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#check"></use>
+                      </svg></span></div>
                 </div>
-                <div class="b-status__item">
+                <div class="b-status__item is-green is-processing">
                   <div class="b-status__item__icon">
                     <svg>
-                      <use xlink:href="img/sprite.svg#status-1"></use>
+                      <use xlink:href="img/sprite.svg#status-2"></use>
                     </svg>
                   </div>
                   <div class="b-status__item__desc">
                     <h5>Confirmed</h5>
                     <p>We have recevied uour order</p><span class="date">10 Jan 20</span>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-green">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-3"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Paid</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-blue">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-4"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Processing</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-blue">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-5"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Delivering</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-green">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-6"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Delivered</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-red">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-7"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Cancelled</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-blue">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-8"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Gift invitation Sent</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-green">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-9"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Gift Accepted</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-red">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-10"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Gift Declined</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-blue">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-11"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Chartty Chosen</h5>
+                    <p>We have recevied uour order</p>
+                  </div>
+                  <div class="b-status__item__line"><span class="circle"></span></div>
+                </div>
+                <div class="b-status__item is-orange">
+                  <div class="b-status__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#status-12"></use>
+                    </svg>
+                  </div>
+                  <div class="b-status__item__desc">
+                    <h5>Chartty Chosen</h5>
+                    <p>We have recevied uour order</p>
                   </div>
                   <div class="b-status__item__line"><span class="circle"></span></div>
                 </div>

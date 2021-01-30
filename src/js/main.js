@@ -345,7 +345,6 @@ if (imgBtn) {
     imgBtn.forEach(function (e) {
         e.addEventListener(`click`, function (e) {
             imgBtn.forEach(function (e) {
-                console.log(111)
                 e.classList.remove(`is-active`)
             })
             let src = this.getAttribute(`data-src`)
@@ -425,10 +424,15 @@ if (chooseTitle) {
             if (type === `col`) {
                 if (list.style.maxHeight) {
                     list.style.maxHeight = null
+                    list.classList.remove(`is-open`)
                     parent.classList.remove(`is-open`)
                 } else {
                     list.style.maxHeight = list.scrollHeight + `px`
                     parent.classList.add(`is-open`)
+
+                    setTimeout(() => {
+                        list.classList.add(`is-open`)
+                    }, 300)
                 }
             }
         })

@@ -54,7 +54,7 @@
                 .b-chooseGift__title__col(data-type="col")
                     .el-arw
                         +svg("arw-1")
-            .b-chooseGift__list
+            .b-chooseGift__list.is-open
                 .b-chooseGift__list__row
                     .b-chooseGift__list__col
                         input#cht21.form-check-1(type="checkbox")
@@ -105,41 +105,41 @@
                                 v-date-picker(class="inline-block h-full" v-model="date")
                                     template(v-slot="{togglePopover}")
                                         +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
-                .b-chooseGift__list__row
-                    .b-chooseGift__list__col
-                        input#cht23.form-check-1(type="checkbox")
-                        label(for="cht23")
-                    .b-chooseGift__list__col
-                        | Ivanov Andrei Kirillovish
-                        br
-                        | Russia
-                    .b-chooseGift__list__col
-                        a.link-blue(href="#") Choose
-                .b-chooseGift__list__row
-                    .b-chooseGift__list__col
-                        input#cht24.form-check-1(type="checkbox")
-                        label(for="cht24")
-                    .b-chooseGift__list__col
-                        | Ivanov Andrei Kirillovish
-                        br
-                        | Russia
-                    .b-chooseGift__list__col
-                        | Ivanov Andrei Kirillovish
-                        br
-                        | Russia
-                    .b-chooseGift__list__col
-                        img(src="img/img-2.jpg" alt="")
-                    .b-chooseGift__list__col $100,000
-                    .b-chooseGift__list__col
-                        button-counter
-                    .b-chooseGift__list__col $100,000
-                    .b-chooseGift__list__col
-                        .el-date
-                            | 22/03/2020
-                            .el-date-icon
-                                v-date-picker(class="inline-block h-full" v-model="date")
-                                    template(v-slot="{togglePopover}")
-                                        +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
+                //.b-chooseGift__list__row
+                //    .b-chooseGift__list__col
+                //        input#cht23.form-check-1(type="checkbox")
+                //        label(for="cht23")
+                //    .b-chooseGift__list__col
+                //        | Ivanov Andrei Kirillovish
+                //        br
+                //        | Russia
+                //    .b-chooseGift__list__col
+                //        a.link-blue(href="#") Choose
+                //.b-chooseGift__list__row
+                //    .b-chooseGift__list__col
+                //        input#cht24.form-check-1(type="checkbox")
+                //        label(for="cht24")
+                //    .b-chooseGift__list__col
+                //        | Ivanov Andrei Kirillovish
+                //        br
+                //        | Russia
+                //    .b-chooseGift__list__col
+                //        | Ivanov Andrei Kirillovish
+                //        br
+                //        | Russia
+                //    .b-chooseGift__list__col
+                //        img(src="img/img-2.jpg" alt="")
+                //    .b-chooseGift__list__col $100,000
+                //    .b-chooseGift__list__col
+                //        button-counter
+                //    .b-chooseGift__list__col $100,000
+                //    .b-chooseGift__list__col
+                //        .el-date
+                //            | 22/03/2020
+                //            .el-date-icon
+                //                v-date-picker(class="inline-block h-full" v-model="date")
+                //                    template(v-slot="{togglePopover}")
+                //                        +svg("calendar")(@click="togglePopover({ placement: 'auto-start' })")
         .b-chooseGift__row
             .b-chooseGift__title
                 .b-chooseGift__title__col(data-type="col")

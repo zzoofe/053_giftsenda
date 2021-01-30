@@ -54,18 +54,25 @@ block content
                     :class="{'active': isActive('sendas')}"
                     id="sendas"
                 )
-                    .b-table_tb3
+                    .b-table_tb7
                         .table-th
                             table
                                 tr
                                     th
                                         .sorting
-                                            span No
+                                            span Order No
+                                            span.el-sort
+                                                a.up(href="#")
+                                                a.dw(href="#")
+                                    th
+                                        .sorting
+                                            span Senda No
                                             span.el-sort
                                                 a.up(href="#")
                                                 a.dw(href="#")
                                     th Recipient
                                     th Gift
+                                    th Q-ty
                                     th
                                         .sorting
                                             span Cost
@@ -92,6 +99,7 @@ block content
                                         a(href="#") INV - 1001
                                         br
                                         | 05/10/2019
+                                    td Text
                                     td
                                         | Ivanov Andrei Kirillovish
                                         br
@@ -104,6 +112,7 @@ block content
                                                 | ID: 3435454
                                             div
                                                 img(src="img/img-1.jpg" alt="")
+                                    td 1
                                     td $100,000
                                     td 22/03/2020
                                     td
@@ -115,6 +124,7 @@ block content
                                         a(href="#") INV - 1001
                                         br
                                         | 05/10/2019
+                                    td Text
                                     td
                                         | Ivanov Andrei Kirillovish
                                         br
@@ -127,98 +137,7 @@ block content
                                                 | ID: 3435454
                                             div
                                                 img(src="img/img-1.jpg" alt="")
-                                    td $100,000
-                                    td 22/03/2020
-                                    td
-                                        span.el-status.el-status_green Delivered
-                                    td
-                                        a.link-blue(href="#") View Greeting Card
-                                tr
-                                    td
-                                        a(href="#") INV - 1001
-                                        br
-                                        | 05/10/2019
-                                    td
-                                        | Ivanov Andrei Kirillovish
-                                        br
-                                        | Russia
-                                    td
-                                        .gift-date
-                                            div
-                                                | Chocolate Basket
-                                                br
-                                                | ID: 3435454
-                                            div
-                                                img(src="img/img-1.jpg" alt="")
-                                    td $100,000
-                                    td 22/03/2020
-                                    td
-                                        span.el-status.el-status_green Delivered
-                                    td
-                                        a.link-blue(href="#") View Greeting Card
-                                tr
-                                    td
-                                        a(href="#") INV - 1001
-                                        br
-                                        | 05/10/2019
-                                    td
-                                        | Ivanov Andrei Kirillovish
-                                        br
-                                        | Russia
-                                    td
-                                        .gift-date
-                                            div
-                                                | Chocolate Basket
-                                                br
-                                                | ID: 3435454
-                                            div
-                                                img(src="img/img-1.jpg" alt="")
-                                    td $100,000
-                                    td 22/03/2020
-                                    td
-                                        span.el-status.el-status_green Delivered
-                                    td
-                                        a.link-blue(href="#") View Greeting Card
-                                tr
-                                    td
-                                        a(href="#") INV - 1001
-                                        br
-                                        | 05/10/2019
-                                    td
-                                        | Ivanov Andrei Kirillovish
-                                        br
-                                        | Russia
-                                    td
-                                        .gift-date
-                                            div
-                                                | Chocolate Basket
-                                                br
-                                                | ID: 3435454
-                                            div
-                                                img(src="img/img-1.jpg" alt="")
-                                    td $100,000
-                                    td 22/03/2020
-                                    td
-                                        span.el-status.el-status_green Delivered
-                                    td
-                                        a.link-blue(href="#") View Greeting Card
-                                tr
-                                    td
-                                        a(href="#") INV - 1001
-                                        br
-                                        | 05/10/2019
-                                    td
-                                        | Ivanov Andrei Kirillovish
-                                        br
-                                        | Russia
-                                    td
-                                        .gift-date
-                                            div
-                                                | Chocolate Basket
-                                                br
-                                                | ID: 3435454
-                                            div
-                                                img(src="img/img-1.jpg" alt="")
+                                    td 1
                                     td $100,000
                                     td 22/03/2020
                                     td
