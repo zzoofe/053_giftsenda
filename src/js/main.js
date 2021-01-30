@@ -237,10 +237,7 @@ if (dateLink) {
     dateLink.forEach(function (e) {
         const picker = datepicker(e, {
             onShow: instance => {
-                console.log(e)
                 let coords = e.getBoundingClientRect()
-                // console.log(coords.left)
-                console.log(picker)
                 picker.calendarContainer.style.left = coords.left + `px`
                 picker.calendarContainer.style.top = coords.top + `px`
             },
@@ -270,7 +267,6 @@ if (filterTitle) {
 
     if (boxOpen) {
         boxOpen.forEach(function (e) {
-            console.log(e)
             e.style.maxHeight = e.scrollHeight + `px`
         })
 
@@ -361,7 +357,6 @@ if (edit) {
             let ed = this.parentElement.querySelector(`.text-edit`)
             ed.setAttribute('contenteditable', 'true')
             ed.focus()
-            // console.log(this.parentElement)
         })
     })
 }
@@ -454,8 +449,6 @@ if (searchOpen) {
             rSearch.classList.add(`is-open`)
             searchOpen.classList.add(`is-open`)
         }
-
-        console.log(rSearch)
     })
 }
 
@@ -506,7 +499,7 @@ if (cardbtn) {
 
 if (clear) {
     clear.addEventListener(`click`, function () {
-        console.log(choice)
+
     })
 }
 

@@ -114,12 +114,7 @@
           </div>
           <div class="columns">
             <div class="column">
-              <select class="js-choice">
-                <option placeholder>Popular</option>
-                <option value="1">Delivered</option>
-                <option value="2">Need Attention</option>
-                <option value="3">Awaiting Action</option>
-              </select>
+              <v-select placeholder="Сountry" :options="options" :searchable="false"></v-select>
             </div>
             <div class="column">
               <v-select placeholder="Сountry" :options="options"></v-select>
@@ -130,34 +125,13 @@
           </div>
           <div class="columns">
             <div class="column is-2">
-              <div class="select-radius-no">
-                <select class="js-choice">
-                  <option placeholder>Popular</option>
-                  <option value="1">Delivered</option>
-                  <option value="2">Need Attention</option>
-                  <option value="3">Awaiting Action</option>
-                </select>
-              </div>
+              <v-select class="style-norad" placeholder="Сountry" :options="options" :searchable="false"></v-select>
             </div>
             <div class="column is-2">
-              <div class="select-border select-radius-no">
-                <select class="js-choice">
-                  <option placeholder>Popular</option>
-                  <option value="1">Delivered</option>
-                  <option value="2">Need Attention</option>
-                  <option value="3">Awaiting Action</option>
-                </select>
-              </div>
+              <v-select class="style-norad style-border" placeholder="Сountry" :options="options" :searchable="false"></v-select>
             </div>
             <div class="column is-2">
-              <div class="select-border">
-                <select class="js-choice">
-                  <option placeholder>Popular</option>
-                  <option value="1">Delivered</option>
-                  <option value="2">Need Attention</option>
-                  <option value="3">Awaiting Action</option>
-                </select>
-              </div>
+              <v-select class="style-border" placeholder="Сountry" :options="options" :searchable="false"></v-select>
             </div>
           </div>
           <div class="columns">

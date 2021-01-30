@@ -55,11 +55,7 @@ block content
                         | New Recipient
             .columns
                 .column
-                    select.js-choice
-                        option(placeholder) Popular
-                        option(value="1") Delivered
-                        option(value="2") Need Attention
-                        option(value="3") Awaiting Action
+                    v-select(placeholder="Сountry" :options="options" :searchable="false")
                 .column
                     v-select(placeholder="Сountry" :options="options")
                 .column
@@ -70,26 +66,23 @@ block content
                         )
             .columns
                 .column.is-2
-                    .select-radius-no
-                        select.js-choice
-                            option(placeholder) Popular
-                            option(value="1") Delivered
-                            option(value="2") Need Attention
-                            option(value="3") Awaiting Action
+                    v-select(
+                        class="style-norad"
+                        placeholder="Сountry"
+                        :options="options"
+                        :searchable="false")
                 .column.is-2
-                    .select-border.select-radius-no
-                        select.js-choice
-                            option(placeholder) Popular
-                            option(value="1") Delivered
-                            option(value="2") Need Attention
-                            option(value="3") Awaiting Action
+                    v-select(
+                        class="style-norad style-border"
+                        placeholder="Сountry"
+                        :options="options"
+                        :searchable="false")
                 .column.is-2
-                    .select-border
-                        select.js-choice
-                            option(placeholder) Popular
-                            option(value="1") Delivered
-                            option(value="2") Need Attention
-                            option(value="3") Awaiting Action
+                    v-select(
+                        class="style-border"
+                        placeholder="Сountry"
+                        :options="options"
+                        :searchable="false")
             .columns
                 .column.is-half
                     input.inp(type="text" placeholder="Simple textbox")
