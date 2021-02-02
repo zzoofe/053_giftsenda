@@ -520,3 +520,15 @@ if (frameNext) {
         })
     })
 }
+
+
+const formInput = document.querySelectorAll(`.form-input .inp`)
+formInput.forEach((e) => {
+    e.addEventListener(`input`, () => {
+        if (e.value.length > 0) {
+            e.classList.add(`length`)
+        } else {
+            e.classList.remove(`length`)
+        }
+    })
+})

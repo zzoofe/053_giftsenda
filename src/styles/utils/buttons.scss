@@ -260,4 +260,34 @@
         border-bottom: 0 !important;
     }
 
+    &_block {
+        width: 100%;
+        justify-content: center;
+    }
+
+    &_nav {
+        border: 1px solid rgba(112,112,112,1);
+        box-sizing: border-box;
+        border-radius: 5px;
+        height: 56px;
+        min-width: 173px;
+        padding: 0;
+        background: none;
+        justify-content: center;
+
+        svg {
+            width: 26px;
+            height: 8px;
+        }
+
+        &:hover {
+            background: none;
+            border: 1px solid rgba(112,112,112,0);
+        }
+
+        &:active {
+            background: #E3E3E3;
+            border: 1px solid rgba(112,112,112,1);
+        }
+    }
 }

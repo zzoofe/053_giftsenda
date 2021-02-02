@@ -194,91 +194,139 @@
       </div>
       <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-          <div class="modal__container modal__container--xl" role="dialog" aria-modal="true">
-            <header class="modal__title">
+          <div class="modal__container modal__container--new" role="dialog" aria-modal="true">
+            <header class="modal__title modal__title_bot10">
               <h3>New Contact</h3>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </header>
             <main class="modal__content">
               <form action="#">
-                <div class="form-row--2">
-                  <div class="col">
-                    <div class="form-line form-line--norm">
-                      <label>First Name</label>
-                      <input class="inp inp_bord" type="text" placeholder="Text">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-line form-line--norm">
-                      <label class="has-text-right">Last Name</label>
-                      <input class="inp inp_bord" type="text" placeholder="Text">
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row--2">
-                  <div class="col">
-                    <div class="form-line form-line--norm">
-                      <label>Company</label>
-                      <input class="inp inp_bord" type="text" placeholder="Text">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-line form-line--norm">
-                      <label class="has-text-right">Country</label>
-                      <div class="form-select form-select--bord">
-                        <select class="js-choice">
-                          <option value="1">Country</option>
-                          <option value="2">Country</option>
-                        </select>
+                <div class="form-info">Hupspot | last updated: 10/10/21</div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-user">
+                          <use xlink:href="img/sprite.svg#form-user"></use>
+                        </svg>
                       </div>
+                      <input class="inp inp_bord" id="form-name" type="text">
+                      <label for="form-name">Enter your name span<span>*</span></label>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-user">
+                          <use xlink:href="img/sprite.svg#form-user"></use>
+                        </svg>
+                      </div>
+                      <input class="inp inp_bord" id="form-nameLast" type="text">
+                      <label for="form-nameLast">Last Name<span>*</span></label>
                     </div>
                   </div>
                 </div>
-                <div class="form-line form-line--norm">
-                  <label>Address 1</label>
-                  <input class="inp inp_bord" type="text" placeholder="Text">
-                </div>
-                <div class="form-line form-line--norm">
-                  <label>Address 2</label>
-                  <input class="inp inp_bord" type="text" placeholder="Text">
-                </div>
-                <div class="form-row--flex">
-                  <div class="column-item">
-                    <label>City</label>
-                  </div>
-                  <div class="column-item">
-                    <input class="inp inp_bord" type="text" placeholder="Text">
-                  </div>
-                  <div class="column-item">
-                    <label>ZIP</label>
-                  </div>
-                  <div class="column-item w200">
-                    <input class="inp inp_bord" type="text" placeholder="Text">
+                <div class="columns">
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-company">
+                          <use xlink:href="img/sprite.svg#form-2"></use>
+                        </svg>
+                      </div>
+                      <input class="inp inp_bord" id="form-company" type="text">
+                      <label for="form-company">Company<span>*</span></label>
+                    </div>
                   </div>
                 </div>
-                <div class="form-row--flex">
-                  <div class="column-item">
-                    <label>Email</label>
+                <div class="columns">
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-email">
+                          <use xlink:href="img/sprite.svg#form-email"></use>
+                        </svg>
+                      </div>
+                      <input class="inp inp_bord" id="form-email" type="text">
+                      <label for="form-email">Email</label>
+                    </div>
                   </div>
-                  <div class="column-item">
-                    <input class="inp inp_bord" type="text" placeholder="Text">
-                  </div>
-                  <div class="column-item">
-                    <label>Phone</label>
-                  </div>
-                  <div class="column-item w250">
-                    <input class="inp inp_bord" type="text" placeholder="Text">
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-phone">
+                          <use xlink:href="img/sprite.svg#form-phone"></use>
+                        </svg>
+                      </div>
+                      <input class="inp inp_bord" id="form-phone" type="text">
+                      <label for="form-phone">Phone</label>
+                    </div>
                   </div>
                 </div>
-                <div class="form-line form-line--norm">
-                  <label>Tags</label>
-                  <input class="inp inp_bord" type="text" placeholder="Text">
+                <div class="columns">
+                  <div class="column">
+                    <v-select class="style-border-grey" placeholder="Сountry" :options="options"></v-select>
+                  </div>
+                  <div class="column">
+                    <v-select class="style-border-grey" placeholder="Сountry" :options="options"></v-select>
+                  </div>
                 </div>
-                <div class="form-line form-line--norm">
-                  <label>Source</label>
-                  <div class="form-text">Salesforce</div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-locat">
+                          <use xlink:href="img/sprite.svg#form-locat"></use>
+                        </svg>
+                      </div>
+                      <input class="inp inp_bord" id="form-addres1" type="text">
+                      <label for="form-addres1">Addres 1</label>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-btn">
-                  <button class="btn btn_blue">Save</button>
+                <div class="columns">
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-locat">
+                          <use xlink:href="img/sprite.svg#form-locat"></use>
+                        </svg>
+                      </div>
+                      <input class="inp inp_bord" id="form-addres2" type="text">
+                      <label for="form-addres2">Addres 2</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-city">
+                          <use xlink:href="img/sprite.svg#form-sity"></use>
+                        </svg>
+                      </div>
+                      <input class="inp inp_bord" id="form-city" type="text">
+                      <label for="form-city">City<span>*</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="form-input">
+                      <div class="form-input__icon">
+                        <svg class="i-zip">
+                          <use xlink:href="img/sprite.svg#form-zip"></use>
+                        </svg>
+                      </div>
+                      <input class="inp inp_bord" id="form-zip" type="text">
+                      <label for="form-zip">Zip</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <button class="btn btn_sm btn_block">Save</button>
+                  </div>
                 </div>
               </form>
             </main>

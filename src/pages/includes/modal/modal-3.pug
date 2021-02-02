@@ -1,60 +1,98 @@
 #modal-3.modal.micromodal-slide(aria-hidden="true")
     .modal__overlay(tabindex="-1" data-micromodal-close)
-        .modal__container.modal__container--xl(role="dialog" aria-modal="true")
-            header.modal__title
+        .modal__container.modal__container--new(role="dialog" aria-modal="true")
+            header.modal__title.modal__title_bot10
                 h3 New Contact
+                button.modal__close(aria-label="Close modal" data-micromodal-close)
             main.modal__content
                 form(action="#")
-                    .form-row--2
-                        .col
-                            .form-line.form-line--norm
-                                label First Name
-                                input.inp.inp_bord(type="text" placeholder="Text")
-                        .col
-                            .form-line.form-line--norm
-                                label.has-text-right Last Name
-                                input.inp.inp_bord(type="text" placeholder="Text")
-                    .form-row--2
-                        .col
-                            .form-line.form-line--norm
-                                label Company
-                                input.inp.inp_bord(type="text" placeholder="Text")
-                        .col
-                            .form-line.form-line--norm
-                                label.has-text-right Country
-                                .form-select.form-select--bord
-                                    select.js-choice
-                                        option(value="1") Country
-                                        option(value="2") Country
-                    .form-line.form-line--norm
-                        label Address 1
-                        input.inp.inp_bord(type="text" placeholder="Text")
-                    .form-line.form-line--norm
-                        label Address 2
-                        input.inp.inp_bord(type="text" placeholder="Text")
-                    .form-row--flex
-                        .column-item
-                            label City
-                        .column-item
-                            input.inp.inp_bord(type="text" placeholder="Text")
-                        .column-item
-                            label ZIP
-                        .column-item.w200
-                            input.inp.inp_bord(type="text" placeholder="Text")
-                    .form-row--flex
-                        .column-item
-                            label Email
-                        .column-item
-                            input.inp.inp_bord(type="text" placeholder="Text")
-                        .column-item
-                            label Phone
-                        .column-item.w250
-                            input.inp.inp_bord(type="text" placeholder="Text")
-                    .form-line.form-line--norm
-                        label Tags
-                        input.inp.inp_bord(type="text" placeholder="Text")
-                    .form-line.form-line--norm
-                        label Source
-                        .form-text Salesforce
-                    .form-btn
-                        button.btn.btn_blue Save
+                    .form-info
+                        | Hupspot | last updated: 10/10/21
+                    .columns
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-user").i-user
+                                input#form-name.inp.inp_bord(type="text")
+                                label(for="form-name")
+                                    | Enter your name span
+                                    span *
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-user").i-user
+                                input#form-nameLast.inp.inp_bord(type="text")
+                                label(for="form-nameLast")
+                                    | Last Name
+                                    span *
+                    .columns
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-2").i-company
+                                input#form-company.inp.inp_bord(type="text")
+                                label(for="form-company")
+                                    | Company
+                                    span *
+                    .columns
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-email").i-email
+                                input#form-email.inp.inp_bord(type="text")
+                                label(for="form-email")
+                                    | Email
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-phone").i-phone
+                                input#form-phone.inp.inp_bord(type="text")
+                                label(for="form-phone")
+                                    | Phone
+                    .columns
+                        .column
+                            v-select(
+                                class="style-border-grey"
+                                placeholder="Сountry"
+                                :options="options")
+                        .column
+                            v-select(
+                                class="style-border-grey"
+                                placeholder="Сountry"
+                                :options="options")
+                    .columns
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-locat").i-locat
+                                input#form-addres1.inp.inp_bord(type="text")
+                                label(for="form-addres1")
+                                    | Addres 1
+                    .columns
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-locat").i-locat
+                                input#form-addres2.inp.inp_bord(type="text")
+                                label(for="form-addres2")
+                                    | Addres 2
+                    .columns
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-sity").i-city
+                                input#form-city.inp.inp_bord(type="text")
+                                label(for="form-city")
+                                    | City
+                                    span *
+                    .columns
+                        .column
+                            .form-input
+                                .form-input__icon
+                                    +svg("form-zip").i-zip
+                                input#form-zip.inp.inp_bord(type="text")
+                                label(for="form-zip")
+                                    | Zip
+                    .columns
+                        .column
+                            button.btn.btn_sm.btn_block Save

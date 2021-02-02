@@ -920,6 +920,105 @@
             }
         }
     }
+    &-input {
+        position: relative;
+
+        &__icon {
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            bottom: 1px;
+            width: 43px;
+            background: #EAEAEA;
+            border-radius: 5px 0px 0px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+
+            }
+
+            .i {
+                &-user {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                &-company {
+                    width: 20px;
+                    height: 14px;
+                }
+
+                &-email {
+                    width: 18px;
+                    height: 12px;
+                }
+
+                &-phone {
+                    width: 21px;
+                    height: 21px;
+                }
+
+                &-locat {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                &-city {
+                    width: 15px;
+                    height: 16px;
+                }
+
+                &-zip {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        label {
+            position: absolute;
+            left: 56px;
+            top: 10px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: #C6C6C6;
+            transition: all .2s ease;
+
+            span {
+                color: #E34646;
+                margin-left: 6px;
+            }
+        }
+
+        .inp {
+            border: 1px solid #C6C6C6;
+            height: 40px;
+            transition: all $time ease;
+            font-size: 14px;
+            line-height: 20px;
+            color: #006699;
+            padding: 10px 0 0 56px;
+
+            &:focus {
+                border: 1px solid #006699;
+
+                &+label {
+                    font-size: 8px;
+                    top: 0;
+                }
+            }
+
+            &.length {
+                &+label {
+                    font-size: 8px;
+                    top: 0;
+                }
+            }
+        }
+
+    }
 }
 
 select {
@@ -1568,6 +1667,18 @@ label {
         }
         &__dropdown-menu {
             border: 1px solid #8f9bb3;
+            border-top: 0;
+        }
+    }
+}
+
+.style-border-grey {
+    .vs {
+        &__dropdown-toggle {
+            border: 1px solid #c6c6c6;
+        }
+        &__dropdown-menu {
+            border: 1px solid #c6c6c6;
             border-top: 0;
         }
     }
