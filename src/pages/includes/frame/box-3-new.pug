@@ -1,0 +1,66 @@
+.b-mdFrame__box
+    .b-mdFrame__main-nv
+        .b-mdFrame__main-nv__title
+            h3 Confirm your shipping address:
+        .b-mdFrame__form-nv
+            form(action="#")
+                .columns
+                    .column
+                        .form-input
+                            .form-input__icon
+                                +svg("form-user").i-user
+                            input#form-name.inp.inp_bord(type="text")
+                            label(for="form-name")
+                                | Enter your name
+                                span *
+                .columns
+                    .column
+                        .form-input
+                            .form-input__icon
+                                +svg("form-locat").i-locat
+                            input#form-addres2.inp.inp_bord(type="text")
+                            label(for="form-addres2")
+                                | Street
+                                span *
+                .columns
+                    .column
+                        .form-input
+                            .form-input__icon
+                                +svg("form-sity").i-city
+                            input#form-city.inp.inp_bord(type="text")
+                            label(for="form-city")
+                                | City
+                                span *
+                .columns
+                    .column
+                        v-select(
+                            class="style-border-grey"
+                            placeholder="Сountry"
+                            :options="options")
+                    .column
+                        v-select(
+                            class="style-border-grey"
+                            placeholder="Сountry"
+                            :options="options")
+                .columns
+                    .column
+                        .form-input
+                            .form-input__icon
+                                +svg("form-phone").i-phone
+                            input#form-phone.inp.inp_bord(type="text")
+                            label(for="form-phone")
+                                | Phone
+                .columns
+                    .column
+                        .form-input
+                            .form-input__icon
+                                +svg("form-zip").i-zip
+                            input#form-zip.inp.inp_bord(type="text")
+                            label(for="form-zip")
+                                | Zip
+                .columns
+                    .column
+                        button.btn.btn_sm.btn_block Proceed
+    .b-mdFrame__prev-nv
+        a.js-prev(href="javascript:void(0)")
+            +svg("arw-prev")

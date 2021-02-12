@@ -73,195 +73,167 @@
               </svg>new senda</a>
           </div>
           <div class="b-sep">Sendas</div>
-          <div class="b-page">
-            <div class="b-page__frame">
-              <div class="b-barTop">
-                <div class="b-search">
-                  <input class="inp b-search__inp" type="text" placeholder="Search by recipient, company, campaign">
-                  <div class="b-search__icon">
-                    <svg class="b-search__icon__search">
-                      <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                    <svg class="b-search__icon__close">
-                      <use xlink:href="img/sprite.svg#close"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="b-filterBtn"><span>Expand the filter</span>
-                  <svg>
-                    <use xlink:href="img/sprite.svg#filter"></use>
-                  </svg>
-                </div>
+          <div class="b-barTop">
+            <div class="b-search">
+              <input class="inp b-search__inp" type="text" placeholder="Search by recipient, company, campaign">
+              <div class="b-search__icon">
+                <svg class="b-search__icon__search">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+                <svg class="b-search__icon__close">
+                  <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
               </div>
-              <div class="b-filter">
-                <div class="b-filter__status">
-                  <select class="js-choice">
-                    <option placeholder>Status</option>
-                    <option value="1">Delivered</option>
-                    <option value="2">Need Attention</option>
-                    <option value="3">Awaiting Action</option>
-                  </select>
-                </div>
-                <div class="b-filter__date">
-                  <div>
-                    <input class="inp inp-date" type="text" placeholder="02/08/20">
-                  </div>
-                  <div>
-                    <input class="inp inp-date" type="text" placeholder="10/08/20">
-                  </div>
-                </div>
+            </div>
+            <div class="b-filterBtn"><span>Expand the filter</span>
+              <svg>
+                <use xlink:href="img/sprite.svg#filter"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="b-filter">
+            <div class="b-filter__status">
+              <select class="js-choice">
+                <option placeholder>Status</option>
+                <option value="1">Delivered</option>
+                <option value="2">Need Attention</option>
+                <option value="3">Awaiting Action</option>
+              </select>
+            </div>
+            <div class="b-filter__date">
+              <div>
+                <input class="inp inp-date" type="text" placeholder="02/08/20">
               </div>
-              <div class="b-table b-table_tb1">
-                <div class="b-table__bar">
-                  <ul class="el-tabs">
-                    <li>Active</li>
-                    <li class="is-active">Delivered</li>
-                    <li>All</li>
-                  </ul>
-                  <ul class="el-view">
-                    <li class="is-active"><a href="#">25</a></li>
-                    <li><a href="#">50</a></li>
-                  </ul>
+              <div>
+                <input class="inp inp-date" type="text" placeholder="10/08/20">
+              </div>
+            </div>
+          </div>
+          <div class="b-table">
+            <div class="b-table__bar">
+              <ul class="el-tabs">
+                <li><a @click.prevent="setActive('sendas')" :class="{active: isActive('sendas')}" href="#sendas">Sendas</a></li>
+                <li><a @click.prevent="setActive('orders')" :class="{active: isActive('orders')}" href="#orders">Orders</a></li>
+              </ul>
+              <ul class="el-view">
+                <li class="is-active"><a href="#">25</a></li>
+                <li><a href="#">50</a></li>
+              </ul>
+            </div>
+            <div class="b-table__box b-tabBox" :class="{'active': isActive('sendas')}" id="sendas">
+              <div class="b-table_tb7">
+                <div class="table-th">
+                  <table>
+                    <tr>
+                      <th>
+                        <div class="sorting"><span>Order No</span><span class="el-sort"><a class="up" href="#"></a><a class="dw" href="#"></a></span></div>
+                      </th>
+                      <th>
+                        <div class="sorting"><span>Senda No</span><span class="el-sort"><a class="up" href="#"></a><a class="dw" href="#"></a></span></div>
+                      </th>
+                      <th>Recipient</th>
+                      <th>Gift</th>
+                      <th class="text-center">Q-ty</th>
+                      <th>
+                        <div class="sorting"><span>Cost</span><span class="el-sort"><a class="up" href="#"></a><a class="dw" href="#"></a></span></div>
+                      </th>
+                      <th>
+                        <div class="sorting"><span>Delivery By</span><span class="el-sort"><a class="up" href="#"></a><a class="dw" href="#"></a></span></div>
+                      </th>
+                      <th>
+                        <div class="sorting"><span>Status</span><span class="el-sort"><a class="up" href="#"></a><a class="dw" href="#"></a></span></div>
+                      </th>
+                      <th>Greeting Card</th>
+                    </tr>
+                  </table>
                 </div>
-                <div class="b-table__box">
-                  <div class="table-th">
-                    <table>
-                      <tr>
-                        <th>Senda type</th>
-                        <th>No / Date</th>
-                        <th>Recipient</th>
-                        <th>Cost</th>
-                        <th>Status</th>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="table-td" data-simplebar>
-                    <table>
-                      <tr>
-                        <td><img src="img/ico-1.svg" alt=""><span><a href="#">1758404858</a></span></td>
-                        <td><a href="#">2312321343</a><br>Oct 20</td>
-                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
-                        <td>$100,000</td>
-                        <td><span class="el-status el-status_green">Delivered</span></td>
-                      </tr>
-                      <tr>
-                        <td><img src="img/ico-2.svg" alt=""></td>
-                        <td><a href="#">2312321343</a><br>Oct 20</td>
-                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
-                        <td>$100,000</td>
-                        <td><span class="el-status el-status_blue">Delivering</span></td>
-                      </tr>
-                      <tr>
-                        <td><img src="img/ico-1.svg" alt=""><span><a href="#">1758404858</a></span></td>
-                        <td><a href="#">2312321343</a><br>Oct 20</td>
-                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
-                        <td>$100,000</td>
-                        <td><span class="el-status el-status_orange">Need Attention</span></td>
-                      </tr>
-                      <tr>
-                        <td><img src="img/ico-2.svg" alt=""></td>
-                        <td><a href="#">2312321343</a><br>Oct 20</td>
-                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
-                        <td>$100,000</td>
-                        <td><span class="el-status el-status_orange">Awaiting Action</span></td>
-                      </tr>
-                      <tr>
-                        <td><img src="img/ico-1.svg" alt=""><span><a href="#">1758404858</a></span></td>
-                        <td><a href="#">2312321343</a><br>Oct 20</td>
-                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
-                        <td>$100,000</td>
-                        <td><span class="el-status el-status_green">Delivered</span></td>
-                      </tr>
-                      <tr>
-                        <td><img src="img/ico-2.svg" alt=""></td>
-                        <td><a href="#">2312321343</a><br>Oct 20</td>
-                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
-                        <td>$100,000</td>
-                        <td><span class="el-status el-status_blue">Delivering</span></td>
-                      </tr>
-                      <tr>
-                        <td><img src="img/ico-1.svg" alt=""><span><a href="#">1758404858</a></span></td>
-                        <td><a href="#">2312321343</a><br>Oct 20</td>
-                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
-                        <td>$100,000</td>
-                        <td><span class="el-status el-status_orange">Need Attention</span></td>
-                      </tr>
-                      <tr>
-                        <td><img src="img/ico-2.svg" alt=""></td>
-                        <td><a href="#">2312321343</a><br>Oct 20</td>
-                        <td class="text-l">Ivanov Andrei Kirillovish<br>Russia<br><a href="#">NY 2323 Campaign</a></td>
-                        <td>$100,000</td>
-                        <td><span class="el-status el-status_orange">Awaiting Action</span></td>
-                      </tr>
-                    </table>
-                  </div>
+                <div class="table-td" data-simplebar>
+                  <table>
+                    <tr>
+                      <td><a href="#">INV - 1001</a><br>05/10/2019</td>
+                      <td>Text</td>
+                      <td>Ivanov Andrei Kirillovish<br>Russia</td>
+                      <td>
+                        <div class="gift-date">
+                          <div>Chocolate Basket<br>ID: 3435454</div>
+                          <div><img src="img/img-1.jpg" alt=""></div>
+                        </div>
+                      </td>
+                      <td>1</td>
+                      <td>$100,000</td>
+                      <td>22/03/2020</td>
+                      <td><span class="el-status el-status_green">Delivered</span></td>
+                      <td><a class="link-blue" href="#">View Greeting Card</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">INV - 1001</a><br>05/10/2019</td>
+                      <td>Text</td>
+                      <td>Ivanov Andrei Kirillovish<br>Russia</td>
+                      <td>
+                        <div class="gift-date">
+                          <div>Chocolate Basket<br>ID: 3435454</div>
+                          <div><img src="img/img-1.jpg" alt=""></div>
+                        </div>
+                      </td>
+                      <td>1</td>
+                      <td>$100,000</td>
+                      <td>22/03/2020</td>
+                      <td><span class="el-status el-status_green">Delivered</span></td>
+                      <td><a class="link-blue" href="#">View Greeting Card</a></td>
+                    </tr>
+                  </table>
                 </div>
               </div>
             </div>
-            <div class="b-page__aside table-none">
-              <div class="b-list" data-simplebar>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#delivery"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
+            <div class="b-table__box b-tabBox" :class="{'active': isActive('orders')}" id="orders">
+              <div class="b-table_tb6">
+                <div class="table-th">
+                  <table>
+                    <tr>
+                      <th>Order No</th>
+                      <th>Date</th>
+                      <th>Recipients</th>
+                      <th>Gifts</th>
+                      <th>Total Sum</th>
+                      <th>Payment Status</th>
+                      <th>Status</th>
+                      <th>Owner</th>
+                    </tr>
+                  </table>
                 </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#warning"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">Senda was sucsefully delivered to John</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#ok"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">Cannot reach the Recepient pls confirim phone NO</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#delivery"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#warning"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">Senda was sucsefully delivered to John</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#ok"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">Cannot reach the Recepient pls confirim phone NO</a></div>
-                </div>
-                <div class="b-list__item">
-                  <div class="b-list__item__icon">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#delivery"></use>
-                    </svg>
-                  </div>
-                  <div class="b-list__item__date"><span>1758404858</span><span>Oct 20, 2020</span></div>
-                  <div class="b-list__item__title"><a href="#">NY Partner Gifitng Campaign sendas were delivered succesfully</a></div>
+                <div class="table-td" data-simplebar>
+                  <table>
+                    <tr>
+                      <td><a href="#">1758404858</a></td>
+                      <td>20 Oct 2020</td>
+                      <td><a class="link-blue" href="#">33</a></td>
+                      <td>38</td>
+                      <td>$100,000</td>
+                      <td>Paid</td>
+                      <td>Delivering</td>
+                      <td>Ivan Ivanov</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">1758404858</a></td>
+                      <td>20 Oct 2020</td>
+                      <td><a class="link-blue" href="#">33</a></td>
+                      <td>38</td>
+                      <td>$100,000</td>
+                      <td>Paid</td>
+                      <td>Delivering</td>
+                      <td>Ivan Ivanov</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">1758404858</a></td>
+                      <td>20 Oct 2020</td>
+                      <td><a class="link-blue" href="#">33</a></td>
+                      <td>38</td>
+                      <td>$100,000</td>
+                      <td>Paid</td>
+                      <td>Delivering</td>
+                      <td>Ivan Ivanov</td>
+                    </tr>
+                  </table>
                 </div>
               </div>
             </div>
@@ -320,6 +292,7 @@
           <li><a href="billing.html">Billing & Plans</a></li>
           <li><a href="ui-kit.html">UI Kit</a></li>
           <li><a href="frame.html">Frame</a></li>
+          <li><a href="frame-new.html">Frame New</a></li>
           <li><a href="branding.html">Branding</a></li>
           <li><a href="single-step-1.html">Single Step 1</a></li>
           <li><a href="card.html">Card</a></li>

@@ -509,6 +509,7 @@ if (frameNext) {
             const frame = e.closest(`.b-mdFrame__box`)
             frame.classList.remove(`is-visible`)
             frame.nextElementSibling.classList.add(`is-visible`)
+            document.querySelector(`.b-textBlock`).classList.add(`is-hide`)
         })
     })
 
@@ -531,4 +532,16 @@ formInput.forEach((e) => {
             e.classList.remove(`length`)
         }
     })
+})
+const textBlock = document.querySelector(`.b-textBlock`)
+const blockTitle = document.querySelector(`.b-textBlock__title`)
+blockTitle.addEventListener(`click`, (e) => {
+    textBlock.classList.remove(`is-hide`)
+})
+
+
+const jsone = document.querySelector(`.js-one`)
+
+jsone.addEventListener(`click`, (e) => {
+    textBlock.classList.remove(`is-hide`)
 })
