@@ -46,13 +46,13 @@ new Vue({
             titleEdit: `Edit`,
             date: new Date(),
             options: [
-                `Albania`,
+                `Angola Cambodia Faroe Islands`,
                 `Angola`,
                 `Belize`,
                 `Cambodia`,
                 `Denmark`,
                 `Ecuador`,
-                `Faroe Islands`,
+                `Faroe Islands Faroe Islands`,
                 `Georgia`,
                 `Haiti`,
                 `India`,
@@ -534,14 +534,25 @@ formInput.forEach((e) => {
     })
 })
 const textBlock = document.querySelector(`.b-textBlock`)
-const blockTitle = document.querySelector(`.b-textBlock__title`)
-blockTitle.addEventListener(`click`, (e) => {
-    textBlock.classList.remove(`is-hide`)
-})
 
+if (textBlock) {
+    const textBlockhide = textBlock.querySelector(`.js-hide`)
+    const blockTitle = document.querySelector(`.b-textBlock__title`)
+
+    blockTitle.addEventListener(`click`, (e) => {
+        textBlock.classList.remove(`is-hide`)
+        textBlock.classList.add(`is-show`)
+    })
+
+    textBlockhide.addEventListener(`click`, () => {
+        textBlock.classList.remove(`is-show`)
+        textBlock.classList.add(`is-hide`)
+    })
+}
 
 const jsone = document.querySelector(`.js-one`)
-
-jsone.addEventListener(`click`, (e) => {
-    textBlock.classList.remove(`is-hide`)
-})
+    if (jsone) {
+    jsone.addEventListener(`click`, (e) => {
+        textBlock.classList.remove(`is-hide`)
+    })
+}

@@ -5452,6 +5452,7 @@
         background: #FFFFFF;
         border-radius: 5px;
         margin-bottom: 27px;
+        position: relative;
 
         @include media-sm {
             margin-bottom: 20px;
@@ -5495,6 +5496,7 @@
             grid-template-columns: 196px 1fr;
             grid-column-gap: 28px;
             padding: 34px 106px 31px 11px;
+            position: relative;
 
             @include media-sm {
                 grid-column-gap: 20px;
@@ -5568,6 +5570,23 @@
             }
             .b-textBlock__frame {
                 display: none;
+            }
+        }
+
+        svg.js-hide {
+            width: 14px;
+            height: 8px;
+            position: absolute;
+            right: 33px;
+            top: 33px;
+            transform: rotate(-180deg);
+            display: none;
+            cursor: pointer;
+        }
+
+        &.is-show {
+            svg.js-hide {
+                display: block;
             }
         }
     }
@@ -5786,4 +5805,11 @@
     background: #C4C4C4;
     outline: 1px solid #ffffff;
     border-radius: 4px;
+}
+
+.vs__selected-options {
+    overflow: hidden;
+    span {
+        line-height: 1.1;
+    }
 }
