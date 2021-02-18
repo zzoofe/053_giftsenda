@@ -77,7 +77,10 @@ block content
                         table
                             tr
                                 th
-                                    input#cht1.form-check-1(type="checkbox")
+                                    input#cht1.form-check-1(
+                                        @click="checkAll"
+                                        v-model="isCheckAll"
+                                        type="checkbox")
                                     label(for="cht1")
                                 th Name
                                 th Company
@@ -87,10 +90,20 @@ block content
                                 th Sendas
                                 th Owner
                                 th
-                            tr
+                            tr(
+                                v-for='lang in langsdata'
+                                :key="lang"
+                                :class="{sel: isSelect}"
+                            )
                                 td
-                                    input#cht2.form-check-1(type="checkbox")
-                                    label(for="cht2")
+                                    input.form-check-1(
+                                        :value="lang"
+                                        v-model="checkSelect"
+                                        @change="updateCheckall()"
+                                        :id="lang"
+                                        type="checkbox"
+                                        )
+                                    label(:for="lang")
                                 td Ivan Ivanov
                                 td DSSS inc
                                 td test@mail.ru
@@ -101,48 +114,7 @@ block content
                                 td
                                     a.el-edit(href="#")
                                         +svg("edit")
-                            tr
-                                td
-                                    input#cht3.form-check-1(type="checkbox")
-                                    label(for="cht3")
-                                td Ivan Ivanov
-                                td DSSS inc
-                                td test@mail.ru
-                                td Russia
-                                td #gold_partner
-                                td 223
-                                td Ivan Ivanov
-                                td
-                                    a.el-edit(href="#")
-                                        +svg("edit")
-                            tr
-                                td
-                                    input#cht4.form-check-1(type="checkbox")
-                                    label(for="cht4")
-                                td Ivan Ivanov
-                                td DSSS inc
-                                td test@mail.ru
-                                td Russia
-                                td #gold_partner
-                                td 223
-                                td Ivan Ivanov
-                                td
-                                    a.el-edit(href="#")
-                                        +svg("edit")
-                            tr
-                                td
-                                    input#cht5.form-check-1(type="checkbox")
-                                    label(for="cht5")
-                                td Ivan Ivanov
-                                td DSSS inc
-                                td test@mail.ru
-                                td Russia
-                                td #gold_partner
-                                td 223
-                                td Ivan Ivanov
-                                td
-                                    a.el-edit(href="#")
-                                        +svg("edit")
+
                     .b-pages
                         ul
                             li.prev

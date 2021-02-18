@@ -707,10 +707,10 @@
                     th {
                         font-weight: 700;
                         font-size: 12px;
-                        line-height: 14px;
+                        line-height: 20px;
                         color: #393939;
                         text-align: left;
-                        padding: 15px 7px 14px 7px;
+                        padding: 12px 7px 12px 7px;
                         background: rgba(0, 102, 153, 0.15);
                         @include media-tablet {
                             display: none;
@@ -833,6 +833,12 @@
                     &:nth-child(2n+1) {
                         td {
                             background: rgba(0, 102, 153, 0.08);
+                        }
+                    }
+
+                    &.sel {
+                        td {
+                            background: rgba(0, 102, 153, 0.25);
                         }
                     }
                 }

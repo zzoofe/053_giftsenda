@@ -112,8 +112,8 @@
 
             &+label {
                 font-weight: normal;
-                width: 12px;
-                height: 12px;
+                width: 18px;
+                height: 18px;
                 color: #8F9BB3;
                 position: relative;
                 padding: 0;
@@ -124,8 +124,8 @@
 
                 &:before {
                     content: '';
-                    width: 12px;
-                    height: 12px;
+                    width: 18px;
+                    height: 18px;
                     background: none;
                     border: 1px solid #000000;
                     box-sizing: border-box;
@@ -138,11 +138,11 @@
 
                 &:after {
                     content: '';
-                    width: 12px;
-                    height: 12px;
+                    width: 18px;
+                    height: 18px;
                     background-image: url(../img/check.svg);
                     background-repeat: no-repeat;
-                    background-size: 70% 70%;
+                    background-size: 70% 68%;
                     background-position: 3px center;
                     position: absolute;
                     left: 0;
@@ -151,6 +151,7 @@
                     transition: all $time ease;
                 }
             }
+
             &:checked + label {
                 color: #006699;
 
@@ -163,6 +164,7 @@
                 }
             }
         }
+
         &-2 {
             position: relative;
             input {

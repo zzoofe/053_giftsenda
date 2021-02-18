@@ -165,7 +165,7 @@
                 <table>
                   <tr>
                     <th>
-                      <input class="form-check-1" id="cht1" type="checkbox">
+                      <input class="form-check-1" id="cht1" @click="checkAll" v-model="isCheckAll" type="checkbox">
                       <label for="cht1"></label>
                     </th>
                     <th>Name</th>
@@ -177,61 +177,10 @@
                     <th>Owner</th>
                     <th></th>
                   </tr>
-                  <tr>
+                  <tr v-for="lang in langsdata" :key="lang" :class="{sel: isSelect}">
                     <td>
-                      <input class="form-check-1" id="cht2" type="checkbox">
-                      <label for="cht2"></label>
-                    </td>
-                    <td>Ivan Ivanov</td>
-                    <td>DSSS inc</td>
-                    <td>test@mail.ru</td>
-                    <td>Russia</td>
-                    <td>#gold_partner</td>
-                    <td>223</td>
-                    <td>Ivan Ivanov</td>
-                    <td><a class="el-edit" href="#">
-                        <svg>
-                          <use xlink:href="img/sprite.svg#edit"></use>
-                        </svg></a></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="form-check-1" id="cht3" type="checkbox">
-                      <label for="cht3"></label>
-                    </td>
-                    <td>Ivan Ivanov</td>
-                    <td>DSSS inc</td>
-                    <td>test@mail.ru</td>
-                    <td>Russia</td>
-                    <td>#gold_partner</td>
-                    <td>223</td>
-                    <td>Ivan Ivanov</td>
-                    <td><a class="el-edit" href="#">
-                        <svg>
-                          <use xlink:href="img/sprite.svg#edit"></use>
-                        </svg></a></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="form-check-1" id="cht4" type="checkbox">
-                      <label for="cht4"></label>
-                    </td>
-                    <td>Ivan Ivanov</td>
-                    <td>DSSS inc</td>
-                    <td>test@mail.ru</td>
-                    <td>Russia</td>
-                    <td>#gold_partner</td>
-                    <td>223</td>
-                    <td>Ivan Ivanov</td>
-                    <td><a class="el-edit" href="#">
-                        <svg>
-                          <use xlink:href="img/sprite.svg#edit"></use>
-                        </svg></a></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input class="form-check-1" id="cht5" type="checkbox">
-                      <label for="cht5"></label>
+                      <input class="form-check-1" :value="lang" v-model="checkSelect" @change="updateCheckall()" :id="lang" type="checkbox">
+                      <label :for="lang"></label>
                     </td>
                     <td>Ivan Ivanov</td>
                     <td>DSSS inc</td>

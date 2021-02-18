@@ -60,7 +60,11 @@ new Vue({
                 `Kenya`,
                 `Liberia`,
                 `Madagascar`
-            ]
+            ],
+            langsdata: [1, 2, 3, 4, 5],
+            isCheckAll: false,
+            checkSelect: [],
+            isSelect: false,
         }
     },
     methods: {
@@ -79,8 +83,28 @@ new Vue({
         },
         setActive(menuItem) {
             this.activeItem = menuItem
-        }
-    }
+        },
+
+        checkAll() {
+            this.isCheckAll = !this.isCheckAll
+            this.isSelect = !this.isSelect
+            this.checkSelect = []
+
+            if (this.isCheckAll) {
+                for (var key in this.langsdata) {
+                    this.checkSelect.push(this.langsdata[key])
+                }
+            }
+        },
+        updateCheckall() {
+            if (this.checkSelect.length == this.langsdata.length) {
+                this.isCheckAll = true
+            } else {
+                this.isCheckAll = false
+            }
+        },
+
+    },
 }).$mount(`.wrap`)
 
 const choices = document.querySelectorAll(`.js-choice`)
@@ -267,9 +291,10 @@ if (filterTitle) {
 
     if (boxOpen) {
         boxOpen.forEach(function (e) {
-            e.style.maxHeight = e.scrollHeight + `px`
+            setTimeout(() => {
+                e.style.maxHeight = e.scrollHeight + `px`
+            }, 1000)
         })
-
     }
 
     filterTitle.forEach(function (e) {
