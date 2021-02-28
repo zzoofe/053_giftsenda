@@ -137,6 +137,7 @@ const frameNext = document.querySelectorAll(`.js-next`)
 const framePrev = document.querySelectorAll(`.js-prev`)
 const indMess = document.querySelector(`.js-indMess`)
 const clear = document.querySelector(`.clear`)
+const allcheck = document.querySelector(`.js-all-check`)
 
 MicroModal.init({
     onShow: () => {
@@ -213,6 +214,12 @@ swiperSelector.forEach(function (e) {
 })
 
 import {general} from "./general";
+
+if (allcheck) {
+    allcheck.addEventListener('click', () => {
+        console.log(111)
+    })
+}
 
 if (choices) {
 

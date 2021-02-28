@@ -1,0 +1,157 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 New Bulk Senda
+            .b-step
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 1
+                        span Step
+                    .b-step__item__label Recipients
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 2
+                        span Step
+                    .b-step__item__label Choose Gifts
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 3
+                        span Step
+                    .b-step__item__label Gift Invite
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 4
+                        span Step
+                    .b-step__item__label Greeting card
+                .b-step__item
+                    .b-step__item__num
+                        strong 5
+                        span Step
+                    .b-step__item__label Review
+            .b-greetCard
+                .b-greetCard__desc
+                    .b-greetCard__desc__title
+                        h2 Design your Gift Invite
+                        span
+                            a.link-blue(href="#") SKIP this step
+                    .b-greetCard__desc__text
+                        p Your Recipients will receive an Email with a link to Gift Invite Landing page, where they can redeem theiier gift, change it or dontaits value.
+                            | !{' '}
+                            a(href="#") See example
+                .b-greetCard__frame
+                    .b-greetCard__frame__tabs
+                        .b-greetCard__frame__tabs__item.is-active Email
+                        .b-greetCard__frame__tabs__item
+                            | Direct Mail Invitation
+                            | !{' '}
+                            i (coming soon)
+                    .b-greetCard__frame__box
+                        form.form-giftDesign(action="#")
+                            .form-giftDesign__row
+                                .form-giftDesign__col
+                                    .from-line
+                                        label.label Subject
+                                        input.inp.inp_bord(type="text")
+                                    .from-line
+                                        label.label
+                                            a.link-blue(
+                                                href="javascript:void(0)"
+                                                @click="modalNavShow()"
+                                            )
+                                                | Select from message templates
+                                        span.f-info Add variables:  $$First_Name, $$Last_Name
+                                        textarea.area.area_block.area_h194.inp_bord
+                                        .el-textLenght Characters 100 / 200
+                                    .b-design__select__swiper
+                                        .b-design__select__swiper__title Logo
+                                        .swiper
+                                            .swiper-container.swiper-container-modal
+                                                .swiper-wrapper
+                                                    .swiper-slide
+                                                        .swiper-slide__item Slide 1
+                                                    .swiper-slide
+                                                        .swiper-slide__item Slide 2
+                                                    .swiper-slide
+                                                        .swiper-slide__item Slide 3
+                                                    .swiper-slide
+                                                        .swiper-slide__item Slide 4
+                                                    .swiper-slide
+                                                        .swiper-slide__item Slide 5
+                                                    .swiper-slide
+                                                        .swiper-slide__item Slide 6
+                                                    .swiper-slide
+                                                        .swiper-slide__item Slide 7
+                                                .swiper-button.swiper-button-prev
+                                                    +svg("swiper-button-prev")
+                                                .swiper-button.swiper-button-next
+                                                    +svg("swiper-button-next")
+                                    .columns
+                                        .column.f-date
+                                            | Schedule Gift Invite Email:
+                                            span 22 Mar 2020 Saturday
+                                                +svg("date-1")
+                                    .columns.mb-0
+                                        .column.f-check
+                                            .form-checked
+                                                span Ask Recipient to verify address
+                                                .form-check-4
+                                                    input#ch51(type="checkbox" checked="checked")
+                                                    label(for="ch51")
+                                    .columns.mb-0
+                                        .column.f-check
+                                            .form-checked
+                                                span.italic
+                                                    | Coming Soon:
+                                                    br
+                                                    | Recipients should schedule a meeting first
+                                                .form-check-4
+                                                    input#ch52(type="checkbox")
+                                                    label(for="ch52")
+                                .form-giftDesign__col
+                                    .from-line
+                                        label.label Preview:
+                                        textarea.area.area_block.area_h370.inp_bord
+                                    .form-giftDesign__btn
+                                        button.btn.btn_bl.btn_w170 Save
+                        nav.b-modalMenu(
+                            :class="{ 'is-visible': modalMenu }"
+                        )
+                            .b-modalMenu__hide(@click="modalNavHide()")
+                                span
+                                    +svg("arw-2")
+                            ul(data-simplebar)
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+                                li: a(href="#") Menu Item
+            .b-btnBar
+                a.btn.btn_bl.btn_lg.btn_prev(href="#")
+                    +svg("arw-btn-prev")
+                    | GIFTS
+                a.btn.btn_bl.btn_lg.btn_next(href="#")
+                    | GREETING CARD
+                    +svg("arw-btn-next")
+    include includes/modal/modal-6

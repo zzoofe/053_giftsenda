@@ -74,47 +74,7 @@ block content
                                                 input#tag4.item-check(type="checkbox" value="Omnis")
                                                 label(for="tag4") Need
                     .b-table_tb2
-                        table
-                            tr
-                                th
-                                    input#cht1.form-check-1(
-                                        @click="checkAll"
-                                        v-model="isCheckAll"
-                                        type="checkbox")
-                                    label(for="cht1")
-                                th Name
-                                th Company
-                                th Email
-                                th Coyntry
-                                th Tags
-                                th Sendas
-                                th Owner
-                                th
-                            tr(
-                                v-for='lang in langsdata'
-                                :key="lang"
-                                :class="{sel: isSelect}"
-                            )
-                                td
-                                    input.form-check-1(
-                                        :value="lang"
-                                        v-model="checkSelect"
-                                        @change="updateCheckall()"
-                                        :id="lang"
-                                        type="checkbox"
-                                        )
-                                    label(:for="lang")
-                                td Ivan Ivanov
-                                td DSSS inc
-                                td test@mail.ru
-                                td Russia
-                                td #gold_partner
-                                td 223
-                                td Ivan Ivanov
-                                td
-                                    a.el-edit(href="#")
-                                        +svg("edit")
-
+                        table-step
                     .b-pages
                         ul
                             li.prev

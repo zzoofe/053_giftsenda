@@ -80,167 +80,164 @@
             </div>
             <div class="b-step__item is-active">
               <div class="b-step__item__num"><strong>3</strong><span>Step</span></div>
-              <div class="b-step__item__label">Messages</div>
+              <div class="b-step__item__label">Gift Invite</div>
+            </div>
+            <div class="b-step__item is-active">
+              <div class="b-step__item__num"><strong>4</strong><span>Step</span></div>
+              <div class="b-step__item__label">Greeting card</div>
             </div>
             <div class="b-step__item">
-              <div class="b-step__item__num"><strong>4</strong><span>Step</span></div>
+              <div class="b-step__item__num"><strong>5</strong><span>Step</span></div>
               <div class="b-step__item__label">Review</div>
             </div>
           </div>
-          <div class="b-sendEmail">
-            <div><span>Send E-mail Gift Invtitations first</span>
-              <div class="form-check-2">
-                <input class="sendEmail" id="ch22" type="checkbox">
-                <label for="ch22"></label>
+          <div class="b-greetCard">
+            <div class="b-greetCard__desc">
+              <div class="b-greetCard__desc__title">
+                <h2>Design your Gift Invite</h2><span><a class="link-blue" href="#">SKIP this step</a></span>
+              </div>
+              <div class="b-greetCard__desc__text">
+                <p>Your Recipients will receive an Email with a link to Gift Invite Landing page, where they can redeem theiier gift, change it or dontaits value. <a href="#">See example</a></p>
               </div>
             </div>
-          </div>
-          <div class="b-sendEmailFrame">
-            <div class="b-sendEmailFrame__padd">
-              <div class="b-sendEmailFrame__info">
-                <div><a class="link-blue js-module" href="javascript:;" data-micromodal-trigger="modal-4">Design</a></div>
-                <div>Gift Invitation Delivery Date:<span>22/03/2020</span>
-                  <div class="el-date-p">
-                    <svg class="link-date">
-                      <use xlink:href="img/sprite.svg#calendar"></use>
-                    </svg>
-                  </div>
+            <div class="b-greetCard__frame">
+              <div class="b-greetCard__frame__tabs">
+                <div class="b-greetCard__frame__tabs__item is-active">Email</div>
+                <div class="b-greetCard__frame__tabs__item">
+                  Direct Mail Invitation
+ <i>(coming soon)</i>
                 </div>
               </div>
-              <div class="b-sendEmailFrame__row">
-                <div><span>Enable swap to charity</span>
-                  <div class="form-check-2">
-                    <input id="ch51" type="checkbox">
-                    <label for="ch51"></label>
-                  </div>
-                </div>
-                <div><span>Gift can be declined</span>
-                  <div class="form-check-2">
-                    <input id="ch52" type="checkbox">
-                    <label for="ch52"></label>
-                  </div>
-                </div>
-                <div><span>Ask Recipient to verify address</span>
-                  <div class="form-check-2">
-                    <input id="ch53" type="checkbox">
-                    <label for="ch53"></label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="b-title_bl">
-            <h2>Design your Greeting Card</h2>
-          </div>
-          <div class="b-design">
-            <div class="b-design__select">
-              <div class="b-design__select__ind"><span>Individual Messages</span>
-                <div class="form-check-2">
-                  <input class="js-indMess" id="ch23" type="checkbox">
-                  <label for="ch23"></label>
-                </div>
-              </div>
-              <div class="b-design__select__drop">
-                <v-select class="style-bord" placeholder="Сountry" :options="options"></v-select>
-              </div>
-              <div class="b-design__select__message">
-                <div class="b-design__select__message__title">Select form message templates</div>
-                <div class="b-design__select__message__frame">
-                  <div class="editor">
-                    <p>Hello World!</p>
-                  </div>
-                </div>
-                <div class="b-design__select__swiper">
-                  <div class="b-design__select__swiper__title">Background</div>
-                  <div class="swiper">
-                    <div class="swiper-container">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="swiper-slide__item">Slide 1</div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="swiper-slide__item">Slide 2</div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="swiper-slide__item">Slide 3</div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="swiper-slide__item">Slide 4</div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="swiper-slide__item">Slide 5</div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="swiper-slide__item">Slide 6</div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="swiper-slide__item">Slide 7</div>
+              <div class="b-greetCard__frame__box">
+                <form class="form-giftDesign" action="#">
+                  <div class="form-giftDesign__row">
+                    <div class="form-giftDesign__col">
+                      <div class="from-line">
+                        <label class="label">Subject</label>
+                        <input class="inp inp_bord" type="text">
+                      </div>
+                      <div class="from-line">
+                        <label class="label"><a class="link-blue" href="javascript:void(0)" @click="modalNavShow()">Select from message templates</a></label><span class="f-info">Add variables:  $$First_Name, $$Last_Name</span>
+                        <textarea class="area area_block area_h194 inp_bord"></textarea>
+                        <div class="el-textLenght">Characters 100 / 200</div>
+                      </div>
+                      <div class="b-design__select__swiper">
+                        <div class="b-design__select__swiper__title">Logo</div>
+                        <div class="swiper">
+                          <div class="swiper-container swiper-container-modal">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="swiper-slide__item">Slide 1</div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-slide__item">Slide 2</div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-slide__item">Slide 3</div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-slide__item">Slide 4</div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-slide__item">Slide 5</div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-slide__item">Slide 6</div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="swiper-slide__item">Slide 7</div>
+                              </div>
+                            </div>
+                            <div class="swiper-button swiper-button-prev">
+                              <svg>
+                                <use xlink:href="img/sprite.svg#swiper-button-prev"></use>
+                              </svg>
+                            </div>
+                            <div class="swiper-button swiper-button-next">
+                              <svg>
+                                <use xlink:href="img/sprite.svg#swiper-button-next"></use>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="swiper-button swiper-button-prev">
-                        <svg>
-                          <use xlink:href="img/sprite.svg#swiper-button-prev"></use>
-                        </svg>
+                      <div class="columns">
+                        <div class="column f-date">Schedule Gift Invite Email:<span>22 Mar 2020 Saturday
+                            <svg>
+                              <use xlink:href="img/sprite.svg#date-1"></use>
+                            </svg></span></div>
                       </div>
-                      <div class="swiper-button swiper-button-next">
-                        <svg>
-                          <use xlink:href="img/sprite.svg#swiper-button-next"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="b-design__select__swiper">
-                    <div class="b-design__select__swiper__title">Logo</div>
-                    <div class="swiper">
-                      <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="swiper-slide__item">Slide 1</div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="swiper-slide__item">Slide 2</div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="swiper-slide__item">Slide 3</div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="swiper-slide__item">Slide 4</div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="swiper-slide__item">Slide 5</div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="swiper-slide__item">Slide 6</div>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="swiper-slide__item">Slide 7</div>
+                      <div class="columns mb-0">
+                        <div class="column f-check">
+                          <div class="form-checked"><span>Ask Recipient to verify address</span>
+                            <div class="form-check-4">
+                              <input id="ch51" type="checkbox" checked="checked">
+                              <label for="ch51"></label>
+                            </div>
                           </div>
                         </div>
-                        <div class="swiper-button swiper-button-prev">
-                          <svg>
-                            <use xlink:href="img/sprite.svg#swiper-button-prev"></use>
-                          </svg>
-                        </div>
-                        <div class="swiper-button swiper-button-next">
-                          <svg>
-                            <use xlink:href="img/sprite.svg#swiper-button-next"></use>
-                          </svg>
+                      </div>
+                      <div class="columns mb-0">
+                        <div class="column f-check">
+                          <div class="form-checked"><span class="italic">Coming Soon:<br>Recipients should schedule a meeting first</span>
+                            <div class="form-check-4">
+                              <input id="ch52" type="checkbox">
+                              <label for="ch52"></label>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div class="form-giftDesign__col">
+                      <div class="from-line">
+                        <label class="label">Preview:</label>
+                        <textarea class="area area_block area_h370 inp_bord"></textarea>
+                      </div>
+                      <div class="form-giftDesign__btn">
+                        <button class="btn btn_bl btn_w170">Save</button>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </form>
+                <nav class="b-modalMenu" :class="{ 'is-visible': modalMenu }">
+                  <div class="b-modalMenu__hide" @click="modalNavHide()"><span>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#arw-2"></use>
+                      </svg></span></div>
+                  <ul data-simplebar>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                    <li><a href="#">Menu Item</a></li>
+                  </ul>
+                </nav>
               </div>
             </div>
-            <div class="b-design__canvas">
-              <canvas></canvas>
-            </div>
-            <div class="b-design__btn"><a class="btn btn_bl btn_w170" href="#">Save</a></div>
           </div>
           <div class="b-btnBar"><a class="btn btn_bl btn_lg btn_prev" href="#">
               <svg>
                 <use xlink:href="img/sprite.svg#arw-btn-prev"></use>
-              </svg>GIFTS</a><a class="btn btn_bl btn_lg btn_next" href="#">REVIEW
+              </svg>GIFTS</a><a class="btn btn_bl btn_lg btn_next" href="#">GREETING CARD
               <svg>
                 <use xlink:href="img/sprite.svg#arw-btn-next"></use>
               </svg></a></div>

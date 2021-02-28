@@ -82,3 +82,104 @@ Vue.component(`color`, {
         </div>
     `
 })
+
+Vue.component(`table-step`, {
+    data: () => {
+        return {
+            isCheckAll: false,
+            show: false,
+            colorSel: ``,
+            array: [1, 2, 3, 4, 5],
+        }
+    },
+
+    methods: {
+        checkAll() {
+            this.show= !this.show
+        }
+    },
+
+    template: `
+      <div>
+      <table>
+          <tbody>
+            <tr>
+                <th>
+                    <input
+                        id="cht1a"
+                        type="checkbox"
+                        class="form-check-1"
+                        @click="checkAll"
+                        v-model='isCheckAll'
+                    >
+                    <label for="cht1a">
+                    </label>
+                </th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Coyntry</th>
+                <th>Tags</th>
+                <th>Sendas</th>
+                <th>Owner</th>
+                <th></th>
+            </tr>
+
+            <table-step-tr
+                v-for="item in array"
+                :key="item"
+                :item="item"
+                :is-sel="show">
+            </table-step-tr>
+          </tbody>
+      </table>
+      </div>
+    `
+})
+
+Vue.component(`table-step-tr`, {
+    data() {
+        return {
+            isSelect: false
+        }
+    },
+
+    props: {
+        item: Number,
+        isSel: Boolean,
+    },
+
+    methods: {
+
+    },
+
+    template: `
+        <tr :class="{sel: isSel}">
+        <td>
+            <input :id="item"
+                   type="checkbox"
+                   class="form-check-1"
+                   :value="item"
+                   @click="isSelect = !isSelect"
+                   v-model='isSel'
+                   >
+            <label :for="item" ></label>
+        </td>
+        <td>Ivanov</td>
+        <td>DSSS inc</td>
+        <td>test@mail.ru</td>
+        <td>Russia</td>
+        <td>#gold_partner</td>
+        <td>223</td>
+        <td>Ivan Ivanov</td>
+        <td>
+            <a href="#" class="el-edit">
+                <svg>
+                    <use xlink:href="img/sprite.svg#edit"></use>
+                </svg>
+            </a>
+        </td>
+        </tr>
+    `
+
+})
