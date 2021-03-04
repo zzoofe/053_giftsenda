@@ -1209,6 +1209,12 @@
 
             }
 
+            .form-giftDesign__col {
+                &:nth-child(2) {
+                    display: block;
+                }
+            }
+
             .form-giftDesign {
                 &__col {
                     align-items: flex-start;
