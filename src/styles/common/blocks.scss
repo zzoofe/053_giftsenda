@@ -2812,6 +2812,29 @@
                 }
             }
         }
+
+        &__box {
+            background: #FFFFFF;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            padding: 30px 65px;
+
+            @include media-sm {
+                padding: 30px;
+            }
+
+
+            &Person {
+                max-width: 53%;
+                @include media-tablet {
+                    max-width: none;
+                }
+                .form-addPerson__row {
+                    display: block;
+                }
+            }
+        }
     }
 
     &-nav {
@@ -5714,6 +5737,10 @@
                 }
             }
         }
+    }
+
+    &-addPerson {
+
     }
 }
 

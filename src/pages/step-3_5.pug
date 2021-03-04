@@ -1,0 +1,117 @@
+extends common/layout
+
+block content
+    main.s-main
+        .container
+            .b-title
+                h1 New Bulk Senda
+            .b-step
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 1
+                        span Step
+                    .b-step__item__label Recipients
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 2
+                        span Step
+                    .b-step__item__label Choose Gifts
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 3
+                        span Step
+                    .b-step__item__label Gift Invite
+                .b-step__item.is-active
+                    .b-step__item__num
+                        strong 4
+                        span Step
+                    .b-step__item__label Greeting card
+                .b-step__item
+                    .b-step__item__num
+                        strong 5
+                        span Step
+                    .b-step__item__label Review
+            .b-greetCard
+                .b-greetCard__desc
+                    .b-greetCard__desc__title
+                        h2 Add a Personal message
+                        span
+                            a.link-blue(href="#") SKIP this step
+                    .b-greetCard__desc__text
+                        p
+                            | This message will be attached to the gift. This is
+                            | !{' '}
+                            a.link-blue(href="#") how it looks like.
+                .b-step__box(:class="{'b-step__boxPerson': !personShow}")
+                    form.form-addPerson(action="#")
+                        .columns
+                            .column
+                                .form-checked
+                                    .form-check-4
+                                        input#ch51(type="checkbox")
+                                        label(for="ch51" @click="personShow = !personShow")
+                                    span Individual Messages
+                        .form-addPerson__row
+                            .form-giftDesign__col
+                                .from-line
+                                    label.label
+                                        a.link-blue(
+                                            href="javascript:void(0)"
+                                            @click="modalNavShow()"
+                                        )
+                                            | Select from message templates
+                                    span.f-info Add variables:  $$First_Name, $$Last_Name
+                                    textarea.area.area_block.area_h194.inp_bord
+                                .from-line
+                                    input.inp.inp_bord(
+                                        type="text"
+                                        placeholder="Add signature to your card")
+                                    .columns.pt-2.is-mobile
+                                        .column
+                                            a.link-blue.fz-12(href="#") Copy this text to all recipients
+                                        .column
+                                            .el-textLenght Characters 100 / 200
+                                .form-giftDesign__btn
+                                    a.btn.btn_blueDark(href="#")
+                                        | Save card
+                            .form-giftDesign__col(v-if="personShow")
+                                list-checkbox
+                    nav.b-modalMenu(
+                        :class="{ 'is-visible': modalMenu }"
+                    )
+                        .b-modalMenu__hide(@click="modalNavHide()")
+                            span
+                                +svg("arw-2")
+                        ul(data-simplebar)
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+                            li: a(href="#") Menu Item
+            .b-btnBar
+                a.btn.btn_bl.btn_lg.btn_prev(href="#")
+                    +svg("arw-btn-prev")
+                    | GIFTS
+                a.btn.btn_bl.btn_lg.btn_next(href="#")
+                    | REVIEW
+                    +svg("arw-btn-next")
+    include includes/modal/modal-6

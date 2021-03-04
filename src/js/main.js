@@ -65,6 +65,7 @@ new Vue({
             isCheckAll: false,
             checkSelect: [],
             isSelect: false,
+            personShow: false
         }
     },
     methods: {

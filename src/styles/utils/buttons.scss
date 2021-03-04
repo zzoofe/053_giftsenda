@@ -290,4 +290,23 @@
             border: 1px solid rgba(112,112,112,1);
         }
     }
+
+    &_blueDark {
+        background: #006699;
+        border-radius: 4px;
+        height: 32px;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: none;
+        min-width: 153px;
+        justify-content: center;
+
+        &:hover {
+            background: #00B7FF;
+        }
+
+        &:active {
+            background: #B9B9B9;
+        }
+    }
 }

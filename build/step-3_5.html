@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GiftSenda</title>
+    <link href="img/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="s-header">
+        <div class="container">
+          <div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
+          <div class="balance"><a href="#">Balance:  3030 у.е</a></div>
+          <div class="user">
+            <div class="user__image"><a href="#"><img src="img/user.jpg" alt=""></a></div>
+            <div class="user__info">
+              <div class="user__info__name"><a href="#">Eric Brain</a></div>
+              <div class="user__info__status">Manager user</div>
+              <div class="user__info__reit">
+                <svg>
+                  <use xlink:href="img/sprite.svg#reit"></use>
+                </svg><span>867</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="s-navBar">
+        <div class="container">
+          <div class="burger"><span></span><span></span><span></span><span></span></div>
+          <div class="s-navBar__frame">
+            <div class="menu">
+              <ul>
+                <li class="is-active"><a href="#">Dashboard</a></li>
+                <li><a href="#">Sendas</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Reports</a></li>
+              </ul>
+            </div>
+            <div class="support"><a href="">
+                <svg>
+                  <use xlink:href="img/sprite.svg#support"></use>
+                </svg><span>Support</span></a></div>
+            <div class="setup"><a href="">
+                <svg>
+                  <use xlink:href="img/sprite.svg#setup"></use>
+                </svg><span>Setup</span></a>
+              <div class="setup__nav">
+                <ul>
+                  <li><a href="#">Users & Teams</a></li>
+                  <li><a href="#">Branding</a></li>
+                  <li><a href="#">Message Templates</a></li>
+                  <li><a href="#">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#exit"></use>
+                      </svg><span>Exit</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="s-main">
+        <div class="container">
+          <div class="b-title">
+            <h1>New Bulk Senda</h1>
+          </div>
+          <div class="b-step">
+            <div class="b-step__item is-active">
+              <div class="b-step__item__num"><strong>1</strong><span>Step</span></div>
+              <div class="b-step__item__label">Recipients</div>
+            </div>
+            <div class="b-step__item is-active">
+              <div class="b-step__item__num"><strong>2</strong><span>Step</span></div>
+              <div class="b-step__item__label">Choose Gifts</div>
+            </div>
+            <div class="b-step__item is-active">
+              <div class="b-step__item__num"><strong>3</strong><span>Step</span></div>
+              <div class="b-step__item__label">Gift Invite</div>
+            </div>
+            <div class="b-step__item is-active">
+              <div class="b-step__item__num"><strong>4</strong><span>Step</span></div>
+              <div class="b-step__item__label">Greeting card</div>
+            </div>
+            <div class="b-step__item">
+              <div class="b-step__item__num"><strong>5</strong><span>Step</span></div>
+              <div class="b-step__item__label">Review</div>
+            </div>
+          </div>
+          <div class="b-greetCard">
+            <div class="b-greetCard__desc">
+              <div class="b-greetCard__desc__title">
+                <h2>Add a Personal message</h2><span><a class="link-blue" href="#">SKIP this step</a></span>
+              </div>
+              <div class="b-greetCard__desc__text">
+                <p>
+                  This message will be attached to the gift. This is
+ <a class="link-blue" href="#">how it looks like.</a>
+                </p>
+              </div>
+            </div>
+            <div class="b-step__box" :class="{'b-step__boxPerson': !personShow}">
+              <form class="form-addPerson" action="#">
+                <div class="columns">
+                  <div class="column">
+                    <div class="form-checked">
+                      <div class="form-check-4">
+                        <input id="ch51" type="checkbox">
+                        <label for="ch51" @click="personShow = !personShow"></label>
+                      </div><span>Individual Messages</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-addPerson__row">
+                  <div class="form-giftDesign__col">
+                    <div class="from-line">
+                      <label class="label"><a class="link-blue" href="javascript:void(0)" @click="modalNavShow()">Select from message templates</a></label><span class="f-info">Add variables:  $$First_Name, $$Last_Name</span>
+                      <textarea class="area area_block area_h194 inp_bord"></textarea>
+                    </div>
+                    <div class="from-line">
+                      <input class="inp inp_bord" type="text" placeholder="Add signature to your card">
+                      <div class="columns pt-2 is-mobile">
+                        <div class="column"><a class="link-blue fz-12" href="#">Copy this text to all recipients</a></div>
+                        <div class="column">
+                          <div class="el-textLenght">Characters 100 / 200</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-giftDesign__btn"><a class="btn btn_blueDark" href="#">Save card</a></div>
+                  </div>
+                  <div class="form-giftDesign__col" v-if="personShow">
+                    <list-checkbox></list-checkbox>
+                  </div>
+                </div>
+              </form>
+              <nav class="b-modalMenu" :class="{ 'is-visible': modalMenu }">
+                <div class="b-modalMenu__hide" @click="modalNavHide()"><span>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#arw-2"></use>
+                    </svg></span></div>
+                <ul data-simplebar>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                  <li><a href="#">Menu Item</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="b-btnBar"><a class="btn btn_bl btn_lg btn_prev" href="#">
+              <svg>
+                <use xlink:href="img/sprite.svg#arw-btn-prev"></use>
+              </svg>GIFTS</a><a class="btn btn_bl btn_lg btn_next" href="#">REVIEW
+              <svg>
+                <use xlink:href="img/sprite.svg#arw-btn-next"></use>
+              </svg></a></div>
+        </div>
+      </main>
+      <div class="modal modal-giftDesing micromodal-slide" id="modal-4" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container modal__container--xl" role="dialog" aria-modal="true">
+            <header class="modal__title">
+              <h3>Gift invitation E-mail Design</h3>
+            </header>
+            <main class="modal__content">
+              <form class="form-giftDesign" action="#">
+                <div class="form-giftDesign__row">
+                  <div class="form-giftDesign__col">
+                    <div class="from-line">
+                      <label class="label">Subject</label>
+                      <input class="inp inp_bord" type="text">
+                    </div>
+                    <div class="from-line">
+                      <label class="label"><a class="link-blue" href="javascript:void(0)" @click="modalNavShow()">Select from message templates</a></label>
+                      <textarea class="area area_block area_h194 inp_bord"></textarea>
+                      <div class="el-textLenght">Characters 100 / 200</div>
+                    </div>
+                    <div class="b-design__select__swiper">
+                      <div class="b-design__select__swiper__title">Logo</div>
+                      <div class="swiper">
+                        <div class="swiper-container swiper-container-modal">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 1</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 2</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 3</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 4</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 5</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 6</div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__item">Slide 7</div>
+                            </div>
+                          </div>
+                          <div class="swiper-button swiper-button-prev">
+                            <svg>
+                              <use xlink:href="img/sprite.svg#swiper-button-prev"></use>
+                            </svg>
+                          </div>
+                          <div class="swiper-button swiper-button-next">
+                            <svg>
+                              <use xlink:href="img/sprite.svg#swiper-button-next"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-giftDesign__col">
+                    <div class="from-line">
+                      <label class="label">Preview:</label>
+                      <textarea class="area area_block area_h370 inp_bord"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-giftDesign__btn">
+                  <button class="btn btn_bl btn_w170">Save</button>
+                </div>
+              </form>
+            </main>
+            <nav class="b-modalMenu" :class="{ 'is-visible': modalMenu }">
+              <div class="b-modalMenu__hide" @click="modalNavHide()"><span>
+                  <svg>
+                    <use xlink:href="img/sprite.svg#arw-2"></use>
+                  </svg></span></div>
+              <ul data-simplebar>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <footer class="s-footer">
+        <div class="container">
+          <div class="copyr">Copyright 2020 | Privacy</div>
+          <div class="social">
+            <ul>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-fb"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-in"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-pn"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-tm"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-ins"></use>
+                  </svg></a></li>
+              <li><a href="#">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#soc-yt"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="terms"><a href="#">Terms of Service</a></div>
+        </div>
+      </footer>
+      <div class="b-pageBar">
+        <div class="b-pageBar__btn"></div>
+        <ul>
+          <li><a href="index_1.html">Sendas</a></li>
+          <li><a href="bulk.html">Bulk</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="recipients.html">Recipients</a></li>
+          <li><a href="popup.html">Popup</a></li>
+          <li><a href="step-1.html">Step 1 (Recipients)</a></li>
+          <li><a href="step-2.html">Step 2 (Choose Gifts)</a></li>
+          <li><a href="step-3.html">Step 3 (Messages)</a></li>
+          <li><a href="step-3_4.html">Step 4 (New)</a></li>
+          <li><a href="step-4.html">Step 4 (Review)</a></li>
+          <li><a href="billing.html">Billing & Plans</a></li>
+          <li><a href="ui-kit.html">UI Kit</a></li>
+          <li><a href="frame.html">Frame</a></li>
+          <li><a href="frame-new.html">Frame New</a></li>
+          <li><a href="branding.html">Branding</a></li>
+          <li><a href="single-step-1.html">Single Step 1</a></li>
+          <li><a href="card.html">Card</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

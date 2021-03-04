@@ -95,7 +95,7 @@ Vue.component(`table-step`, {
 
     methods: {
         checkAll() {
-            this.show= !this.show
+            this.show = !this.show
         }
     },
 
@@ -182,4 +182,62 @@ Vue.component(`table-step-tr`, {
         </tr>
     `
 
+})
+
+Vue.component(`list-checkbox`, {
+    data: () => {
+        return {
+            isCheckAll: false,
+            show: false,
+            colorSel: ``,
+            person: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        }
+    },
+
+    methods: {
+        checkAll() {
+            this.show = !this.show
+        }
+    },
+
+    template: `
+        <div class="form-listCheck">
+            <div class="form-listCheck__scroll" data-simplebar>
+                <ul class="form-listCheck__list">
+                    <list-checkbox-item :id="item" v-for="item in this.person" />
+                </ul>
+            </div>
+        </div>
+    `
+})
+
+
+Vue.component(`list-checkbox-item`, {
+    props: {
+        id: Number
+    },
+    data: () => {
+        return {
+            isCheckAll: false,
+            show: false,
+            colorSel: ``,
+        }
+    },
+
+    methods: {
+        checkAll() {
+            this.show = !this.show
+        }
+    },
+
+    template: `
+        <li class="form-listCheck__item">
+            <input type="checkbox" :id="id">
+            <label :for="id">
+                <span class="bx-name">Ivan Ivanov</span>
+                <span class="bx-desc">Lorem ipsum dolor sit amet, consectetur consec adipiscing</span>
+                <span class="bx-status">Saved</span>
+            </label>
+        </li>
+    `
 })
